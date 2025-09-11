@@ -1,0 +1,87 @@
+'use client';
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+import { secondaryNavigationLinks } from '@/lib/placeholder-data';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+export default function SecondaryNav() {
+  const pathname = usePathname();
+
+  return (
+    <div className="hidden md:flex justify-center items-center py-2 bg-background border-b z-40 relative">
+      <NavigationMenu>
+        <NavigationMenuList>
+          {secondaryNavigationLinks.map(link => {
+             const categoryImage = PlaceHolderImages.find(p => p.id === link.items?.[0]?.imageId);
+            return (
+              <NavigationMenuItem key={link.title}>
+                <NavigationMenuTrigger
+                  className={cn(
+                    'text-sm font-headline tracking-wider uppercase',
+                    pathname.startsWith(link.href ?? '#')
+                      ? 'text-primary font-bold'
+                      : 'text-muted-foreground'
+                  )}
+                >
+                  {link.title}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="flex">
+                    <ul className="grid grid-cols-2 gap-x-4 p-6 w-[500px]">
+                      {link.items?.map(item => (
+                        <ListItem key={item.title} href={item.href} title={item.title} />
+                      ))}
+                    </ul>
+                     {categoryImage && (
+                        <div className="p-4 w-[300px] bg-muted/50 flex flex-col justify-between">
+                            <div>
+                                <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden">
+                                    <Image
+                                    src={categoryImage.imageUrl}
+                                    alt={categoryImage.description}
+                                    data-ai-hint={categoryImage.imageHint}
+                                    fill
+                                    className="object-cover"
+                                    />
+                                </div>
+                                <h3 className="font-headline text-lg font-semibold">{link.title}</h3>
+                                <p className="text-sm text-muted-foreground mt-2 mb-4">{link.description}</p>
+                            </div>
+                            <Link href={link.href ?? '#'} className="text-sm font-bold text-primary hover:underline self-start">
+                                Shop All {link.title} &rarr;
+                            </Link>
+                        </div>
+                    )}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            );
+          })}
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
+  );
+}
+
+const ListItem = ({ href, title }: { href: string; title: string }) => {
+  return (
+    <li>
+      <Link
+        href={href}
+        className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+      </Link>
+    </li>
+  );
+};
