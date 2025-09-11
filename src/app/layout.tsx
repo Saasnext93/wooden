@@ -24,8 +24,10 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         <div className="flex flex-col min-h-screen">
-          <Header />
-          <SecondaryNav />
+          <div className="sticky top-0 z-50">
+            <Header />
+            <SecondaryNav />
+          </div>
           <div className="flex-1">{children}</div>
           <Footer />
         </div>

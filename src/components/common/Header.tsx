@@ -21,10 +21,10 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+    <header className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto flex flex-col items-center px-4 py-3">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center p-4">
           <Logo />
         </div>
 
@@ -36,7 +36,7 @@ export default function Header() {
                   {mainNavigationLinks.map((link) => (
                     <NavigationMenuItem key={link.title}>
                         <Link href={link.href ?? "/"} legacyBehavior passHref>
-                          <NavigationMenuLink className={cn('text-base font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
+                          <NavigationMenuLink className={cn('text-lg font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
                             {link.title}
                           </NavigationMenuLink>
                         </Link>
@@ -54,7 +54,7 @@ export default function Header() {
 
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="md:hidden absolute top-3 right-4">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent focus-visible:bg-transparent">
