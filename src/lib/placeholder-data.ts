@@ -124,65 +124,68 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-export const navigationLinks: NavigationLink[] = [
+export const mainNavigationLinks: NavigationLink[] = [
   {
     title: 'Legacy',
     href: '#',
-    description: 'Our story of passion and craftsmanship.',
-    items: [
-      {
-        title: "Founder's Story",
-        href: '#',
-        description: 'The vision that started it all.',
-        imageId: 'founderStory'
-      },
-      {
-        title: 'Passion for Perfection',
-        href: '#',
-        description: 'The drive for quality in every piece.',
-        imageId: 'passion'
-      },
-      {
-        title: 'Our Mission & Goals',
-        href: '#',
-        description: 'Envisioning the future of furniture.',
-        imageId: 'mission'
-      },
-    ],
   },
   {
     title: 'Products',
     href: '/products',
-    description: 'Explore our collection of handcrafted furniture.',
-    items: [
-      {
-        title: 'Chairs',
-        href: '/products?category=Chairs',
-        description: 'Comfortable and stylish seating.',
-        imageId: 'category-chairs'
-      },
-      {
-        title: 'Tables',
-        href: '/products?category=Tables',
-        description: 'The centerpiece of your dining room.',
-        imageId: 'category-tables'
-      },
-      {
-        title: 'Sofas',
-        href: '/products?category=Sofas',
-        description: 'Relax in style and comfort.',
-        imageId: 'category-sofas'
-      },
-      {
-        title: 'Storage',
-        href: '/products?category=Storage',
-        description: 'Functional and beautiful storage solutions.',
-        imageId: 'category-storage'
-      },
-    ],
   },
   {
     title: 'Contact',
     href: '/#contact',
   },
-]
+];
+
+
+export const secondaryNavigationLinks: NavigationLink[] = [
+  {
+    title: 'Upholstered Furniture',
+    href: '/products?category=Sofas',
+    description: 'Comfortable and stylish seating solutions.',
+    items: [
+      { title: 'Stationary Sofas', href: '#', imageId: 'category-sofas' },
+      { title: 'Motion Sofas', href: '#', imageId: 'category-sofas' },
+      { title: 'Home Theatre', href: '#', imageId: 'category-sofas' },
+      { title: 'Armchairs', href: '/products?category=Chairs', imageId: 'category-chairs' },
+      { title: 'Day Bed', href: '#', imageId: 'product1' },
+      { title: 'Sofa Cum Bed', href: '#', imageId: 'product3' },
+      { title: 'Recliners', href: '#', imageId: 'product5' },
+      { title: 'Beds', href: '#', imageId: 'product1' },
+      { title: 'Mattress', href: '#', imageId: 'product1' },
+      { title: 'Pillows', href: '#', imageId: 'product1' },
+      { title: 'Puffee', href: '#', imageId: 'product7' },
+    ],
+  },
+    {
+    title: 'Case Goods',
+    href: '/products?category=Tables',
+    description: 'Explore our collection of case goods.',
+    items: [
+      { title: 'Coffee Tables', href: '/products?category=Tables', imageId: 'category-tables' },
+      { title: 'Side Tables', href: '/products?category=Tables', imageId: 'category-tables' },
+      { title: 'Consoles', href: '/products?category=Tables', imageId: 'category-tables' },
+    ],
+  },
+  {
+    title: 'Fixed Cabinets',
+    href: '/products?category=Storage',
+    description: 'Explore our collection of fixed cabinets.',
+    items: [
+      { title: 'Entertainment Units', href: '/products?category=Storage', imageId: 'category-storage' },
+      { title: 'Sideboards', href: '/products?category=Storage', imageId: 'category-storage' },
+      { title: 'Bookshelves', href: '/products?category=Storage', imageId: 'category-storage' },
+    ],
+  },
+  {
+    title: 'Loose Cabinets',
+    href: '/products?category=Storage',
+    description: 'Explore our collection of loose cabinets.',
+    items: [
+      { title: 'Night Stands', href: '/products?category=Storage', imageId: 'category-storage' },
+      { title: 'Chest of Drawers', href: '/products?category=Storage', imageId: 'category-storage' },
+    ],
+  },
+];

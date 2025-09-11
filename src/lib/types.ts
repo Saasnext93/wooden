@@ -29,6 +29,6 @@ export type NavigationLink = {
 export type NavigationSubItem = {
   title: string;
   href: string;
-  description: string;
+  description?: string;
   imageId: string;
 }
