@@ -25,7 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         )}
       </CardHeader>
       <CardContent className="p-4 flex-grow flex flex-col">
-        <CardTitle className="text-lg font-headline leading-tight mb-2 h-14">{product.name}</CardTitle>
+        <CardTitle className="text-lg font-headline leading-tight mb-2 min-h-[4rem]">{product.name}</CardTitle>
         <div className="flex items-center justify-end text-sm text-muted-foreground mt-auto">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-500 fill-current" />
