@@ -3,8 +3,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useFormState } from 'react-dom';
-import { useEffect, useRef } from 'react';
+import { useActionState, useEffect, useRef } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -32,7 +31,7 @@ type FormSchema = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
   const { toast } = useToast();
-  const [state, formAction] = useFormState(submitContactForm, { message: '', success: false });
+  const [state, formAction] = useActionState(submitContactForm, { message: '', success: false });
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
