@@ -13,14 +13,24 @@ import {
 import { secondaryNavigationLinks } from '@/lib/placeholder-data';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function SecondaryNav() {
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   return (
-    <div className="hidden md:flex w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 justify-center">
+    <div className={cn("hidden md:flex w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 justify-center transition-all duration-300", isScrolled ? 'py-0' : 'py-2' )}>
       <NavigationMenu>
         <NavigationMenuList>
           {secondaryNavigationLinks.map((link) => {
@@ -28,7 +38,7 @@ export default function SecondaryNav() {
 
             return (
               <NavigationMenuItem key={link.title}>
-                <NavigationMenuTrigger className="text-base font-headline tracking-wider uppercase">
+                <NavigationMenuTrigger className={cn("text-base font-headline tracking-wider uppercase transition-all duration-300", isScrolled ? 'text-sm' : 'text-base')}>
                   {link.title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>

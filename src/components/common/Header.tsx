@@ -7,7 +7,7 @@ import Logo from '@/components/common/Logo';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -19,17 +19,26 @@ import { mainNavigationLinks, secondaryNavigationLinks } from '@/lib/placeholder
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex flex-col items-center px-4 py-3">
+    <header className={cn("w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300", isScrolled ? 'py-2' : 'py-3')}>
+      <div className="container mx-auto flex flex-col items-center px-4">
         {/* Logo */}
-        <div className="flex items-center p-4">
-          <Logo />
+        <div className={cn("flex items-center transition-all duration-300", isScrolled ? 'p-1' : 'p-4')}>
+          <Logo isScrolled={isScrolled} />
         </div>
 
         {/* Desktop Navigation & Quote Button */}
-        <div className="hidden md:flex items-center justify-center">
+        <div className={cn("hidden md:flex items-center justify-center transition-all duration-300", isScrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto opacity-100')}>
             <nav className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -73,7 +82,7 @@ export default function Header() {
                 <nav className="flex flex-col space-y-4">
                   {mainNavigationLinks.map((link) => (
                       <Link
-                        key={link.href}
+                        key={link.title}
                         href={link.href ?? "/"}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={cn(
