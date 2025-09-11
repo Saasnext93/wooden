@@ -5,7 +5,7 @@ import Footer from "@/components/common/Footer"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Artisan Showcase',
+  title: 'Wooden Manufacture',
   description: 'Premium furniture for the discerning eye.',
 };
 
