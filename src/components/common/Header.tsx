@@ -12,7 +12,6 @@ import { useState } from 'react';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '/enhance-image', label: 'AI Enhancer' },
 ];
 
 export default function Header() {
