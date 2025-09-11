@@ -13,8 +13,12 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from "@/components/ui/navigation-menu"
 import { mainNavigationLinks, secondaryNavigationLinks } from '@/lib/placeholder-data';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Header() {
   const pathname = usePathname();
@@ -30,15 +34,15 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={cn("w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300", isScrolled ? 'py-2' : 'py-3')}>
-      <div className="container mx-auto flex flex-col items-center px-4">
+    <header className={cn("w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300", isScrolled ? 'py-2' : 'py-4')}>
+      <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
-        <div className={cn("flex items-center transition-all duration-300", isScrolled ? 'p-1' : 'p-4')}>
+        <div className="flex items-center">
           <Logo isScrolled={isScrolled} />
         </div>
 
         {/* Desktop Navigation & Quote Button */}
-        <div className={cn("hidden md:flex items-center justify-center transition-all duration-300", isScrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto opacity-100')}>
+        <div className="hidden md:flex items-center space-x-6">
             <nav className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -51,6 +55,50 @@ export default function Header() {
                         </Link>
                     </NavigationMenuItem>
                   ))}
+                  {secondaryNavigationLinks.map((link) => {
+                    const categoryImage = PlaceHolderImages.find(p => p.id === link.items?.[0]?.imageId);
+
+                    return (
+                      <NavigationMenuItem key={link.title}>
+                        <NavigationMenuTrigger className={cn("text-lg font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent", pathname.startsWith(link.href ?? '#') ? 'text-primary bg-accent font-semibold' : '')}>
+                          {link.title}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <div className="flex">
+                            <ul className="grid grid-cols-2 gap-x-4 p-6 w-[500px]">
+                              {link.items?.map((item) => (
+                                <ListItem
+                                  key={item.title}
+                                  href={item.href}
+                                  title={item.title}
+                                />
+                              ))}
+                            </ul>
+                            {categoryImage && (
+                              <div className="p-4 w-[300px] bg-muted/50 flex flex-col justify-between">
+                                <div>
+                                  <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden">
+                                     <Image
+                                        src={categoryImage.imageUrl}
+                                        alt={categoryImage.description}
+                                        data-ai-hint={categoryImage.imageHint}
+                                        fill
+                                        className="object-cover"
+                                      />
+                                  </div>
+                                  <h3 className="font-headline text-lg font-semibold">{link.title}</h3>
+                                  <p className="text-sm text-muted-foreground mt-2 mb-4">{link.description}</p>
+                                </div>
+                                <Link href={link.href ?? '#'} className="text-sm font-bold text-primary hover:underline self-start">
+                                  Shop All {link.title} &rarr;
+                                </Link>
+                              </div>
+                            )}
+                          </div>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    );
+                  })}
                 </NavigationMenuList>
               </NavigationMenu>
             </nav>
@@ -63,7 +111,7 @@ export default function Header() {
 
 
         {/* Mobile Navigation */}
-        <div className="md:hidden absolute top-3 right-4">
+        <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent focus-visible:bg-transparent">
@@ -129,3 +177,26 @@ export default function Header() {
     </header>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+});
+ListItem.displayName = "ListItem";

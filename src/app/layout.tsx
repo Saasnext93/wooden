@@ -3,7 +3,6 @@ import { Toaster } from "@/components/ui/toaster"
 import Header from "@/components/common/Header"
 import Footer from "@/components/common/Footer"
 import './globals.css';
-import SecondaryNav from '@/components/common/SecondaryNav';
 
 export const metadata: Metadata = {
   title: 'Wooden Manufacture',
@@ -26,7 +25,6 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <div className="sticky top-0 z-50">
             <Header />
-            <SecondaryNav />
           </div>
           <div className="flex-1">{children}</div>
           <Footer />
