@@ -7,10 +7,17 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Star, Truck, ShieldCheck, Phone } from 'lucide-react';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function ProductDetailPage() {
   const params = useParams();
   const { id } = params;
+  const [reviewCount, setReviewCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Generate random number only on the client-side after mounting
+    setReviewCount(Math.floor(Math.random() * 50) + 10);
+  }, []);
 
   const product = allProducts.find(p => p.id === id);
   const placeholderImage = product ? PlaceHolderImages.find(p => p.id === product.imageId) : undefined;
@@ -62,7 +69,9 @@ export default function ProductDetailPage() {
                         <Star className="w-5 h-5 fill-current" />
                         <span className="font-bold text-lg text-foreground">{product.rating}</span>
                         </div>
-                        <span className="text-sm text-muted-foreground">({Math.floor(Math.random() * 50) + 10} reviews)</span>
+                        {reviewCount !== null && (
+                          <span className="text-sm text-muted-foreground">({reviewCount} reviews)</span>
+                        )}
                     </div>
                 </div>
 
