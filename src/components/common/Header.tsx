@@ -91,7 +91,7 @@ export default function Header() {
                         <div className="flex flex-col space-y-2 mt-2 ml-2">
                         {link.items?.map((item) => (
                           <Link
-                            key={item.href}
+                            key={item.title}
                             href={item.href}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={cn(
