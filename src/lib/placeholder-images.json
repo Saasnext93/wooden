@@ -1,3 +1,89 @@
+
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "Hero image for the landing page",
+      "imageUrl": "https://picsum.photos/seed/hero-furn/1920/1080",
+      "imageHint": "modern living room"
+    },
+    {
+      "id": "about",
+      "description": "Image for the about section",
+      "imageUrl": "https://picsum.photos/seed/about-furn/800/600",
+      "imageHint": "woodworking tools"
+    },
+    {
+      "id": "product1",
+      "description": "Classic Oak Armchair",
+      "imageUrl": "https://picsum.photos/seed/product1/600/600",
+      "imageHint": "wooden armchair"
+    },
+    {
+      "id": "product2",
+      "description": "Walnut Coffee Table",
+      "imageUrl": "https://picsum.photos/seed/product2/600/600",
+      "imageHint": "coffee table"
+    },
+    {
+      "id": "product3",
+      "description": "Linen Blend Sofa",
+      "imageUrl": "https://picsum.photos/seed/product3/600/600",
+      "imageHint": "white sofa"
+    },
+    {
+      "id": "product4",
+      "description": "Modern Bookshelf",
+      "imageUrl": "https://picsum.photos/seed/product4/600/600",
+      "imageHint": "wood bookshelf"
+    },
+    {
+      "id": "product5",
+      "description": "Ergonomic Desk Chair",
+      "imageUrl": "https://picsum.photos/seed/product5/600/600",
+      "imageHint": "desk chair"
+    },
+    {
+      "id": "product6",
+      "description": "Round Dining Table",
+      "imageUrl": "https://picsum.photos/seed/product6/600/600",
+      "imageHint": "dining table"
+    },
+    {
+      "id": "product7",
+      "description": "Velvet Ottoman",
+      "imageUrl": "https://picsum.photos/seed/product7/600/600",
+      "imageHint": "velvet ottoman"
+    },
+    {
+      "id": "product8",
+      "description": "Floating Wall Shelves",
+      "imageUrl": "https://picsum.photos/seed/product8/600/600",
+      "imageHint": "wall shelves"
+    },
+    {
+      "id": "avatar1",
+      "description": "Avatar for Emily Carter",
+      "imageUrl": "https://picsum.photos/seed/avatar1/100/100",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar2",
+      "description": "Avatar for Michael Chen",
+      "imageUrl": "https://picsum.photos/seed/avatar2/100/100",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar3",
+      "description": "Avatar for Sarah Jenkins",
+      "imageUrl": "https://picsum.photos/seed/avatar3/100/100",
+      "imageHint": "woman architect"
+    },
+    {
+      "id": "avatar4",
+      "description": "Avatar for David Lee",
+      "imageUrl": "https://picsum.photos/seed/avatar4/100/100",
+      "imageHint": "man smiling"
+    }
+  ]
 }

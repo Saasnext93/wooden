@@ -1,0 +1,18 @@
+export type Product = {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  imageId: string;
+  category: string; // e.g., 'Chairs', 'Tables', 'Sofas'
+  material: string; // e.g., 'Oak', 'Walnut', 'Linen'
+  rating: number; // 1-5
+};
+
+export type Testimonial = {
+  id: string;
+  quote: string;
+  customerName: string;
+  customerTitle: string;
+  imageId: string;
+};
