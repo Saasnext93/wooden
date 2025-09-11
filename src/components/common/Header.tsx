@@ -31,14 +31,10 @@ export default function Header() {
 
   return (
     <header className={cn("w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300 z-50", isScrolled ? 'py-2' : 'py-4')}>
-      <div className="container mx-auto flex flex-col items-center justify-between px-4">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Logo isScrolled={isScrolled} />
-        </div>
+      <div className="container mx-auto flex items-center justify-between px-4">
 
         {/* Desktop Navigation & Quote Button */}
-        <div className="hidden md:flex items-center space-x-6 mt-4">
+        <div className="hidden md:flex items-center space-x-6">
             <nav className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -61,6 +57,10 @@ export default function Header() {
             </div>
         </div>
 
+        {/* Logo */}
+        <div className="flex items-center">
+          <Logo isScrolled={isScrolled} />
+        </div>
 
         {/* Mobile Navigation */}
         <div className="absolute top-1/2 left-4 -translate-y-1/2 md:hidden">
