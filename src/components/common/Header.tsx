@@ -41,7 +41,7 @@ export default function Header() {
                     <NavigationMenuItem key={link.title}>
                       {link.items ? (
                         <>
-                          <NavigationMenuTrigger>{link.title}</NavigationMenuTrigger>
+                          <NavigationMenuTrigger className="text-lg">{link.title}</NavigationMenuTrigger>
                           <NavigationMenuContent>
                             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                               <li className="row-span-3">
@@ -70,7 +70,7 @@ export default function Header() {
                         </>
                       ) : (
                         <Link href={link.href ?? "/"} legacyBehavior passHref>
-                          <NavigationMenuLink className={cn('text-sm font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
+                          <NavigationMenuLink className={cn('text-lg font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
                             {link.title}
                           </NavigationMenuLink>
                         </Link>
