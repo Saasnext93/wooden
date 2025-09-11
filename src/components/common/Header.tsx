@@ -37,12 +37,12 @@ export default function Header() {
       isScrolled ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent",
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <div className="flex-1 flex justify-start">
+        <div className="flex items-center">
             <Logo />
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <nav className="hidden md:flex items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -60,7 +60,7 @@ export default function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="flex-1 flex justify-end md:hidden">
+        <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className={cn(!isScrolled && 'text-white hover:text-white hover:bg-white/10')}>
@@ -92,6 +92,9 @@ export default function Header() {
             </SheetContent>
           </Sheet>
         </div>
+        
+        {/* Placeholder for right side on desktop to balance the logo */}
+        <div className="hidden md:flex items-center" />
       </div>
     </header>
   );
