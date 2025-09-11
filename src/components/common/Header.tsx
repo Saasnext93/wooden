@@ -13,6 +13,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { mainNavigationLinks, secondaryNavigationLinks } from '@/lib/placeholder-data';
 
@@ -44,9 +45,9 @@ export default function Header() {
                 <NavigationMenuList>
                   {mainNavigationLinks.map((link) => (
                     <NavigationMenuItem key={link.title}>
-                        <Link href={link.href ?? "/"} legacyBehavior passHref>
-                          <NavigationMenuLink className={cn('text-lg font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
-                            {link.title}
+                        <Link href={link.href ?? "/"} passHref>
+                          <NavigationMenuLink asChild className={cn('text-lg font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
+                             <Link href={link.href ?? "/"}>{link.title}</Link>
                           </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
