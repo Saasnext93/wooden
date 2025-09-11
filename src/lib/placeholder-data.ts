@@ -1,4 +1,4 @@
-import type { Product, Testimonial } from './types';
+import type { Product, Testimonial, NavigationLink } from './types';
 
 export const products: Product[] = [
   {
@@ -123,3 +123,66 @@ export const testimonials: Testimonial[] = [
     imageId: 'avatar4',
   },
 ];
+
+export const navigationLinks: NavigationLink[] = [
+  {
+    title: 'Legacy',
+    href: '#',
+    description: 'Our story of passion and craftsmanship.',
+    items: [
+      {
+        title: "Founder's Story",
+        href: '#',
+        description: 'The vision that started it all.',
+        imageId: 'founderStory'
+      },
+      {
+        title: 'Passion for Perfection',
+        href: '#',
+        description: 'The drive for quality in every piece.',
+        imageId: 'passion'
+      },
+      {
+        title: 'Our Mission & Goals',
+        href: '#',
+        description: 'Envisioning the future of furniture.',
+        imageId: 'mission'
+      },
+    ],
+  },
+  {
+    title: 'Products',
+    href: '/products',
+    description: 'Explore our collection of handcrafted furniture.',
+    items: [
+      {
+        title: 'Chairs',
+        href: '/products?category=Chairs',
+        description: 'Comfortable and stylish seating.',
+        imageId: 'category-chairs'
+      },
+      {
+        title: 'Tables',
+        href: '/products?category=Tables',
+        description: 'The centerpiece of your dining room.',
+        imageId: 'category-tables'
+      },
+      {
+        title: 'Sofas',
+        href: '/products?category=Sofas',
+        description: 'Relax in style and comfort.',
+        imageId: 'category-sofas'
+      },
+      {
+        title: 'Storage',
+        href: '/products?category=Storage',
+        description: 'Functional and beautiful storage solutions.',
+        imageId: 'category-storage'
+      },
+    ],
+  },
+  {
+    title: 'Contact',
+    href: '/#contact',
+  },
+]

@@ -114,6 +114,24 @@
       "description": "Avatar for David Lee",
       "imageUrl": "https://picsum.photos/seed/avatar4/100/100",
       "imageHint": "man smiling"
+    },
+    {
+      "id": "founderStory",
+      "description": "Founder's Story",
+      "imageUrl": "https://picsum.photos/seed/founder/400/300",
+      "imageHint": "founder portrait"
+    },
+    {
+      "id": "passion",
+      "description": "Passion for Perfection",
+      "imageUrl": "https://picsum.photos/seed/passion/400/300",
+      "imageHint": "woodworking details"
+    },
+    {
+      "id": "mission",
+      "description": "Our Mission & Goals",
+      "imageUrl": "https://picsum.photos/seed/mission/400/300",
+      "imageHint": "team photo"
     }
   ]
 }

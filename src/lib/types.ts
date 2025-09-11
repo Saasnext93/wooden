@@ -18,3 +18,17 @@ export type Testimonial = {
   customerTitle: string;
   imageId: string;
 };
+
+export type NavigationLink = {
+  title: string;
+  href?: string;
+  description?: string;
+  items?: NavigationSubItem[];
+}
+
+export type NavigationSubItem = {
+  title: string;
+  href: string;
+  description: string;
+  imageId: string;
+}

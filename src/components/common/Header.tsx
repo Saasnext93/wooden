@@ -3,17 +3,22 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
+import Image from 'next/image';
 import Logo from '@/components/common/Logo';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
-  { href: '/#contact', label: 'Contact' },
-];
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+import { navigationLinks } from '@/lib/placeholder-data';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Header() {
   const pathname = usePathname();
@@ -23,23 +28,55 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center">
-            <Logo />
+          <Logo />
         </div>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                'text-sm font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent',
-                pathname === link.href ? 'text-primary bg-accent font-semibold' : ''
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <NavigationMenu>
+            <NavigationMenuList>
+              {navigationLinks.map((link) => (
+                <NavigationMenuItem key={link.title}>
+                  {link.items ? (
+                    <>
+                      <NavigationMenuTrigger>{link.title}</NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                          <li className="row-span-3">
+                            <NavigationMenuLink asChild>
+                              <a
+                                className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                                href={link.href ?? "/"}
+                              >
+                                <div className="mb-2 mt-4 text-lg font-medium">
+                                  {link.title}
+                                </div>
+                                <p className="text-sm leading-tight text-muted-foreground">
+                                  {link.description}
+                                </p>
+                              </a>
+                            </NavigationMenuLink>
+                          </li>
+                          {link.items.map((item) => {
+                            const itemImage = PlaceHolderImages.find(p => p.id === item.imageId);
+                            return (
+                            <ListItem key={item.title} href={item.href} title={item.title} image={itemImage?.imageUrl} />
+                          )
+                          })}
+                        </ul>
+                      </NavigationMenuContent>
+                    </>
+                  ) : (
+                    <Link href={link.href ?? "/"} legacyBehavior passHref>
+                      <NavigationMenuLink className={cn('text-sm font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
+                        {link.title}
+                      </NavigationMenuLink>
+                    </Link>
+                  )}
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
         </nav>
 
         {/* Mobile Navigation */}
@@ -57,28 +94,49 @@ export default function Header() {
               </SheetHeader>
               <div className="flex flex-col p-6">
                 <div className="mb-8">
-                    <Logo />
+                  <Logo />
                 </div>
                 <nav className="flex flex-col space-y-4">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={cn(
-                        'text-lg font-medium transition-colors hover:text-primary',
-                        pathname === link.href ? 'text-primary' : 'text-muted-foreground'
-                      )}
-                    >
-                      {link.label}
-                    </Link>
+                  {navigationLinks.map((link) => (
+                    link.items ? (
+                      <div key={link.title}>
+                        <h3 className="font-semibold text-lg">{link.title}</h3>
+                        <div className="flex flex-col space-y-2 mt-2 ml-2">
+                        {link.items.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={cn(
+                              'text-muted-foreground transition-colors hover:text-primary',
+                              pathname === item.href ? 'text-primary' : ''
+                            )}
+                          >
+                            {item.title}
+                          </Link>
+                        ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        key={link.href}
+                        href={link.href ?? "/"}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={cn(
+                          'text-lg font-medium transition-colors hover:text-primary',
+                          pathname === link.href ? 'text-primary' : 'text-muted-foreground'
+                        )}
+                      >
+                        {link.title}
+                      </Link>
+                    )
                   ))}
                 </nav>
               </div>
             </SheetContent>
           </Sheet>
         </div>
-        
+
         <div className="hidden md:flex items-center">
           <Button asChild>
             <Link href="/#contact">Get Quote</Link>
@@ -88,3 +146,33 @@ export default function Header() {
     </header>
   );
 }
+
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { image?: string }
+>(({ className, title, children, image, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="flex items-center gap-4">
+            {image && <Image src={image} alt={title ?? ''} width={40} height={40} className="rounded-md" />}
+            <div className="text-sm font-medium leading-none">{title}</div>
+          </div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"
