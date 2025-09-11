@@ -27,60 +27,71 @@ export default function ProductDetailPage() {
     );
   }
 
-  const imageUrl = placeholderImage?.imageUrl ?? `https://picsum.photos/seed/${product.id}/800/800`;
+  const imageUrl = placeholderImage?.imageUrl ?? `https://picsum.photos/seed/${product.id}/1600/900`;
   const imageHint = placeholderImage?.imageHint ?? 'furniture piece';
 
   return (
-    <div className="container mx-auto px-4 py-12 md:py-20">
-      <div className="grid md:grid-cols-2 gap-12 items-start">
-        {/* Product Image */}
-        <div className="relative aspect-square rounded-lg shadow-lg overflow-hidden">
-          <Image
-            src={imageUrl}
-            alt={product.name}
-            data-ai-hint={imageHint}
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        {/* Product Details */}
-        <div className="flex flex-col h-full">
-          <h1 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">{product.name}</h1>
-          
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center gap-1 text-yellow-500">
-              <Star className="w-5 h-5 fill-current" />
-              <span className="font-bold text-lg text-foreground">{product.rating}</span>
+    <div>
+        {/* Hero Section */}
+        <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center text-white">
+            <Image
+                src={imageUrl}
+                alt={product.name}
+                data-ai-hint={imageHint}
+                fill
+                className="object-cover"
+                priority
+            />
+            <div className="absolute inset-0 bg-black/40" />
+            <div className="relative z-10 text-center p-4">
+                <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 drop-shadow-md">
+                    {product.name}
+                </h1>
             </div>
-            <span className="text-sm text-muted-foreground">({Math.floor(Math.random() * 50) + 10} reviews)</span>
-          </div>
-          
-          <p className="text-lg text-muted-foreground mb-6">{product.description}</p>
-          
-          <div className="text-4xl font-bold text-primary mb-6">${product.price.toFixed(2)}</div>
+        </section>
 
-          <div className="mt-auto space-y-6">
-             <Button size="lg" className="w-full text-lg">
-                Add to Quote
-            </Button>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mt-6">
-                <div className="flex flex-col items-center p-4 bg-accent/50 rounded-lg">
-                    <Truck className="w-6 h-6 mb-2 text-primary" />
-                    <span className="text-sm font-semibold">Fast Delivery</span>
+        {/* Product Details Section */}
+        <section className="container mx-auto px-4 py-16 md:py-24">
+            <div className="grid md:grid-cols-2 gap-12">
+                {/* Left Column: Description & Rating */}
+                <div>
+                    <h2 className="text-2xl font-headline font-bold text-primary mb-4">Product Details</h2>
+                    <p className="text-lg text-muted-foreground mb-6">{product.description}</p>
+                    <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-1 text-yellow-500">
+                        <Star className="w-5 h-5 fill-current" />
+                        <span className="font-bold text-lg text-foreground">{product.rating}</span>
+                        </div>
+                        <span className="text-sm text-muted-foreground">({Math.floor(Math.random() * 50) + 10} reviews)</span>
+                    </div>
                 </div>
-                <div className="flex flex-col items-center p-4 bg-accent/50 rounded-lg">
-                    <ShieldCheck className="w-6 h-6 mb-2 text-primary" />
-                    <span className="text-sm font-semibold">Quality Assured</span>
-                </div>
-                <div className="flex flex-col items-center p-4 bg-accent/50 rounded-lg">
-                    <Phone className="w-6 h-6 mb-2 text-primary" />
-                    <span className="text-sm font-semibold">Expert Support</span>
+
+                {/* Right Column: Actions & Features */}
+                <div className="space-y-8">
+                    <div>
+                        <h2 className="text-2xl font-headline font-bold text-primary mb-4">Request a Quote</h2>
+                        <p className="text-muted-foreground mb-6">Interested in this piece? Add it to your quote request, and our team will get in touch with you.</p>
+                        <Button size="lg" className="w-full text-lg">
+                            Add to Quote
+                        </Button>
+                    </div>
+                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div className="flex flex-col items-center p-4 bg-accent/50 rounded-lg">
+                            <Truck className="w-6 h-6 mb-2 text-primary" />
+                            <span className="text-sm font-semibold">Fast Delivery</span>
+                        </div>
+                        <div className="flex flex-col items-center p-4 bg-accent/50 rounded-lg">
+                            <ShieldCheck className="w-6 h-6 mb-2 text-primary" />
+                            <span className="text-sm font-semibold">Quality Assured</span>
+                        </div>
+                        <div className="flex flex-col items-center p-4 bg-accent/50 rounded-lg">
+                            <Phone className="w-6 h-6 mb-2 text-primary" />
+                            <span className="text-sm font-semibold">Expert Support</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-        </div>
-      </div>
+        </section>
     </div>
   );
 }
