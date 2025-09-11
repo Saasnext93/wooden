@@ -8,6 +8,36 @@
       "imageHint": "modern living room"
     },
     {
+      "id": "philosophy",
+      "description": "A craftsman carefully working on a piece of wood.",
+      "imageUrl": "https://images.unsplash.com/photo-1595341595379-cf3cb2b5c777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b29kd29ya2luZ3xlbnwwfHx8fDE3NTc2MzU5MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woodworking craftsman"
+    },
+    {
+      "id": "category-chairs",
+      "description": "A stylish wooden chair in a well-lit room.",
+      "imageUrl": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "stylish chair"
+    },
+    {
+      "id": "category-tables",
+      "description": "A wooden dining table set for a meal.",
+      "imageUrl": "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "dining table"
+    },
+    {
+      "id": "category-sofas",
+      "description": "A comfortable sofa in a modern living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884424b74c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "living room"
+    },
+    {
+      "id": "category-storage",
+      "description": "A wooden cabinet with decorative items.",
+      "imageUrl": "https://images.unsplash.com/photo-1633533439405-a6986a4911e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "wooden cabinet"
+    },
+    {
       "id": "about",
       "description": "Image for the about section",
       "imageUrl": "https://images.unsplash.com/photo-1721222204647-6280987830cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8d29vZGVuJTIwZnVybml0dXJlfGVufDB8fHx8MTc1NzU0OTgwOHww&ixlib=rb-4.1.0&q=80&w=1080",
