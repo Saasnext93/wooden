@@ -14,6 +14,7 @@ import { secondaryNavigationLinks } from '@/lib/placeholder-data';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function SecondaryNav() {
   const pathname = usePathname();
@@ -22,33 +23,50 @@ export default function SecondaryNav() {
     <div className="hidden md:flex w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 justify-center">
       <NavigationMenu>
         <NavigationMenuList>
-          {secondaryNavigationLinks.map((link) => (
-            <NavigationMenuItem key={link.title}>
-              <NavigationMenuTrigger className="text-sm font-headline tracking-wider uppercase">
-                {link.title}
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <div className="flex">
-                  <ul className="p-6 w-[250px]">
-                    {link.items?.map((item) => (
-                      <ListItem
-                        key={item.title}
-                        href={item.href}
-                        title={item.title}
-                      />
-                    ))}
-                  </ul>
-                  <div className="p-6 w-[400px] bg-muted/50">
-                    <h3 className="font-headline text-lg font-semibold">{link.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-2 mb-4">{link.description}</p>
-                    <Link href={link.href ?? '#'} className="text-sm font-bold text-primary hover:underline">
-                      Shop All {link.title} &rarr;
-                    </Link>
+          {secondaryNavigationLinks.map((link) => {
+            const categoryImage = PlaceHolderImages.find(p => p.id === link.items?.[0]?.imageId);
+
+            return (
+              <NavigationMenuItem key={link.title}>
+                <NavigationMenuTrigger className="text-sm font-headline tracking-wider uppercase">
+                  {link.title}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="flex">
+                    <ul className="grid grid-cols-2 gap-x-4 p-6 w-[500px]">
+                      {link.items?.map((item) => (
+                        <ListItem
+                          key={item.title}
+                          href={item.href}
+                          title={item.title}
+                        />
+                      ))}
+                    </ul>
+                    {categoryImage && (
+                      <div className="p-4 w-[300px] bg-muted/50 flex flex-col justify-between">
+                        <div>
+                          <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden">
+                             <Image
+                                src={categoryImage.imageUrl}
+                                alt={categoryImage.description}
+                                data-ai-hint={categoryImage.imageHint}
+                                fill
+                                className="object-cover"
+                              />
+                          </div>
+                          <h3 className="font-headline text-lg font-semibold">{link.title}</h3>
+                          <p className="text-sm text-muted-foreground mt-2 mb-4">{link.description}</p>
+                        </div>
+                        <Link href={link.href ?? '#'} className="text-sm font-bold text-primary hover:underline self-start">
+                          Shop All {link.title} &rarr;
+                        </Link>
+                      </div>
+                    )}
                   </div>
-                </div>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          ))}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            );
+          })}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
