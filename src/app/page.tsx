@@ -5,7 +5,6 @@ import HeroSection from "@/components/landing/HeroSection";
 import ManufacturingProcess from "@/components/landing/ManufacturingProcess";
 import NewProducts from "@/components/landing/NewProducts";
 import OurPhilosophy from "@/components/landing/OurPhilosophy";
-import ShopByCategory from "@/components/landing/ShopByCategory";
 import Testimonials from "@/components/landing/Testimonials";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <HeroSection />
       <NewProducts />
       <OurPhilosophy />
-      <ShopByCategory />
       <FeaturedProducts />
       <AboutSection />
       <ManufacturingProcess />
