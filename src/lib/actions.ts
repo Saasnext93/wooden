@@ -4,15 +4,22 @@ import { z } from 'zod';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  number: z.string().min(10, { message: 'Please enter a valid number.' }),
   email: z.string().email({ message: "Please enter a valid email." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  city: z.string().min(2, { message: 'City is required.' }),
+  assist: z.string({ required_error: "Please select an option." }),
+  comments: z.string().optional(),
 });
+
 
 export async function submitContactForm(prevState: any, formData: FormData) {
   const validatedFields = formSchema.safeParse({
     name: formData.get('name'),
+    number: formData.get('number'),
     email: formData.get('email'),
-    message: formData.get('message'),
+    city: formData.get('city'),
+    assist: formData.get('assist'),
+    comments: formData.get('comments'),
   });
 
   if (!validatedFields.success) {
