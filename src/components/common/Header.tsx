@@ -45,9 +45,9 @@ export default function Header() {
                 <NavigationMenuList>
                   {mainNavigationLinks.map((link) => (
                     <NavigationMenuItem key={link.title}>
-                        <Link href={link.href ?? "/"} passHref>
+                        <Link href={link.href ?? "/"} legacyBehavior passHref>
                           <NavigationMenuLink asChild className={cn('text-lg font-medium transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-accent', pathname === link.href ? 'text-primary bg-accent font-semibold' : '')}>
-                             <Link href={link.href ?? "/"}>{link.title}</Link>
+                             <a>{link.title}</a>
                           </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -98,9 +98,9 @@ export default function Header() {
                       <div key={link.title}>
                         <h3 className="font-semibold text-lg mt-4">{link.title}</h3>
                         <div className="flex flex-col space-y-2 mt-2 ml-2">
-                        {link.items?.map((item) => (
+                        {link.items?.map((item, index) => (
                           <Link
-                            key={item.title}
+                            key={`${item.title}-${index}`}
                             href={item.href}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={cn(
