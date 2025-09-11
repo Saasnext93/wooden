@@ -34,25 +34,25 @@
     {
       "id": "product4",
       "description": "Modern Bookshelf",
-      "imageUrl": "https://picsum.photos/seed/product4/600/600",
+      "imageUrl": "https://picsum.photos/seed/product4/600/800",
       "imageHint": "wood bookshelf"
     },
     {
       "id": "product5",
       "description": "Ergonomic Desk Chair",
-      "imageUrl": "https://picsum.photos/seed/product5/600/600",
+      "imageUrl": "https://picsum.photos/seed/product5/400/400",
       "imageHint": "desk chair"
     },
     {
       "id": "product6",
       "description": "Round Dining Table",
-      "imageUrl": "https://picsum.photos/seed/product6/600/600",
+      "imageUrl": "https://picsum.photos/seed/product6/400/400",
       "imageHint": "dining table"
     },
     {
       "id": "product7",
       "description": "Velvet Ottoman",
-      "imageUrl": "https://picsum.photos/seed/product7/600/600",
+      "imageUrl": "https://picsum.photos/seed/product7/400/400",
       "imageHint": "velvet ottoman"
     },
     {

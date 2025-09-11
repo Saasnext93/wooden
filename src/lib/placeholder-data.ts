@@ -10,6 +10,7 @@ export const products: Product[] = [
     category: 'Chairs',
     material: 'Oak',
     rating: 4.8,
+    status: 'In Stock',
   },
   {
     id: 'prod_2',
@@ -20,6 +21,7 @@ export const products: Product[] = [
     category: 'Tables',
     material: 'Walnut',
     rating: 4.9,
+    status: 'In Stock',
   },
   {
     id: 'prod_3',
@@ -30,6 +32,7 @@ export const products: Product[] = [
     category: 'Sofas',
     material: 'Linen',
     rating: 4.7,
+    status: 'In Stock',
   },
   {
     id: 'prod_4',
@@ -40,6 +43,8 @@ export const products: Product[] = [
     category: 'Storage',
     material: 'Pine',
     rating: 4.6,
+    status: 'Pre-Order',
+    status_label: ' arriving soon'
   },
   {
     id: 'prod_5',
@@ -50,6 +55,8 @@ export const products: Product[] = [
     category: 'Chairs',
     material: 'Ash',
     rating: 4.8,
+    status: 'Pre-Order',
+    status_label: ' new design'
   },
   {
     id: 'prod_6',
@@ -60,6 +67,7 @@ export const products: Product[] = [
     category: 'Tables',
     material: 'Walnut',
     rating: 4.9,
+    status: 'New Arrival',
   },
   {
     id: 'prod_7',
@@ -70,6 +78,7 @@ export const products: Product[] = [
     category: 'Sofas',
     material: 'Velvet',
     rating: 4.5,
+    status: 'New Arrival',
   },
   {
     id: 'prod_8',
@@ -80,6 +89,7 @@ export const products: Product[] = [
     category: 'Storage',
     material: 'Oak',
     rating: 4.7,
+    status: 'In Stock',
   },
 ];
 

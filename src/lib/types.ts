@@ -7,6 +7,8 @@ export type Product = {
   category: string; // e.g., 'Chairs', 'Tables', 'Sofas'
   material: string; // e.g., 'Oak', 'Walnut', 'Linen'
   rating: number; // 1-5
+  status?: 'New Arrival' | 'Pre-Order' | 'In Stock';
+  status_label?: string;
 };
 
 export type Testimonial = {
