@@ -32,7 +32,7 @@ export default function NewProducts() {
             opts={{
               align: "start",
             }}
-            className="w-full"
+            className="w-full relative"
           >
             <CarouselContent>
               {newProducts.map((product) => (
@@ -43,8 +43,8 @@ export default function NewProducts() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2" />
+            <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2" />
           </Carousel>
         </ScrollAnimationWrapper>
       </div>
