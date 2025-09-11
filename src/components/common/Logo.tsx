@@ -12,8 +12,8 @@ export default function Logo({ isScrolled = false }: LogoProps) {
        <Image 
         src="/logo_pin.png" 
         alt="Wooden Manufacture Logo"
-        width={isScrolled ? 100 : 150}
-        height={isScrolled ? 27 : 40}
+        width={isScrolled ? 120 : 180}
+        height={isScrolled ? 32 : 48}
         className="transition-all duration-300"
         priority
        />
