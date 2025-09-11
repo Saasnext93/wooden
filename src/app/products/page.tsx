@@ -22,7 +22,7 @@ export default function ProductsPage() {
     categories: [] as string[],
     materials: [] as string[],
   });
-  const [sort, setSort] = useState('price-asc');
+  const [sort, setSort] = useState('rating-desc');
   const [searchQuery, setSearchQuery] = useState('');
 
   const availableCategories = useMemo(() => Array.from(new Set(productsWithImages.map(p => p.category))), []);
@@ -44,14 +44,14 @@ export default function ProductsPage() {
     }
 
     switch (sort) {
-      case 'price-asc':
-        filtered.sort((a, b) => a.price - b.price);
-        break;
-      case 'price-desc':
-        filtered.sort((a, b) => b.price - a.price);
-        break;
       case 'rating-desc':
         filtered.sort((a, b) => b.rating - a.rating);
+        break;
+      case 'name-asc':
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'name-desc':
+        filtered.sort((a, b) => b.name.localeCompare(a.name));
         break;
     }
 

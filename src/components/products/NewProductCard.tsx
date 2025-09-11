@@ -14,7 +14,6 @@ export default function NewProductCard({ product }: NewProductCardProps) {
       <CardContent className="p-4 flex-grow flex flex-col">
         <div className="text-sm font-medium uppercase text-muted-foreground">{product.status}{product.status_label}</div>
         <h3 className="text-xl font-bold my-1">{product.name}</h3>
-        <p className="text-sm">From ${product.price.toFixed(2)}</p>
         <div className="flex-grow flex items-center justify-center mt-4">
           {product.imageUrl && (
             <Image

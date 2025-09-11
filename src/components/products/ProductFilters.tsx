@@ -82,9 +82,9 @@ export default function ProductFilters({
                     <SelectValue placeholder="Sort by" />
                     </SelectTrigger>
                     <SelectContent>
-                    <SelectItem value="price-asc">Price: Low to High</SelectItem>
-                    <SelectItem value="price-desc">Price: High to Low</SelectItem>
                     <SelectItem value="rating-desc">Highest Rating</SelectItem>
+                    <SelectItem value="name-asc">Name: A to Z</SelectItem>
+                    <SelectItem value="name-desc">Name: Z to A</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
