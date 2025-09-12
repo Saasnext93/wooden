@@ -20,7 +20,7 @@ export default function AboutSection() {
                                 <div className="bg-background/80 backdrop-blur-sm p-8 rounded-lg shadow-xl md:p-12">
                                     <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">The Soul of Wood, The Heart of a Home</h2>
                                     <p className="text-lg text-muted-foreground mb-4">
-                                        At Artisan Showcase, we believe furniture is more than just an object. It's a part of your story. For over three decades, our family has been dedicated to sourcing the finest sustainable hardwoods and transforming them into functional works of art.
+                                        At Pinnacle Modular Furniture, we believe furniture is more than just an object. It's a part of your story. For over three decades, our family has been dedicated to sourcing the finest sustainable hardwoods and transforming them into functional works of art.
                                     </p>
                                     <p className="text-muted-foreground mb-6">
                                         Every curve, joint, and finish is a testament to our passion for quality and a deep respect for the natural material. We invite you to bring this legacy of craftsmanship into your home.

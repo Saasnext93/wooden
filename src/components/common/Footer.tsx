@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary/20 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Wooden Manufacture. All Rights Reserved.</p>
+          <p>&copy; {currentYear} Pinnacle Modular Furniture. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

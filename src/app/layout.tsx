@@ -6,8 +6,8 @@ import SecondaryNav from '@/components/common/SecondaryNav';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Wooden Manufacture',
-  description: 'Premium furniture for the discerning eye.',
+  title: 'Pinnacle Modular Furniture',
+  description: 'Premium modular furniture for modern living.',
 };
 
 export default function RootLayout({
