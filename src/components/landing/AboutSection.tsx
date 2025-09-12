@@ -20,8 +20,8 @@ export default function AboutSection() {
                                 src={aboutImage.imageUrl}
                                 alt={aboutImage.description}
                                 data-ai-hint={aboutImage.imageHint}
-                                width={800}
-                                height={600}
+                                width={600}
+                                height={800}
                                 className="rounded-lg shadow-lg object-cover"
                             />
                         )}
