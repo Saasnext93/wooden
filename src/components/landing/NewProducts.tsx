@@ -11,9 +11,14 @@ import NewProductCard from '../products/NewProductCard';
 
 export default function NewProducts() {
   const newProducts = allProducts.filter(p => p.status !== 'In Stock').map(product => {
-    const imageUrl = product.id === 'prod_4' 
-      ? "https://images.unsplash.com/photo-1487015307662-6ce6210680f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU3Njk1NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-      : `https://picsum.photos/seed/${product.id}/600/800`;
+    let imageUrl;
+    if (product.id === 'prod_4') {
+      imageUrl = "https://images.unsplash.com/photo-1487015307662-6ce6210680f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU3Njk1NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080";
+    } else if (product.id === 'prod_5') {
+      imageUrl = "https://images.unsplash.com/photo-1721222204755-669d8056cdb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b29kZW4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU3Njk1NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    } else {
+      imageUrl = `https://picsum.photos/seed/${product.id}/600/800`;
+    }
 
     return {
       ...product,
