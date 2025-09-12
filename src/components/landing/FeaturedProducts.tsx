@@ -1,3 +1,5 @@
+'use client';
+
 import { products as allProducts } from '@/lib/placeholder-data';
 import ProductCard from '../products/ProductCard';
 import { Button } from '../ui/button';
@@ -10,6 +12,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+import React from 'react';
 
 export default function FeaturedProducts() {
   const featuredProducts = allProducts.slice(0, 5).map(product => {
@@ -19,6 +23,10 @@ export default function FeaturedProducts() {
       imageHint: 'furniture piece'
     }
   });
+
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
 
   return (
     <section className="bg-background py-16 md:py-24">
@@ -32,11 +40,14 @@ export default function FeaturedProducts() {
         
         <ScrollAnimationWrapper delay={200}>
           <Carousel
+            plugins={[plugin.current]}
             opts={{
               align: "start",
               loop: true,
             }}
             className="w-full"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
               {featuredProducts.map((product) => (
