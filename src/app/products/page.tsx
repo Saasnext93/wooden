@@ -7,9 +7,14 @@ import ProductFilters from '@/components/products/ProductFilters';
 import ProductGrid from '@/components/products/ProductGrid';
 
 const productsWithImages = allProducts.map(product => {
+  let imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
+  if (product.id === 'prod_1') {
+      imageUrl = "https://images.unsplash.com/photo-1516650556972-e9904734f467?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxM3x8d29vZGVuJTIwZnVybml0dXJlfGVufDB8fHx8MTc1NzY5NTc1M3ww&ixlib=rb-4.1.0&q=80&w=1080";
+  }
+
   return {
     ...product,
-    imageUrl: `https://picsum.photos/seed/${product.id}/600/600`,
+    imageUrl: imageUrl,
     imageHint: 'furniture piece'
   }
 });
