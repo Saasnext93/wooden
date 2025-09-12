@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 export default function AboutSection() {
     const aboutImage = {
-        imageUrl: "https://picsum.photos/seed/about/800/600",
+        imageUrl: "https://images.unsplash.com/photo-1653971858625-9cb23d0dca80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8JTIwd29vZGVuJTIwZnVybml0dXJlfGVufDB8fHx8MTc1NzY5NjEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
         description: "Image for the about section",
         imageHint: "woodworking tools"
     };
