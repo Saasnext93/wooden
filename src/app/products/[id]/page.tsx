@@ -3,7 +3,6 @@
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { products as allProducts } from '@/lib/placeholder-data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Star, Truck, ShieldCheck, Phone } from 'lucide-react';
 import Link from 'next/link';
@@ -20,7 +19,6 @@ export default function ProductDetailPage() {
   }, []);
 
   const product = allProducts.find(p => p.id === id);
-  const placeholderImage = product ? PlaceHolderImages.find(p => p.id === product.imageId) : undefined;
 
   if (!product) {
     return (
@@ -34,8 +32,8 @@ export default function ProductDetailPage() {
     );
   }
 
-  const imageUrl = placeholderImage?.imageUrl ?? `https://picsum.photos/seed/${product.id}/1600/900`;
-  const imageHint = placeholderImage?.imageHint ?? 'furniture piece';
+  const imageUrl = `https://picsum.photos/seed/${product.id}/1600/900`;
+  const imageHint = 'furniture piece';
 
   return (
     <div>

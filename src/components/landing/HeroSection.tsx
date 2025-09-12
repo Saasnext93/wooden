@@ -1,12 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
 import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
+  const heroImage = {
+      imageUrl: "https://picsum.photos/seed/hero/1920/1080",
+      description: "Hero image for the landing page",
+      imageHint: "modern living room"
+  };
 
   return (
     <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-white">

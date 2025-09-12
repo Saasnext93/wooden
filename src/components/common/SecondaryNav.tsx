@@ -12,7 +12,6 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function SecondaryNav() {
   const pathname = usePathname();
@@ -22,7 +21,7 @@ export default function SecondaryNav() {
       <NavigationMenu>
         <NavigationMenuList>
           {secondaryNavigationLinks.map(link => {
-             const categoryImage = PlaceHolderImages.find(p => p.id === link.items?.[0]?.imageId);
+             const categoryImageId = link.items?.[0]?.imageId;
             return (
               <NavigationMenuItem key={link.title}>
                 <NavigationMenuTrigger
@@ -42,14 +41,14 @@ export default function SecondaryNav() {
                         <ListItem key={item.title} href={item.href} title={item.title} />
                       ))}
                     </ul>
-                     {categoryImage && (
+                     {categoryImageId && (
                         <div className="p-4 w-[300px] bg-muted/50 flex flex-col justify-between">
                             <div>
                                 <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden">
                                     <Image
-                                    src={categoryImage.imageUrl}
-                                    alt={categoryImage.description}
-                                    data-ai-hint={categoryImage.imageHint}
+                                    src={`https://picsum.photos/seed/${categoryImageId}/400/400`}
+                                    alt={link.title}
+                                    data-ai-hint="furniture category"
                                     fill
                                     className="object-cover"
                                     />

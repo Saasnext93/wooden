@@ -5,14 +5,12 @@ import type { Product } from '@/lib/types';
 import { products as allProducts } from '@/lib/placeholder-data';
 import ProductFilters from '@/components/products/ProductFilters';
 import ProductGrid from '@/components/products/ProductGrid';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const productsWithImages = allProducts.map(product => {
-  const placeholderImage = PlaceHolderImages.find(p => p.id === product.imageId);
   return {
     ...product,
-    imageUrl: placeholderImage?.imageUrl ?? `https://picsum.photos/seed/${product.id}/600/600`,
-    imageHint: placeholderImage?.imageHint ?? 'furniture piece'
+    imageUrl: `https://picsum.photos/seed/${product.id}/600/600`,
+    imageHint: 'furniture piece'
   }
 });
 

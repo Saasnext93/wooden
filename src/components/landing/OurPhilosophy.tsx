@@ -2,10 +2,13 @@ import ScrollAnimationWrapper from "../animations/ScrollAnimationWrapper";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function OurPhilosophy() {
-  const philosophyImage = PlaceHolderImages.find(p => p.id === 'philosophy');
+  const philosophyImage = {
+      imageUrl: "https://picsum.photos/seed/philosophy/1920/1080",
+      description: "A craftsman carefully working on a piece of wood.",
+      imageHint: "woodworking craftsman"
+  };
   
   return (
     <section className="relative bg-primary text-primary-foreground py-20 md:py-32">

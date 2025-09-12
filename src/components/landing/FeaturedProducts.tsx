@@ -10,15 +10,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function FeaturedProducts() {
   const featuredProducts = allProducts.slice(0, 5).map(product => {
-    const placeholderImage = PlaceHolderImages.find(p => p.id === product.imageId);
     return {
       ...product,
-      imageUrl: placeholderImage?.imageUrl ?? `https://picsum.photos/seed/${product.id}/600/600`,
-      imageHint: placeholderImage?.imageHint ?? 'furniture piece'
+      imageUrl: `https://picsum.photos/seed/${product.id}/600/600`,
+      imageHint: 'furniture piece'
     }
   });
 

@@ -2,7 +2,6 @@ import { Star } from 'lucide-react';
 import Image from 'next/image';
 
 import { testimonials } from '@/lib/placeholder-data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -15,11 +14,10 @@ import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
 
 export default function Testimonials() {
   const testimonialsWithImages = testimonials.map(testimonial => {
-    const placeholderImage = PlaceHolderImages.find(p => p.id === testimonial.imageId);
     return {
       ...testimonial,
-      avatarUrl: placeholderImage?.imageUrl ?? `https://picsum.photos/seed/${testimonial.id}/100/100`,
-      avatarHint: placeholderImage?.imageHint ?? 'customer portrait'
+      avatarUrl: `https://picsum.photos/seed/${testimonial.id}/100/100`,
+      avatarHint: 'customer portrait'
     }
   });
 

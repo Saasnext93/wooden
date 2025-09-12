@@ -6,17 +6,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
 import NewProductCard from '../products/NewProductCard';
 
 export default function NewProducts() {
   const newProducts = allProducts.filter(p => p.status !== 'In Stock').map(product => {
-    const placeholderImage = PlaceHolderImages.find(p => p.id === product.imageId);
     return {
       ...product,
-      imageUrl: placeholderImage?.imageUrl ?? `https://picsum.photos/seed/${product.id}/600/800`,
-      imageHint: placeholderImage?.imageHint ?? 'furniture piece'
+      imageUrl: `https://picsum.photos/seed/${product.id}/600/800`,
+      imageHint: 'furniture piece'
     }
   });
 

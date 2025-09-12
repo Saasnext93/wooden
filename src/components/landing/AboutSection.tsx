@@ -1,11 +1,14 @@
 import Image from "next/image";
 import ScrollAnimationWrapper from "../animations/ScrollAnimationWrapper";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
 export default function AboutSection() {
-    const aboutImage = PlaceHolderImages.find(p => p.id === 'about');
+    const aboutImage = {
+        imageUrl: "https://picsum.photos/seed/about/800/600",
+        description: "Image for the about section",
+        imageHint: "woodworking tools"
+    };
 
     return (
         <section className="bg-background py-16 md:py-24">
