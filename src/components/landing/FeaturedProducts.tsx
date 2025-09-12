@@ -17,9 +17,30 @@ import React from 'react';
 
 export default function FeaturedProducts() {
   const featuredProducts = allProducts.slice(0, 5).map(product => {
+    let imageUrl;
+    switch(product.id) {
+      case 'prod_1':
+        imageUrl = "https://images.unsplash.com/photo-1589271243979-3153ef0dcbd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b29kZW4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU3Njk1NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080";
+        break;
+      case 'prod_2':
+        imageUrl = "https://images.unsplash.com/photo-1543469578-995229712a52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3YWxudXQlMjBjb2ZmZWUlMjB0YWJsZXxlbnwwfHx8fDE3NTc3MDAzNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080";
+        break;
+      case 'prod_3':
+        imageUrl = "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaW5lbiUyMHNvZmF8ZW58MHx8fHwxNzU3NzAwNDIyfDA&ixlib=rb-4.1.0&q=80&w=1080";
+        break;
+      case 'prod_4':
+        imageUrl = "https://images.unsplash.com/photo-1594399333333-5d83a2a34a81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBib29rc2hlbGZ8ZW58MHx8fHwxNzU3NzAwNDczfDA&ixlib=rb-4.1.0&q=80&w=1080";
+        break;
+      case 'prod_5':
+        imageUrl = "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlcmdvbm9taWMlMjBkZXNrJTIwY2hhaXJ8ZW58MHx8fHwxNzU3NzAwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080";
+        break;
+      default:
+        imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
+    }
+
     return {
       ...product,
-      imageUrl: `https://picsum.photos/seed/${product.id}/600/600`,
+      imageUrl,
       imageHint: 'furniture piece'
     }
   });

@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
   const heroImage = {
-      imageUrl: "https://picsum.photos/seed/hero/1920/1080",
+      imageUrl: "/hero.jpg",
       description: "Hero image for the landing page",
       imageHint: "modern living room"
   };
