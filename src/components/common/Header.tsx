@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from '@/components/common/Logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import React, { useState, useEffect } from 'react';
 import {
@@ -71,53 +71,36 @@ export default function Header() {
                 <span className="sr-only">Open Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
-              <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col p-6">
-                <div className="mb-8">
-                  <Logo />
-                </div>
-                <nav className="flex flex-col space-y-4">
-                  {mainNavigationLinks.map((link) => (
+            <SheetContent side="top" className="h-full w-full bg-background/95 backdrop-blur-lg p-0 flex flex-col">
+                <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
+                    <Logo />
+                    <SheetClose asChild>
+                        <Button variant="ghost" size="icon">
+                            <X className="h-6 w-6" />
+                            <span className="sr-only">Close menu</span>
+                        </Button>
+                    </SheetClose>
+                </SheetHeader>
+              <div className="flex-grow flex flex-col items-center justify-center p-6 text-center overflow-y-auto">
+                <nav className="flex flex-col space-y-6">
+                  {mainNavigationLinks.map((link, index) => (
                       <Link
                         key={link.title}
                         href={link.href ?? "/"}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={cn(
-                          'text-lg font-medium transition-colors hover:text-primary',
-                          pathname === link.href ? 'text-primary' : 'text-muted-foreground'
+                          'text-3xl font-headline transition-all duration-500 ease-out opacity-0 translate-y-4',
+                          isMobileMenuOpen && 'opacity-100 translate-y-0',
+                          pathname === link.href ? 'text-primary' : 'text-foreground hover:text-primary'
                         )}
+                        style={{ transitionDelay: `${150 * (index + 1)}ms`}}
                       >
                         {link.title}
                       </Link>
                   ))}
-                   <div className="pt-4 mt-4 border-t">
-                    {secondaryNavigationLinks.map((link) => (
-                      <div key={link.title}>
-                        <h3 className="font-semibold text-lg mt-4">{link.title}</h3>
-                        <div className="flex flex-col space-y-2 mt-2 ml-2">
-                        {link.items?.map((item, index) => (
-                          <Link
-                            key={`${item.title}-${index}`}
-                            href={item.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className={cn(
-                              'text-muted-foreground transition-colors hover:text-primary',
-                              pathname === item.href ? 'text-primary' : ''
-                            )}
-                          >
-                            {item.title}
-                          </Link>
-                        ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </nav>
-                <div className="mt-8">
-                    <Button asChild className='w-full'>
+                <div className="mt-12 w-full max-w-xs">
+                    <Button asChild className='w-full' size="lg">
                         <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Get Quote</Link>
                     </Button>
                 </div>
