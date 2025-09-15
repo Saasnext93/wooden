@@ -4,74 +4,74 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%; /* Very Light Blue-Gray */
-    --foreground: 210 10% 23%; /* Dark Slate Gray */
+    --background: 35 33% 96%; /* Light Warm Beige */
+    --foreground: 25 25% 20%; /* Dark Brown */
     --card: 0 0% 100%;
-    --card-foreground: 210 10% 23%;
+    --card-foreground: 25 25% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 23%;
-    --primary: 210 70% 45%; /* Slate Blue */
-    --primary-foreground: 210 40% 98%; /* Light color for text on blue */
-    --secondary: 210 40% 90%; /* Light Blue-Gray */
-    --secondary-foreground: 210 10% 23%;
-    --muted: 210 40% 94%;
-    --muted-foreground: 210 10% 45%;
-    --accent: 210 40% 94%; /* Subtle Accent */
-    --accent-foreground: 210 10% 23%;
+    --popover-foreground: 25 25% 20%;
+    --primary: 30 50% 40%; /* Medium Warm Brown (Oak/Teak) */
+    --primary-foreground: 35 33% 96%; /* Light Warm Beige for text on brown */
+    --secondary: 30 40% 90%; /* Lighter, Softer Brown */
+    --secondary-foreground: 25 25% 25%;
+    --muted: 30 40% 94%;
+    --muted-foreground: 25 20% 45%;
+    --accent: 120 10% 94%; /* Muted Earthy Green */
+    --accent-foreground: 25 25% 20%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 210 70% 45%;
-    --chart-1: 210 70% 45%;
-    --chart-2: 210 70% 65%;
-    --chart-3: 210 70% 25%;
-    --chart-4: 210 10% 50%;
-    --chart-5: 210 10% 70%;
+    --border: 30 20% 88%; /* Soft Light Brown */
+    --input: 30 20% 88%;
+    --ring: 30 50% 40%;
+    --chart-1: 30 50% 40%;
+    --chart-2: 30 50% 60%;
+    --chart-3: 30 50% 20%;
+    --chart-4: 30 20% 50%;
+    --chart-5: 30 20% 70%;
     --radius: 0.5rem;
-    --sidebar-background: 210 20% 15%;
-    --sidebar-foreground: 210 40% 95%;
-    --sidebar-primary: 210 70% 55%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 210 20% 25%;
-    --sidebar-accent-foreground: 210 40% 95%;
-    --sidebar-border: 210 20% 30%;
-    --sidebar-ring: 210 70% 55%;
+    --sidebar-background: 25 25% 15%;
+    --sidebar-foreground: 35 33% 95%;
+    --sidebar-primary: 30 50% 50%;
+    --sidebar-primary-foreground: 35 33% 96%;
+    --sidebar-accent: 25 25% 25%;
+    --sidebar-accent-foreground: 35 33% 95%;
+    --sidebar-border: 25 25% 30%;
+    --sidebar-ring: 30 50% 50%;
   }
 
   .dark {
-    --background: 210 40% 98%; /* Very Light Blue-Gray */
-    --foreground: 210 10% 23%; /* Dark Slate Gray */
-    --card: 0 0% 100%;
-    --card-foreground: 210 10% 23%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 23%;
-    --primary: 210 70% 45%; /* Slate Blue */
-    --primary-foreground: 210 40% 98%; /* Light color for text on blue */
-    --secondary: 210 40% 90%; /* Light Blue-Gray */
-    --secondary-foreground: 210 10% 23%;
-    --muted: 210 40% 94%;
-    --muted-foreground: 210 10% 45%;
-    --accent: 210 40% 94%; /* Subtle Accent */
-    --accent-foreground: 210 10% 23%;
+    --background: 25 25% 15%; /* Deep Dark Brown */
+    --foreground: 35 33% 92%; /* Off-white */
+    --card: 25 25% 20%;
+    --card-foreground: 35 33% 92%;
+    --popover: 25 25% 20%;
+    --popover-foreground: 35 33% 92%;
+    --primary: 30 50% 60%; /* Lighter Warm Brown */
+    --primary-foreground: 25 25% 10%; /* Dark Brown for text on light brown */
+    --secondary: 25 25% 25%; /* Darker, Softer Brown */
+    --secondary-foreground: 35 33% 92%;
+    --muted: 25 25% 22%;
+    --muted-foreground: 35 20% 65%;
+    --accent: 120 10% 22%; /* Dark Muted Green */
+    --accent-foreground: 35 33% 92%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 210 70% 45%;
-    --chart-1: 210 70% 45%;
-    --chart-2: 210 70% 65%;
-    --chart-3: 210 70% 25%;
-    --chart-4: 210 10% 50%;
-    --chart-5: 210 10% 70%;
-    --sidebar-background: 210 20% 15%;
-    --sidebar-foreground: 210 40% 95%;
-    --sidebar-primary: 210 70% 55%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 210 20% 25%;
-    --sidebar-accent-foreground: 210 40% 95%;
-    --sidebar-border: 210 20% 30%;
-    --sidebar-ring: 210 70% 55%;
+    --border: 25 25% 30%; /* Dark Soft Brown */
+    --input: 25 25% 30%;
+    --ring: 30 50% 60%;
+    --chart-1: 30 50% 60%;
+    --chart-2: 30 50% 40%;
+    --chart-3: 30 50% 80%;
+    --chart-4: 30 20% 50%;
+    --chart-5: 30 20% 70%;
+    --sidebar-background: 25 25% 10%;
+    --sidebar-foreground: 35 33% 95%;
+    --sidebar-primary: 30 50% 60%;
+    --sidebar-primary-foreground: 25 25% 10%;
+    --sidebar-accent: 25 25% 20%;
+    --sidebar-accent-foreground: 35 33% 95%;
+    --sidebar-border: 25 25% 25%;
+    --sidebar-ring: 30 50% 60%;
   }
 }
 
