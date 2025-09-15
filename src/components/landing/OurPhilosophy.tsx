@@ -5,17 +5,17 @@ import { Button } from "../ui/button";
 
 const philosophyPillars = [
     {
-        icon: <Leaf className="w-10 h-10 text-primary mb-4" />,
+        icon: <Leaf className="w-12 h-12 text-primary mb-6" />,
         title: "Sustainability",
         description: "We are committed to our planet. Our materials are responsibly sourced, ensuring that your furniture is not only beautiful but also environmentally conscious.",
     },
     {
-        icon: <Brush className="w-10 h-10 text-primary mb-4" />,
+        icon: <Brush className="w-12 h-12 text-primary mb-6" />,
         title: "Artistry",
         description: "Each piece is a celebration of the artisan's touch. We honor traditional techniques while embracing modern design to create timeless furniture.",
     },
     {
-        icon: <ShieldCheck className="w-10 h-10 text-primary mb-4" />,
+        icon: <ShieldCheck className="w-12 h-12 text-primary mb-6" />,
         title: "Quality",
         description: "We believe in furniture that lasts. From the choice of wood to the final finish, every detail is a promise of enduring quality and durability.",
     },
@@ -26,7 +26,7 @@ export default function OurPhilosophy() {
     <section className="bg-accent py-20 md:py-32">
       <div className="container mx-auto px-4">
         <ScrollAnimationWrapper className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
               Our Philosophy
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -36,17 +36,17 @@ export default function OurPhilosophy() {
 
         <div className="grid md:grid-cols-3 gap-12 text-center">
             {philosophyPillars.map((pillar, index) => (
-                <ScrollAnimationWrapper key={pillar.title} delay={index * 150}>
-                    <div className="flex flex-col items-center">
+                <ScrollAnimationWrapper key={pillar.title} delay={index * 200}>
+                    <div className="flex flex-col items-center p-6 transition-all duration-300 hover:bg-background/50 hover:shadow-2xl hover:scale-105 rounded-xl">
                         {pillar.icon}
-                        <h3 className="text-2xl font-headline font-semibold text-primary mb-3">{pillar.title}</h3>
-                        <p className="text-muted-foreground">{pillar.description}</p>
+                        <h3 className="text-3xl font-headline font-semibold text-primary mb-4">{pillar.title}</h3>
+                        <p className="text-base text-muted-foreground">{pillar.description}</p>
                     </div>
                 </ScrollAnimationWrapper>
             ))}
         </div>
         
-        <ScrollAnimationWrapper className="text-center mt-16" delay={450}>
+        <ScrollAnimationWrapper className="text-center mt-16" delay={600}>
             <Button variant="outline" asChild>
               <Link href="/#manufacturing">Discover Our Process</Link>
             </Button>
