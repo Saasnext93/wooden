@@ -4,6 +4,7 @@ import Header from "@/components/common/Header"
 import Footer from "@/components/common/Footer"
 import SecondaryNav from '@/components/common/SecondaryNav';
 import './globals.css';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: 'Pinnacle Modular Furniture',
@@ -26,7 +27,9 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <div className="sticky top-0 z-50">
             <Header />
-            <SecondaryNav />
+            <Suspense fallback={<div className="h-12 border-b"></div>}>
+              <SecondaryNav />
+            </Suspense>
           </div>
           <div className="flex-1">{children}</div>
           <Footer />
