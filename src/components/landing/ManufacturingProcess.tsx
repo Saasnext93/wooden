@@ -31,7 +31,7 @@ const processSteps = [
 
 export default function ManufacturingProcess() {
     return (
-        <section className="bg-accent py-16 md:py-24">
+        <section id="manufacturing" className="bg-accent py-16 md:py-24 scroll-mt-20">
             <div className="container mx-auto px-4">
                 <ScrollAnimationWrapper className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">From Forest to Furniture</h2>
@@ -41,33 +41,45 @@ export default function ManufacturingProcess() {
                 </ScrollAnimationWrapper>
 
                 <div className="relative">
-                    {/* The timeline line */}
-                    <div className="absolute left-1/2 top-0 h-full w-0.5 bg-primary/20 -translate-x-1/2 hidden md:block" />
+                    <div className="absolute left-1/2 top-0 h-full w-0.5 bg-primary/20 -translate-x-1/2 hidden md:block" aria-hidden="true" />
 
                     <div className="space-y-16">
-                        {processSteps.map((step, index) => (
-                            <ScrollAnimationWrapper key={index} delay={index * 150}>
-                                <div className="flex flex-col md:flex-row items-center">
-                                    {/* Left Side (or Top on Mobile) */}
-                                    <div className={`flex-1 flex md:justify-center ${index % 2 === 0 ? 'md:order-1' : 'md:order-3'}`}>
-                                        <div className="max-w-md p-6 text-center md:text-left">
-                                            <h3 className="text-2xl font-headline font-bold text-primary mb-2">{step.title}</h3>
-                                            <p className="text-muted-foreground">{step.description}</p>
+                        {processSteps.map((step, index) => {
+                            const isEven = index % 2 === 0;
+                            return (
+                                <div key={index} className="relative flex items-center">
+                                    <div className={`w-full flex ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:items-center`}>
+                                        
+                                        {/* Content Block */}
+                                        <div className="w-full md:w-5/12">
+                                            <ScrollAnimationWrapper 
+                                                className={`transform ${isEven ? 'md:translate-x-[-2rem]' : 'md:translate-x-[2rem]'} [&.is-visible]:translate-x-0 transition-transform duration-1000 ease-out`}
+                                            >
+                                                <div className={`p-6 bg-background rounded-lg shadow-lg ${isEven ? 'md:text-right' : 'md:text-left'} text-center`}>
+                                                    <h3 className="text-2xl font-headline font-bold text-primary mb-2">{step.title}</h3>
+                                                    <p className="text-muted-foreground">{step.description}</p>
+                                                </div>
+                                            </ScrollAnimationWrapper>
                                         </div>
-                                    </div>
 
-                                    {/* Center Icon */}
-                                    <div className="flex-shrink-0 md:order-2">
-                                        <div className="w-20 h-20 bg-background rounded-full flex items-center justify-center shadow-lg border-4 border-primary/20 z-10 relative">
-                                            {step.icon}
+                                        {/* Icon */}
+                                        <div className="w-full md:w-2/12 flex justify-center">
+                                            <ScrollAnimationWrapper 
+                                                delay={200}
+                                                className="transform scale-50 [&.is-visible]:scale-100 transition-transform duration-700 ease-in-out"
+                                            >
+                                                <div className="w-20 h-20 my-4 md:my-0 bg-background rounded-full flex items-center justify-center shadow-lg border-4 border-primary/20 z-10 relative">
+                                                    {step.icon}
+                                                </div>
+                                            </ScrollAnimationWrapper>
                                         </div>
+
+                                        {/* Spacer */}
+                                        <div className="hidden md:block md:w-5/12" />
                                     </div>
-                                    
-                                    {/* Right Side (Placeholder) */}
-                                    <div className="flex-1 hidden md:block md:order-1" />
                                 </div>
-                            </ScrollAnimationWrapper>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </div>
