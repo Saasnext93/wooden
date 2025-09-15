@@ -1,3 +1,4 @@
+
 'use client';
 
 import {
@@ -11,28 +12,36 @@ import { secondaryNavigationLinks } from '@/lib/placeholder-data';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function SecondaryNav() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const categories = searchParams.getAll('categories');
 
   return (
     <div className="hidden md:flex justify-center items-center py-2 bg-background border-b z-40 relative">
       <NavigationMenu>
         <NavigationMenuList>
           {secondaryNavigationLinks.map(link => {
-             const categoryImageId = link.items?.[0]?.imageId;
+            const categoryImageId = link.items?.[0]?.imageId;
+
+            // A menu is active if the current path starts with its href
+            // or if one of its category filters is active
+            const isActive = pathname.startsWith(link.href ?? '#') || (link.href?.includes('?categories=') && (link.href.split('?categories=')[1].split('&').some(cat => categories.includes(cat))));
+
+
             return (
               <NavigationMenuItem key={link.title}>
                 <NavigationMenuTrigger
                   className={cn(
                     'text-base font-headline tracking-wider uppercase',
-                    pathname.startsWith(link.href ?? '#')
+                     isActive
                       ? 'text-primary font-bold'
                       : 'text-muted-foreground'
                   )}
                 >
-                  {link.title}
+                   <Link href={link.href ?? '#'}>{link.title}</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="flex">

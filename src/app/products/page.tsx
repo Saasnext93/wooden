@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -5,6 +6,7 @@ import type { Product } from '@/lib/types';
 import { products as allProducts } from '@/lib/placeholder-data';
 import ProductFilters from '@/components/products/ProductFilters';
 import ProductGrid from '@/components/products/ProductGrid';
+import { useSearchParams } from 'next/navigation';
 
 const productsWithImages = allProducts.map(product => {
   let imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
@@ -21,8 +23,11 @@ const productsWithImages = allProducts.map(product => {
 
 
 export default function ProductsPage() {
+  const searchParams = useSearchParams();
+  const initialCategories = searchParams.getAll('categories');
+
   const [filters, setFilters] = useState({
-    categories: [] as string[],
+    categories: initialCategories.length > 0 ? initialCategories : ([] as string[]),
     materials: [] as string[],
   });
   const [sort, setSort] = useState('rating-desc');
