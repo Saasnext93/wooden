@@ -1,4 +1,4 @@
-import { DraftingCompass, Gem, Hand, PackageCheck, Trees } from "lucide-react";
+import { DraftingCompass, Gem, Hand, PackageCheck, Trees, Sofa, Armchair } from "lucide-react";
 import ScrollAnimationWrapper from "../animations/ScrollAnimationWrapper";
 
 const processSteps = [
@@ -13,12 +13,12 @@ const processSteps = [
         description: "We hand-select the finest, sustainably-harvested hardwoods, ensuring each piece has a beautiful origin story and minimal environmental impact.",
     },
     {
-        icon: <Hand className="w-8 h-8 text-primary" />,
+        icon: <Armchair className="w-8 h-8 text-primary" />,
         title: "Artisanal Craftsmanship",
         description: "Our skilled artisans use traditional woodworking techniques to shape, join, and construct each component with precision and care.",
     },
     {
-        icon: <Gem className="w-8 h-8 text-primary" />,
+        icon: <Sofa className="w-8 h-8 text-primary" />,
         title: "Finishing & Detailing",
         description: "The furniture is meticulously sanded, and layers of natural oils or lacquers are applied to protect the wood and enhance its natural grain.",
     },
