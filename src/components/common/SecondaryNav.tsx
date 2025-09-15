@@ -26,7 +26,7 @@ export default function SecondaryNav() {
               <NavigationMenuItem key={link.title}>
                 <NavigationMenuTrigger
                   className={cn(
-                    'text-sm font-headline tracking-wider uppercase',
+                    'text-base font-headline tracking-wider uppercase',
                     pathname.startsWith(link.href ?? '#')
                       ? 'text-primary font-bold'
                       : 'text-muted-foreground'
