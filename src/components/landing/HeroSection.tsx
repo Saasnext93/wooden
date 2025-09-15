@@ -3,26 +3,26 @@ import Link from 'next/link';
 
 const heroPanels = [
   {
-    title: 'Bridge Saws',
+    title: 'Stationary Sofas',
     href: '/products',
-    imageUrl: 'https://images.unsplash.com/photo-1504607798333-52a30e543418?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: '/sofa2.jpg',
     imageHint: 'industrial saw wood',
   },
   {
-    title: 'CNC Machines',
-    imageUrl: 'https://images.unsplash.com/photo-1628126933397-285642a8450a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Home Theatre',
+    imageUrl: '/wooden1.jpg',
     href: '/products',
     imageHint: 'CNC machine cutting',
   },
   {
-    title: 'Polishing Tools',
-    imageUrl: 'https://images.unsplash.com/photo-1607502752523-743431a4eda7?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Recliners',
+    imageUrl: '/wooden2.jpg',
     href: '/products',
     imageHint: 'worker polishing wood',
   },
   {
-    title: 'Diamond Blades',
-    imageUrl: 'https://images.unsplash.com/photo-1595034604233-0137577c4493?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Mattress',
+    imageUrl: '/sofa.jpg',
     href: '/products',
     imageHint: 'saw blade cutting',
   },
