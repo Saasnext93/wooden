@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
+import TypewriterEffect from '../animations/TypewriterEffect';
 import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
@@ -26,8 +27,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 text-center p-4">
         <ScrollAnimationWrapper>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-4 drop-shadow-md">
-            Timeless Design, Modern Craft
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-4 drop-shadow-md min-h-[100px] md:min-h-[160px] lg:min-h-[180px]">
+            <TypewriterEffect text="Timeless Design, Modern Craft" />
           </h1>
         </ScrollAnimationWrapper>
         <ScrollAnimationWrapper delay={200}>
