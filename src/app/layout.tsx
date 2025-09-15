@@ -5,6 +5,7 @@ import Footer from "@/components/common/Footer"
 import SecondaryNav from '@/components/common/SecondaryNav';
 import './globals.css';
 import { Suspense } from 'react';
+import Loader from '@/components/common/Loader';
 
 export const metadata: Metadata = {
   title: 'Pinnacle Modular Furniture',
@@ -24,17 +25,19 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
-        <div className="flex flex-col min-h-screen">
-          <div className="sticky top-0 z-50">
-            <Header />
-            <Suspense fallback={<div className="h-12 border-b"></div>}>
-              <SecondaryNav />
-            </Suspense>
-          </div>
-          <div className="flex-1">{children}</div>
-          <Footer />
-        </div>
-        <Toaster />
+        <Suspense fallback={<Loader />}>
+            <div className="flex flex-col min-h-screen">
+            <div className="sticky top-0 z-50">
+                <Header />
+                 <Suspense fallback={<div className="h-12 border-b"></div>}>
+                    <SecondaryNav />
+                 </Suspense>
+            </div>
+            <div className="flex-1">{children}</div>
+            <Footer />
+            </div>
+            <Toaster />
+        </Suspense>
       </body>
     </html>
   );
