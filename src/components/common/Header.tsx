@@ -31,7 +31,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={cn("w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300 z-50", isScrolled ? 'py-2' : 'py-4')}>
+    <header className={cn("w-full border-b bg-background transition-all duration-300 z-50", isScrolled ? 'py-2' : 'py-4')}>
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center">
