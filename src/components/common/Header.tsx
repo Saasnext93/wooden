@@ -65,7 +65,7 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent focus-visible:bg-transparent relative z-[60]">
+              <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent focus-visible:bg-transparent">
                 <AnimatedHamburgerIcon isOpen={isMobileMenuOpen} />
                 <span className="sr-only">Open Menu</span>
               </Button>
@@ -74,6 +74,10 @@ export default function Header() {
                 <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
                     <Logo />
                     <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+                    <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)} className="text-primary hover:bg-transparent focus-visible:bg-transparent">
+                        <AnimatedHamburgerIcon isOpen={true} />
+                        <span className="sr-only">Close Menu</span>
+                    </Button>
                 </SheetHeader>
               <div className="flex-grow flex flex-col items-center justify-center p-6 text-center overflow-y-auto">
                 <nav className="flex flex-col space-y-6">
