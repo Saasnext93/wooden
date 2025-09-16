@@ -30,7 +30,7 @@ const heroPanels = [
 
 export default function HeroSection() {
   return (
-    <section className="h-[70vh] md:h-[90vh] w-full grid grid-cols-1 md:grid-cols-4">
+    <section className="h-[70vh] md:h-[90vh] w-full grid grid-cols-2 md:grid-cols-4">
       {heroPanels.map((panel) => (
         <Link href={panel.href} key={panel.title}>
           <div className="relative h-full w-full group overflow-hidden">
@@ -43,7 +43,7 @@ export default function HeroSection() {
             />
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 flex h-full items-end justify-center p-8">
-              <h2 className="text-white text-2xl md:text-3xl font-headline font-bold drop-shadow-md text-center transform transition-transform duration-500 ease-in-out group-hover:-translate-y-2">
+              <h2 className="text-white text-xl md:text-3xl font-headline font-bold drop-shadow-md text-center transform transition-transform duration-500 ease-in-out group-hover:-translate-y-2">
                 {panel.title}
               </h2>
             </div>
