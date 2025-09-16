@@ -16,6 +16,7 @@ import {
 import { mainNavigationLinks } from '@/lib/placeholder-data';
 import AnimatedHamburgerIcon from './AnimatedHamburgerIcon';
 import SecondaryNav from './SecondaryNav';
+import MobileSecondaryNav from './MobileSecondaryNav';
 
 export default function Header() {
   const pathname = usePathname();
@@ -89,29 +90,35 @@ export default function Header() {
                           <span className="sr-only">Close Menu</span>
                       </Button>
                   </SheetHeader>
-                <div className="flex-grow flex flex-col items-center justify-center p-6 text-center overflow-y-auto">
-                  <nav className="flex flex-col space-y-6">
-                    {mainNavigationLinks.map((link, index) => (
-                        <Link
-                          key={link.title}
-                          href={link.href ?? "/"}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className={cn(
-                            'text-3xl font-headline transition-all duration-500 ease-out opacity-0 translate-y-4',
-                            isMobileMenuOpen && 'opacity-100 translate-y-0',
-                            pathname === link.href ? 'text-primary' : 'text-foreground hover:text-primary'
-                          )}
-                          style={{ transitionDelay: `${150 * (index + 1)}ms`}}
-                        >
-                          {link.title}
-                        </Link>
-                    ))}
-                  </nav>
-                  <div className="mt-12 w-full max-w-xs">
-                      <Button asChild className='w-full' size="lg">
-                          <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Get Quote</Link>
-                      </Button>
-                  </div>
+                <div className="flex-grow flex flex-col justify-center p-6 text-center overflow-y-auto">
+                    <div className="w-full max-w-sm mx-auto">
+                        <nav className="flex flex-col space-y-6">
+                            {mainNavigationLinks.map((link, index) => (
+                                <Link
+                                key={link.title}
+                                href={link.href ?? "/"}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className={cn(
+                                    'text-3xl font-headline transition-all duration-500 ease-out opacity-0 translate-y-4',
+                                    isMobileMenuOpen && 'opacity-100 translate-y-0',
+                                    pathname === link.href ? 'text-primary' : 'text-foreground hover:text-primary'
+                                )}
+                                style={{ transitionDelay: `${150 * (index + 1)}ms`}}
+                                >
+                                {link.title}
+                                </Link>
+                            ))}
+                        </nav>
+                        <div className="my-8 border-t"></div>
+                        <Suspense fallback={<div>Loading categories...</div>}>
+                            <MobileSecondaryNav />
+                        </Suspense>
+                        <div className="mt-12 w-full">
+                            <Button asChild className='w-full' size="lg">
+                                <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Get Quote</Link>
+                            </Button>
+                        </div>
+                    </div>
                 </div>
               </SheetContent>
             </Sheet>
