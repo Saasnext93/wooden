@@ -111,3 +111,22 @@
     animation: loader-fade-out 0.5s ease-out forwards;
   }
 }
+
+
+@layer components {
+  .hamburger-icon {
+    @apply w-6 h-6 flex flex-col justify-around;
+  }
+  .hamburger-line {
+    @apply w-full h-[2px] bg-primary rounded-full transition-all duration-300 ease-in-out;
+  }
+  .hamburger-line-1-open {
+    @apply translate-y-[8px] rotate-45;
+  }
+  .hamburger-line-2-open {
+    @apply opacity-0;
+  }
+  .hamburger-line-3-open {
+    @apply -translate-y-[8px] -rotate-45;
+  }
+}

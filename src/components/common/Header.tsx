@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
 import Logo from '@/components/common/Logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import React, { useState, useEffect } from 'react';
 import {
@@ -13,9 +12,9 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { mainNavigationLinks, secondaryNavigationLinks } from '@/lib/placeholder-data';
+import { mainNavigationLinks } from '@/lib/placeholder-data';
+import AnimatedHamburgerIcon from './AnimatedHamburgerIcon';
 
 export default function Header() {
   const pathname = usePathname();
@@ -66,12 +65,12 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent focus-visible:bg-transparent">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent focus-visible:bg-transparent relative z-[60]">
+                <AnimatedHamburgerIcon isOpen={isMobileMenuOpen} />
                 <span className="sr-only">Open Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="top" className="h-full w-full bg-background/95 backdrop-blur-lg p-0 flex flex-col">
+            <SheetContent side="top" className="h-full w-full bg-background/95 backdrop-blur-lg p-0 flex flex-col z-50">
                 <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
                     <Logo />
                 </SheetHeader>
