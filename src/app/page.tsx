@@ -6,6 +6,7 @@ import ManufacturingProcess from "@/components/landing/ManufacturingProcess";
 import NewProducts from "@/components/landing/NewProducts";
 import OurPhilosophy from "@/components/landing/OurPhilosophy";
 import Testimonials from "@/components/landing/Testimonials";
+import TrustBadges from "@/components/landing/TrustBadges";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutSection />
       <ManufacturingProcess />
       <Testimonials />
+      <TrustBadges />
       <ContactForm />
     </div>
   );
