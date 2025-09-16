@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from '@/components/common/Logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import React, { useState, useEffect } from 'react';
 import {
@@ -73,6 +73,7 @@ export default function Header() {
             <SheetContent side="top" className="h-full w-full bg-background/95 backdrop-blur-lg p-0 flex flex-col z-50">
                 <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
                     <Logo />
+                    <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                 </SheetHeader>
               <div className="flex-grow flex flex-col items-center justify-center p-6 text-center overflow-y-auto">
                 <nav className="flex flex-col space-y-6">
