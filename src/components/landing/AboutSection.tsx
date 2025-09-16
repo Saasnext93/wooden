@@ -11,22 +11,9 @@ export default function AboutSection() {
     };
 
     return (
-        <section id="about" className="bg-accent/50 py-24 md:py-32 scroll-mt-20">
+        <section id="about" className="bg-background py-24 md:py-32 scroll-mt-20 overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <ScrollAnimationWrapper delay={200} className="flex justify-center">
-                        <div className="relative w-80 h-80 md:w-96 md:h-96">
-                             {aboutImage && (
-                                <Image 
-                                    src={aboutImage.imageUrl}
-                                    alt={aboutImage.description}
-                                    data-ai-hint={aboutImage.imageHint}
-                                    fill
-                                    className="rounded-full shadow-2xl object-cover border-8 border-background"
-                                />
-                            )}
-                        </div>
-                    </ScrollAnimationWrapper>
                     <ScrollAnimationWrapper>
                         <div className="text-center md:text-left">
                             <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">The Soul of Wood, The Heart of a Home</h2>
@@ -39,6 +26,20 @@ export default function AboutSection() {
                              <Button asChild>
                                 <Link href="/#manufacturing">Our Process</Link>
                             </Button>
+                        </div>
+                    </ScrollAnimationWrapper>
+                     <ScrollAnimationWrapper delay={200} className="flex justify-center items-center h-full">
+                        <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px]">
+                             <div className="absolute inset-0 bg-accent rotate-12 rounded-3xl"></div>
+                             {aboutImage && (
+                                <Image 
+                                    src={aboutImage.imageUrl}
+                                    alt={aboutImage.description}
+                                    data-ai-hint={aboutImage.imageHint}
+                                    fill
+                                    className="rounded-3xl shadow-2xl object-cover"
+                                />
+                            )}
                         </div>
                     </ScrollAnimationWrapper>
                 </div>
