@@ -74,12 +74,6 @@ export default function Header() {
             <SheetContent side="top" className="h-full w-full bg-background/95 backdrop-blur-lg p-0 flex flex-col">
                 <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
                     <Logo />
-                    <SheetClose asChild>
-                        <Button variant="ghost" size="icon">
-                            <X className="h-6 w-6" />
-                            <span className="sr-only">Close menu</span>
-                        </Button>
-                    </SheetClose>
                 </SheetHeader>
               <div className="flex-grow flex flex-col items-center justify-center p-6 text-center overflow-y-auto">
                 <nav className="flex flex-col space-y-6">
