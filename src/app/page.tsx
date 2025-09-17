@@ -9,6 +9,7 @@ import OurPhilosophy from "@/components/landing/OurPhilosophy";
 import StatsSection from "@/components/landing/StatsSection";
 import Testimonials from "@/components/landing/Testimonials";
 import TrustBadges from "@/components/landing/TrustBadges";
+import WhyChooseUs from "@/components/landing/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <NewProducts />
       <AboutSection />
       <ManufacturingProcess />
+      <WhyChooseUs />
       <Testimonials />
       <TrustBadges />
       <ContactForm />
