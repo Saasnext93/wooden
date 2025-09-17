@@ -60,28 +60,13 @@ export default function FeaturedProducts() {
         </ScrollAnimationWrapper>
         
         <ScrollAnimationWrapper delay={200}>
-          <Carousel
-            plugins={[plugin.current]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-          >
-            <CarouselContent>
-              {featuredProducts.map((product) => (
-                <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredProducts.slice(0,3).map((product) => (
+                <div key={product.id}>
                     <ProductCard product={product} />
-                  </div>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+          </div>
         </ScrollAnimationWrapper>
 
         <ScrollAnimationWrapper className="text-center mt-12" delay={400}>

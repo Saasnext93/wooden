@@ -16,9 +16,9 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <FeaturedSlider />
-      <NewProducts />
       <OurPhilosophy />
       <FeaturedProducts />
+      <NewProducts />
       <AboutSection />
       <ManufacturingProcess />
       <Testimonials />
