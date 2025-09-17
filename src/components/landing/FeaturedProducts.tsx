@@ -136,7 +136,7 @@ export default function FeaturedProducts() {
             imageUrl = "/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg";
             break;
         case 'prod_7':
-            imageUrl = "/modern-kids-bunk-bedroom-design-with-study-area.jpg";
+            imageUrl = "/modern-bedroom-design-with-a-double-bed-and-an-ottoman-bench.jpg";
             break;
         case 'prod_8':
             imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
