@@ -7,6 +7,7 @@ import Link from 'next/link';
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, useMemo } from 'react';
+import { ScrollArea } from '../ui/scroll-area';
 
 export default function FeaturedProducts() {
   const categories = [
@@ -78,21 +79,25 @@ export default function FeaturedProducts() {
         <ScrollAnimationWrapper delay={200}>
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <div className="flex justify-center mb-8">
-                    <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 h-auto">
+                  <ScrollArea className="w-full whitespace-nowrap rounded-lg">
+                    <TabsList className="h-auto bg-transparent p-0">
                         {categories.map(category => (
-                             <TabsTrigger key={category} value={category} className="text-xs sm:text-sm">{category}</TabsTrigger>
+                             <TabsTrigger key={category} value={category} className="text-base mx-2 first:ml-0 last:mr-0 data-[state=active]:shadow-none data-[state=active]:bg-accent data-[state=active]:text-primary">{category}</TabsTrigger>
                         ))}
                     </TabsList>
+                  </ScrollArea>
                 </div>
-                <TabsContent value={activeTab}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {filteredProducts.map((product) => (
-                            <div key={product.id}>
-                                <ProductCard product={product} />
-                            </div>
-                        ))}
-                    </div>
-                </TabsContent>
+                {categories.map(category => (
+                  <TabsContent key={category} value={category}>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                          {filteredProducts.map((product) => (
+                              <div key={product.id}>
+                                  <ProductCard product={product} />
+                              </div>
+                          ))}
+                      </div>
+                  </TabsContent>
+                ))}
             </Tabs>
         </ScrollAnimationWrapper>
 
