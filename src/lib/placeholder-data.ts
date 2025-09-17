@@ -4,7 +4,7 @@ import type { Product, Testimonial, NavigationLink } from './types';
 export const products: Product[] = [
   {
     id: 'prod_1',
-    name: 'Classic Oak Armchair',
+    name: 'L-Shaped Kitchen Design',
     description: 'A timeless piece, handcrafted from solid oak with a natural finish. Perfect for any living room.',
     price: 450,
     imageId: 'product1',
@@ -15,7 +15,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_2',
-    name: 'Walnut Coffee Table',
+    name: 'Modern Wardrobe Design',
     description: 'Minimalist design meets rich walnut wood. This coffee table is a statement of elegance.',
     price: 620,
     imageId: 'product2',
@@ -26,7 +26,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_3',
-    name: 'Linen Blend Sofa',
+    name: 'Master Bedroom Design',
     description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
     price: 1250,
     imageId: 'product3',
@@ -37,7 +37,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_4',
-    name: 'Modern Bookshelf',
+    name: 'Art Deco Kids Bedroom',
     description: 'Display your collection in style with this sleek and sturdy bookshelf, made from reclaimed pine.',
     price: 780,
     imageId: 'product4',
@@ -49,7 +49,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_5',
-    name: 'Ergonomic Desk Chair',
+    name: 'Parallel Kitchen Design',
     description: 'Designed for comfort and style, this chair features a beautiful ash wood frame and leather seat.',
     price: 530,
     imageId: 'product5',

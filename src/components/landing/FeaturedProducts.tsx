@@ -24,19 +24,19 @@ export default function FeaturedProducts() {
     let imageUrl;
     switch(product.id) {
         case 'prod_1':
-            imageUrl = "/sofa.jpg";
-            break;
-        case 'prod_2':
-            imageUrl = "/wooden1.jpg";
-            break;
-        case 'prod_3':
-            imageUrl = "/wooden2.jpg";
-            break;
-        case 'prod_4':
             imageUrl = "/l-shaped-kitchen-design-with-island-and-white-cabinets.jpg";
             break;
-        case 'prod_5':
+        case 'prod_2':
+            imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
+            break;
+        case 'prod_3':
             imageUrl = "/modern-master-bedroom-design-with-a-brown-tufted-headboard.jpg";
+            break;
+        case 'prod_4':
+            imageUrl = "/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg";
+            break;
+        case 'prod_5':
+            imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
             break;
         default:
             imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
