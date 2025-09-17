@@ -106,7 +106,7 @@ export default function SecondaryNav() {
                             <div>
                                 <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden">
                                     <Image
-                                    src={`https://picsum.photos/seed/${categoryImageId}/400/400`}
+                                    src={`/wooden.jpg`}
                                     alt={link.title}
                                     data-ai-hint="furniture category"
                                     fill
