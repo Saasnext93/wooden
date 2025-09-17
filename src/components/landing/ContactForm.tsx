@@ -78,7 +78,7 @@ export default function ContactForm() {
           </p>
         </ScrollAnimationWrapper>
 
-        <div className="grid md:grid-cols-5 gap-8 items-center bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="grid md:grid-cols-5 gap-8 items-center bg-card rounded-xl shadow-lg overflow-hidden">
           {/* Left Column: Map */}
           <div className="md:col-span-3 p-8">
             <Image
@@ -92,9 +92,9 @@ export default function ContactForm() {
           </div>
 
           {/* Right Column: Form */}
-          <div className="md:col-span-2 bg-rose-500 p-8 h-full flex flex-col justify-center">
+          <div className="md:col-span-2 bg-primary p-8 h-full flex flex-col justify-center">
             <ScrollAnimationWrapper delay={200} className="w-full">
-               <h3 className="text-2xl font-headline font-bold text-white mb-6 text-center">
+               <h3 className="text-2xl font-headline font-bold text-primary-foreground mb-6 text-center">
                 Interior Design Services Executed to Perfection
               </h3>
               <Form {...form}>
@@ -104,9 +104,9 @@ export default function ContactForm() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Name*</FormLabel>
+                        <FormLabel className="text-primary-foreground">Name*</FormLabel>
                         <FormControl>
-                          <Input {...field} className="bg-white" />
+                          <Input {...field} className="bg-background" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -115,7 +115,7 @@ export default function ContactForm() {
                   <div className="flex gap-2">
                      <div className="w-1/4">
                         <Select defaultValue="+91">
-                          <SelectTrigger className="bg-white">
+                          <SelectTrigger className="bg-background">
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
@@ -129,9 +129,9 @@ export default function ContactForm() {
                           name="mobile"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-white sr-only">Mobile*</FormLabel>
+                              <FormLabel className="text-primary-foreground sr-only">Mobile*</FormLabel>
                               <FormControl>
-                                <Input placeholder="Mobile*" {...field} className="bg-white" />
+                                <Input placeholder="Mobile*" {...field} className="bg-background" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -144,9 +144,9 @@ export default function ContactForm() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Email*</FormLabel>
+                        <FormLabel className="text-primary-foreground">Email*</FormLabel>
                         <FormControl>
-                          <Input {...field} className="bg-white" />
+                          <Input {...field} className="bg-background" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -157,10 +157,10 @@ export default function ContactForm() {
                     name="city"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Choose City*</FormLabel>
+                        <FormLabel className="text-primary-foreground">Choose City*</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="bg-white">
+                            <SelectTrigger className="bg-background">
                               <SelectValue placeholder="Select a city" />
                             </SelectTrigger>
                           </FormControl>
@@ -180,12 +180,12 @@ export default function ContactForm() {
                     control={form.control}
                     name="whatsapp"
                     render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 text-white">
+                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 text-primary-foreground">
                         <FormControl>
                           <Checkbox
                             checked={field.value}
                             onCheckedChange={field.onChange}
-                            className="border-white data-[state=checked]:bg-white data-[state=checked]:text-rose-500"
+                            className="border-primary-foreground data-[state=checked]:bg-primary-foreground data-[state=checked]:text-primary"
                           />
                         </FormControl>
                         <div className="space-y-1 leading-none">
@@ -198,12 +198,12 @@ export default function ContactForm() {
                   />
                   
                   <div className="flex justify-center">
-                    <Button type="submit" className="w-full bg-white text-rose-500 hover:bg-rose-100" disabled={isSubmitting}>
+                    <Button type="submit" className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90" disabled={isSubmitting}>
                       {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                       Connect With Our Team
                     </Button>
                   </div>
-                   <p className="text-xs text-white/80 text-center">
+                   <p className="text-xs text-primary-foreground/80 text-center">
                     By submitting this form, you agree to the privacy policy and terms of use.
                   </p>
                 </form>
