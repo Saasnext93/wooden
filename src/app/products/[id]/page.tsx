@@ -18,6 +18,8 @@ const allProducts = [
     material: 'Oak',
     rating: 4.8,
     status: 'In Stock',
+    imageUrl: "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg",
+    imageHint: 'l-shaped kitchen'
   },
   {
     id: 'prod_2',
@@ -29,6 +31,8 @@ const allProducts = [
     material: 'Walnut',
     rating: 4.9,
     status: 'In Stock',
+    imageUrl: "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg",
+    imageHint: 'modern wardrobe'
   },
   {
     id: 'prod_3',
@@ -40,6 +44,8 @@ const allProducts = [
     material: 'Linen',
     rating: 4.7,
     status: 'In Stock',
+    imageUrl: "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg",
+    imageHint: 'master bedroom'
   },
   {
     id: 'prod_4',
@@ -51,7 +57,9 @@ const allProducts = [
     material: 'Pine',
     rating: 4.6,
     status: 'Pre-Order',
-    status_label: ' arriving soon'
+    status_label: ' arriving soon',
+    imageUrl: "/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg",
+    imageHint: 'kids bedroom'
   },
   {
     id: 'prod_5',
@@ -63,7 +71,9 @@ const allProducts = [
     material: 'Ash',
     rating: 4.8,
     status: 'Pre-Order',
-    status_label: ' new design'
+    status_label: ' new design',
+    imageUrl: "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg",
+    imageHint: 'parallel kitchen'
   },
   {
     id: 'prod_6',
@@ -75,6 +85,8 @@ const allProducts = [
     material: 'Walnut',
     rating: 4.9,
     status: 'New Arrival',
+    imageUrl: "/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg",
+    imageHint: 'kitchen wall design'
   },
   {
     id: 'prod_7',
@@ -86,6 +98,8 @@ const allProducts = [
     material: 'Velvet',
     rating: 4.5,
     status: 'New Arrival',
+    imageUrl: "/modern-bedroom-design-with-a-double-bed-and-an-ottoman-bench.jpg",
+    imageHint: 'bunk bed'
   },
   {
     id: 'prod_8',
@@ -97,6 +111,8 @@ const allProducts = [
     material: 'Oak',
     rating: 4.7,
     status: 'In Stock',
+    imageUrl: "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg",
+    imageHint: 'swing wardrobe'
   },
 ];
 
@@ -125,25 +141,27 @@ export default function ProductDetailPage() {
     );
   }
 
-  const imageUrl = `https://picsum.photos/seed/${product.id}/1600/900`;
-  const imageHint = 'furniture piece';
+  const { name, description, rating, imageUrl, imageHint, category } = product;
 
   return (
     <div>
         {/* Hero Section */}
         <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center text-white">
-            <Image
-                src={imageUrl}
-                alt={product.name}
-                data-ai-hint={imageHint}
-                fill
-                className="object-cover"
-                priority
-            />
+            {imageUrl &&
+              <Image
+                  src={imageUrl}
+                  alt={name}
+                  data-ai-hint={imageHint}
+                  fill
+                  className="object-cover"
+                  priority
+              />
+            }
             <div className="absolute inset-0 bg-black/40" />
             <div className="relative z-10 text-center p-4">
+                <p className="text-lg md:text-xl font-body uppercase tracking-widest">{category}</p>
                 <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 drop-shadow-md">
-                    {product.name}
+                    {name}
                 </h1>
             </div>
         </section>
@@ -154,11 +172,11 @@ export default function ProductDetailPage() {
                 {/* Left Column: Description & Rating */}
                 <div>
                     <h2 className="text-2xl font-headline font-bold text-primary mb-4">Product Details</h2>
-                    <p className="text-lg text-muted-foreground mb-6">{product.description}</p>
+                    <p className="text-lg text-muted-foreground mb-6">{description}</p>
                     <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1 text-yellow-500">
                         <Star className="w-5 h-5 fill-current" />
-                        <span className="font-bold text-lg text-foreground">{product.rating}</span>
+                        <span className="font-bold text-lg text-foreground">{rating}</span>
                         </div>
                         {reviewCount !== null && (
                           <span className="text-sm text-muted-foreground">({reviewCount} reviews)</span>
