@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useActionState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -15,20 +16,19 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { submitContactForm } from '@/lib/actions';
 import { useToast } from '@/hooks/use-toast';
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
-import { Loader2 } from 'lucide-react';
+import { Checkbox } from '../ui/checkbox';
+import { Loader2, Zap } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  number: z.string().min(10, { message: 'Please enter a valid number.' }),
+  mobile: z.string().min(10, { message: 'Please enter a valid mobile number.' }),
   email: z.string().email({ message: 'Please enter a valid email.' }),
-  city: z.string().min(2, { message: 'City is required.' }),
-  assist: z.string({ required_error: "Please select an option." }),
-  comments: z.string().optional(),
+  city: z.string({ required_error: "Please select a city." }),
+  whatsapp: z.boolean().default(false).optional(),
 });
 
 type FormSchema = z.infer<typeof formSchema>;
@@ -40,10 +40,9 @@ export default function ContactForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
-      number: '',
+      mobile: '',
       email: '',
-      city: '',
-      comments: '',
+      whatsapp: true,
     },
   });
 
@@ -69,122 +68,149 @@ export default function ContactForm() {
   
   const { isSubmitting } = form.formState;
 
-
   return (
     <section id="contact" className="py-16 md:py-24 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
-        <ScrollAnimationWrapper className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">To know more</h2>
+        <ScrollAnimationWrapper className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">Cities We Serve</h2>
           <p className="text-lg text-muted-foreground">
-            Drop us a line, we will get in touch with you.
+            Our teams across India are unified by the love for interior design.
           </p>
         </ScrollAnimationWrapper>
 
-        <ScrollAnimationWrapper delay={200} className="max-w-4xl mx-auto">
-          <Form {...form}>
-            <form ref={formRef} action={formAction} className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name*</FormLabel>
-                      <FormControl>
-                        <Input {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="number"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Number*</FormLabel>
-                      <FormControl>
-                        <Input {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email ID*</FormLabel>
-                      <FormControl>
-                        <Input {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                 <FormField
-                  control={form.control}
-                  name="city"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>City*</FormLabel>
-                      <FormControl>
-                        <Input {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="assist"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Please select an option so we can assist you:*</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <div className="grid md:grid-cols-5 gap-8 items-center bg-white rounded-xl shadow-lg overflow-hidden">
+          {/* Left Column: Map */}
+          <div className="md:col-span-3 p-8">
+            <Image
+              src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              alt="Map of India with service locations"
+              data-ai-hint="India map"
+              width={1260}
+              height={750}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* Right Column: Form */}
+          <div className="md:col-span-2 bg-rose-500 p-8 h-full flex flex-col justify-center">
+            <ScrollAnimationWrapper delay={200} className="w-full">
+               <h3 className="text-2xl font-headline font-bold text-white mb-6 text-center">
+                Interior Design Services Executed to Perfection
+              </h3>
+              <Form {...form}>
+                <form ref={formRef} action={formAction} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-white">Name*</FormLabel>
                         <FormControl>
-                          <SelectTrigger>
+                          <Input {...field} className="bg-white" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <div className="flex gap-2">
+                     <div className="w-1/4">
+                        <Select defaultValue="+91">
+                          <SelectTrigger className="bg-white">
                             <SelectValue />
                           </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="+91">+91</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    <div className="w-3/4">
+                      <FormField
+                          control={form.control}
+                          name="mobile"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-white sr-only">Mobile*</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Mobile*" {...field} className="bg-white" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                    </div>
+                  </div>
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-white">Email*</FormLabel>
+                        <FormControl>
+                          <Input {...field} className="bg-white" />
                         </FormControl>
-                        <SelectContent>
-                          <SelectItem value="quote">Request a Quote</SelectItem>
-                          <SelectItem value="product">Product Information</SelectItem>
-                          <SelectItem value="support">Customer Support</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                 <FormField
-                  control={form.control}
-                  name="comments"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Comments</FormLabel>
-                      <FormControl>
-                        <Input {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              
-              <div className="flex justify-center">
-                <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
-                  {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Send Message
-                </Button>
-              </div>
-            </form>
-          </Form>
-        </ScrollAnimationWrapper>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                   <FormField
+                    control={form.control}
+                    name="city"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-white">Choose City*</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="bg-white">
+                              <SelectValue placeholder="Select a city" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="mumbai">Mumbai</SelectItem>
+                            <SelectItem value="delhi">Delhi</SelectItem>
+                            <SelectItem value="bangalore">Bangalore</SelectItem>
+                            <SelectItem value="hyderabad">Hyderabad</SelectItem>
+                            <SelectItem value="pune">Pune</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="whatsapp"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 text-white">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="border-white data-[state=checked]:bg-white data-[state=checked]:text-rose-500"
+                          />
+                        </FormControl>
+                        <div className="space-y-1 leading-none">
+                          <FormLabel>
+                            You can reach me on <Zap className="inline-block h-4 w-4 text-green-300 fill-current" /> WhatsApp
+                          </FormLabel>
+                        </div>
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <div className="flex justify-center">
+                    <Button type="submit" className="w-full bg-white text-rose-500 hover:bg-rose-100" disabled={isSubmitting}>
+                      {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                      Connect With Our Team
+                    </Button>
+                  </div>
+                   <p className="text-xs text-white/80 text-center">
+                    By submitting this form, you agree to the privacy policy and terms of use.
+                  </p>
+                </form>
+              </Form>
+            </ScrollAnimationWrapper>
+          </div>
+        </div>
       </div>
     </section>
   );
