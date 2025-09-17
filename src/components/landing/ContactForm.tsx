@@ -82,7 +82,7 @@ export default function ContactForm() {
           {/* Left Column: Map */}
           <div className="md:col-span-3 p-8">
             <Image
-              src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              src="https://images.unsplash.com/photo-1733094151451-4222a842cfd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYSUyMG1hcHxlbnwwfHx8fDE3NTgxMTQ4MjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
               alt="Map of India with service locations"
               data-ai-hint="India map"
               width={1260}
