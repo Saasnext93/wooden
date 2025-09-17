@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Star, Truck, ShieldCheck, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import TypewriterEffect from '@/components/animations/TypewriterEffect';
 
 const allProducts = [
   {
@@ -160,8 +161,8 @@ export default function ProductDetailPage() {
             <div className="absolute inset-0 bg-black/40" />
             <div className="relative z-10 text-center p-4">
                 <p className="text-lg md:text-xl font-body uppercase tracking-widest">{category}</p>
-                <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 drop-shadow-md">
-                    {name}
+                <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 drop-shadow-md min-h-[4rem] md:min-h-[6rem]">
+                    <TypewriterEffect text={name} />
                 </h1>
             </div>
         </section>
