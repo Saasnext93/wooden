@@ -32,10 +32,10 @@ export default function FeaturedProducts() {
             imageUrl = "/wooden2.jpg";
             break;
         case 'prod_4':
-            imageUrl = "https://images.unsplash.com/photo-1715160761399-c9fb4d2a5f77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b29kZW5uJTIwZnVybml0dXJlfGVufDB8fHx8MTc1NzkwNjc3NHww&ixlib=rb-4.1.0&q=80&w=1080";
+            imageUrl = "/l-shaped-kitchen-design-with-island-and-white-cabinets.jpg";
             break;
         case 'prod_5':
-            imageUrl = "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlcmdvbm9taWMlMjBkZXNrJTIwY2hhaXJ8ZW58MHx8fHwxNzU3NzAwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080";
+            imageUrl = "/modern-master-bedroom-design-with-a-brown-tufted-headboard.jpg";
             break;
         default:
             imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
