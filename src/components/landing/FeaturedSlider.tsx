@@ -20,19 +20,19 @@ export default function FeaturedSlider() {
     let imageUrl;
     switch(product.id) {
       case 'prod_1':
-        imageUrl = "/sofa.jpg";
+        imageUrl = "/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg";
         break;
       case 'prod_2':
-        imageUrl = "/wooden1.jpg";
+        imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
         break;
       case 'prod_3':
-        imageUrl = "/wooden2.jpg";
+        imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
         break;
       case 'prod_4':
-        imageUrl = "https://images.unsplash.com/photo-1715160761399-c9fb4d2a5f77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b29kZW5uJTIwZnVybml0dXJlfGVufDB8fHx8MTc1NzkwNjc3NHww&ixlib=rb-4.1.0&q=80&w=1080";
+        imageUrl = "/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg";
         break;
       case 'prod_5':
-        imageUrl = "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlcmdvbm9taWMlMjBkZXNrJTIwY2hhaXJ8ZW58MHx8fHwxNzU3NzAwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080";
+        imageUrl = "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg";
         break;
       default:
         imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;

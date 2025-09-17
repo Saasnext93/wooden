@@ -3,25 +3,25 @@ import Link from 'next/link';
 
 const heroPanels = [
   {
-    title: 'Stationary Sofas',
+    title: 'Boys Room Design',
     href: '/products',
-    imageUrl: '/sofa2.jpg',
-    imageHint: 'industrial saw wood',
+    imageUrl: '/contemporary-boys-room-design-with-glossy-wall-panel-and-car-fixtures.jpeg',
+    imageHint: 'contemporary-boys-room-design-with-glossy-wall-panel-and-car-fixtures.jpeg',
   },
   {
-    title: 'Home Theatre',
-    imageUrl: '/wooden1.jpg',
+    title: 'Modern Bedroom',
+    imageUrl: '/modern-bedroom-design-with-a-queen-bed-and-a-dark-green-tufted-headboard.jpg',
     href: '/products',
     imageHint: 'CNC machine cutting',
   },
   {
-    title: 'Recliners',
+    title: 'Kitchen',
     imageUrl: '/wooden2.jpg',
     href: '/products',
     imageHint: 'worker polishing wood',
   },
   {
-    title: 'Mattress',
+    title: 'Living Room',
     imageUrl: '/sofa.jpg',
     href: '/products',
     imageHint: 'saw blade cutting',
