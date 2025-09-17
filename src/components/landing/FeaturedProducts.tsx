@@ -1,3 +1,4 @@
+
 'use client';
 
 import { products as allProducts } from '@/lib/placeholder-data';
@@ -24,7 +25,7 @@ export default function FeaturedProducts() {
     let imageUrl;
     switch(product.id) {
         case 'prod_1':
-            imageUrl = "/l-shaped-kitchen-design-with-island-and-white-cabinets.jpg";
+            imageUrl = "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg";
             break;
         case 'prod_2':
             imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
@@ -50,18 +51,10 @@ export default function FeaturedProducts() {
   }), []);
 
   const filteredProducts = useMemo(() => {
-    // Since the new categories don't match product data, we'll show a selection for all tabs.
-    // This can be updated later when product data matches the new categories.
     if (activeTab === 'All') {
       return productsWithImages.slice(0, 16);
     }
-    // For other tabs, we'll show a different slice of products as a placeholder.
-    // This logic should be updated when products have the new categories.
-    const productsForCategory = productsWithImages.filter(p => {
-        // A real implementation would filter by the activeTab
-        // For now, we'll just cycle through products.
-        return true;
-    });
+    const productsForCategory = productsWithImages.filter(p => p.category === activeTab);
     return productsForCategory.slice(0, 16);
   }, [activeTab, productsWithImages]);
 
