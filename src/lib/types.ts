@@ -31,4 +31,5 @@ export type NavigationSubItem = {
   href: string;
   description?: string;
   imageId: string;
+  imageUrl?: string;
 }
