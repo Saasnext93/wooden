@@ -76,6 +76,16 @@ export default function SecondaryNav() {
         <NavigationMenuList>
           {secondaryNavigationLinks.map(link => {
             const categoryImageId = link.items?.[0]?.imageId;
+            let categoryImageUrl = '/wooden.jpg'; // Default image
+
+            if (link.title === 'Upholstered Furniture') {
+              categoryImageUrl = '/sofa.jpg';
+            } else if (link.title === 'Case Goods') {
+              categoryImageUrl = '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg';
+            } else if (link.title.includes('Cabinets')) {
+              categoryImageUrl = '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg';
+            }
+
 
             // A menu is active if the current path starts with its href
             // or if one of its category filters is active
@@ -106,7 +116,7 @@ export default function SecondaryNav() {
                             <div>
                                 <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden">
                                     <Image
-                                    src={`/wooden.jpg`}
+                                    src={categoryImageUrl}
                                     alt={link.title}
                                     data-ai-hint="furniture category"
                                     fill
