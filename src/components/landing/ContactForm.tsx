@@ -71,13 +71,6 @@ export default function ContactForm() {
   return (
     <section id="contact" className="py-16 md:py-24 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
-        <ScrollAnimationWrapper className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">Cities We Serve</h2>
-          <p className="text-lg text-muted-foreground">
-            Our teams across India are unified by the love for interior design.
-          </p>
-        </ScrollAnimationWrapper>
-
         <div className="grid md:grid-cols-5 gap-8 items-center bg-card rounded-xl shadow-lg overflow-hidden">
           {/* Left Column: Map */}
           <div className="md:col-span-3 p-8">
@@ -94,9 +87,12 @@ export default function ContactForm() {
           {/* Right Column: Form */}
           <div className="md:col-span-2 bg-primary p-8 h-full flex flex-col justify-center">
             <ScrollAnimationWrapper delay={200} className="w-full">
-               <h3 className="text-2xl font-headline font-bold text-primary-foreground mb-6 text-center">
-                Interior Design Services Executed to Perfection
-              </h3>
+               <div className="text-center mb-6">
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary-foreground mb-2">Get a free consultation</h2>
+                    <p className="text-lg text-muted-foreground text-primary-foreground/80">
+                        with our top interior designers
+                    </p>
+                </div>
               <Form {...form}>
                 <form ref={formRef} action={formAction} className="space-y-6">
                   <FormField
