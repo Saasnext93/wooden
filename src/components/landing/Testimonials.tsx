@@ -43,7 +43,7 @@ export default function Testimonials() {
               {testimonialsWithImages.map((testimonial) => (
                 <CarouselItem key={testimonial.id} className="md:basis-1/2">
                   <div className="p-4">
-                    <Card className="h-full flex flex-col">
+                    <Card className="h-full flex flex-col bg-background shadow-lg">
                       <CardContent className="p-6 flex-grow flex flex-col items-center text-center">
                         <Image
                           src={testimonial.avatarUrl}
@@ -51,13 +51,13 @@ export default function Testimonials() {
                           data-ai-hint={testimonial.avatarHint}
                           width={80}
                           height={80}
-                          className="rounded-full mb-4 border-2 border-primary/50"
+                          className="rounded-full mb-4 border-4 border-primary/20 shadow-md"
                         />
-                         <div className="flex items-center gap-0.5 text-yellow-500 mb-4">
+                        <p className="text-lg text-foreground/90 italic mb-4 flex-grow">&ldquo;{testimonial.quote}&rdquo;</p>
+                        <div className="flex items-center gap-0.5 text-yellow-500 mb-4">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
                         </div>
-                        <p className="text-foreground/80 italic mb-4 flex-grow">&ldquo;{testimonial.quote}&rdquo;</p>
-                        <div className="font-bold text-primary">{testimonial.customerName}</div>
+                        <div className="font-headline font-bold text-lg text-primary">{testimonial.customerName}</div>
                         <div className="text-sm text-muted-foreground">{testimonial.customerTitle}</div>
                       </CardContent>
                     </Card>
