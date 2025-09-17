@@ -13,10 +13,26 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import { mainNavigationLinks } from '@/lib/placeholder-data';
+import type { NavigationLink } from '@/lib/types';
 import AnimatedHamburgerIcon from './AnimatedHamburgerIcon';
 import SecondaryNav from './SecondaryNav';
 import MobileSecondaryNav from './MobileSecondaryNav';
+
+const mainNavigationLinks: NavigationLink[] = [
+  {
+    title: 'Legacy',
+    href: '#',
+  },
+  {
+    title: 'Products',
+    href: '/products',
+  },
+  {
+    title: 'Contact',
+    href: '/#contact',
+  },
+];
+
 
 export default function Header() {
   const pathname = usePathname();

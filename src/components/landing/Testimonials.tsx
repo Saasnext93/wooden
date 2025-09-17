@@ -4,7 +4,7 @@ import { Star, StarHalf } from 'lucide-react';
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
 
-import { testimonials as allTestimonials } from '@/lib/placeholder-data';
+import type { Testimonial } from '@/lib/types';
 import {
   Card,
   CardContent
@@ -12,6 +12,38 @@ import {
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Separator } from '../ui/separator';
+
+const allTestimonials: Testimonial[] = [
+  {
+    id: 'test_1',
+    quote: "The quality of our new dining table is simply outstanding. You can feel the craftsmanship. It's the centerpiece of our home now.",
+    customerName: 'Priya Sharma',
+    customerTitle: 'Homeowner, Mumbai',
+    imageId: 'avatar1',
+  },
+  {
+    id: 'test_2',
+    quote: "Wooden Manufacture transformed our living space. The sofa is not only beautiful but incredibly comfortable. The whole process was seamless.",
+    customerName: 'Mahesh Kumar',
+    customerTitle: 'Interior Designer, Delhi',
+    imageId: 'avatar2',
+  },
+  {
+    id: 'test_3',
+    quote: "I was looking for a unique bookshelf and found the perfect one here. It's a true work of art. I get compliments on it all the time!",
+    customerName: 'Anika Reddy',
+    customerTitle: 'Architect, Bangalore',
+    imageId: 'avatar3',
+  },
+   {
+    id: 'test_4',
+    quote: "From the wood grain on my armchair to the soft-close drawers on my sideboard, every detail is perfect. Highly recommended.",
+    customerName: 'Rohan Mehta',
+    customerTitle: 'Art Director, Pune',
+    imageId: 'avatar4',
+  },
+];
+
 
 function GoogleIcon() {
     return (

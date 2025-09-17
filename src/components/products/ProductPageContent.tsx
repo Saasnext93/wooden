@@ -3,10 +3,103 @@
 
 import { useState, useMemo } from 'react';
 import type { Product } from '@/lib/types';
-import { products as allProducts } from '@/lib/placeholder-data';
 import ProductFilters from '@/components/products/ProductFilters';
 import ProductGrid from '@/components/products/ProductGrid';
 import { useSearchParams } from 'next/navigation';
+
+const allProducts = [
+  {
+    id: 'prod_1',
+    name: 'L-Shaped Kitchen Design',
+    description: 'A timeless piece, handcrafted from solid oak with a natural finish. Perfect for any living room.',
+    price: 450,
+    imageId: 'product1',
+    category: 'Modular Kitchen Design',
+    material: 'Oak',
+    rating: 4.8,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_2',
+    name: 'Modern Wardrobe Design',
+    description: 'Minimalist design meets rich walnut wood. This coffee table is a statement of elegance.',
+    price: 620,
+    imageId: 'product2',
+    category: 'Wardrobe Design',
+    material: 'Walnut',
+    rating: 4.9,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_3',
+    name: 'Master Bedroom Design',
+    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    price: 1250,
+    imageId: 'product3',
+    category: 'Master bedroom design',
+    material: 'Linen',
+    rating: 4.7,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_4',
+    name: 'Art Deco Kids Bedroom',
+    description: 'Display your collection in style with this sleek and sturdy bookshelf, made from reclaimed pine.',
+    price: 780,
+    imageId: 'product4',
+    category: 'Kids Room Design',
+    material: 'Pine',
+    rating: 4.6,
+    status: 'Pre-Order',
+    status_label: ' arriving soon'
+  },
+  {
+    id: 'prod_5',
+    name: 'Parallel Kitchen Design',
+    description: 'Designed for comfort and style, this chair features a beautiful ash wood frame and leather seat.',
+    price: 530,
+    imageId: 'product5',
+    category: 'Kitchen wall design',
+    material: 'Ash',
+    rating: 4.8,
+    status: 'Pre-Order',
+    status_label: ' new design'
+  },
+  {
+    id: 'prod_6',
+    name: 'Modern Kitchen Wall Design',
+    description: 'Gather your family around this stunning round dining table, crafted from dark walnut for a dramatic effect.',
+    price: 1400,
+    imageId: 'product6',
+    category: 'Kitchen wall design',
+    material: 'Walnut',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_7',
+    name: 'Kids Bedroom with Bunk Bed',
+    description: 'A touch of luxury for any room. This plush velvet ottoman comes in a variety of rich colors.',
+    price: 320,
+    imageId: 'product7',
+    category: 'Kids Room Design',
+    material: 'Velvet',
+    rating: 4.5,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_8',
+    name: 'Swing Wardrobe with Study Table',
+    description: 'Solid oak floating shelves that provide a clean, modern way to display decor.',
+    price: 180,
+    imageId: 'product8',
+    category: 'Wardrobe Design',
+    material: 'Oak',
+    rating: 4.7,
+    status: 'In Stock',
+  },
+];
+
 
 const productsWithImages = allProducts.map(product => {
   let imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
