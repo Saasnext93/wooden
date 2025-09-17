@@ -6,7 +6,7 @@
   :root {
     --background: 43 50% 93%; /* #f9f2e1 */
     --foreground: 25 25% 20%; /* Dark Brown */
-    --card: 0 0% 100%;
+    --card: 43 50% 93%;
     --card-foreground: 25 25% 20%;
     --popover: 0 0% 100%;
     --popover-foreground: 25 25% 20%;
