@@ -106,16 +106,16 @@ export default function NewProducts() {
   const newProducts = allProducts.filter(p => p.status !== 'In Stock').map(product => {
     let imageUrl;
     if (product.id === 'prod_4') {
-      imageUrl = "https://images.unsplash.com/photo-1487015307662-6ce6210680f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU3Njk1NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080";
+      imageUrl = "/wooden.jpg";
     } else if (product.id === 'prod_5') {
-      imageUrl = "https://images.unsplash.com/photo-1721222204755-669d8056cdb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b29kZW4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU3Njk1NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      imageUrl = "/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg"
     } else if (product.id === 'prod_6') {
-      imageUrl = "https://images.unsplash.com/photo-1665005255783-3298cabef5aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHwlMjByb3VuZCUyMGRpbmluZyUyMHRhYmxlfGVufDB8fHx8MTc1NzY5NTkxMHww&ixlib=rb-4.1.0&q=80&w=1080"
+      imageUrl = "/modern-kitchen-with-a-marble-top-island-and-a-wooden-breakfast-bar.jpg"
     } else if (product.id === 'prod_7') {
-        imageUrl = "https://images.unsplash.com/photo-1721989516639-e051c83c2bd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8d29vZGVuJTIwZnVybml0dXJlfGVufDB8fHx8MTc1NzY5NTc1M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+        imageUrl = "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg"
     }
     else {
-      imageUrl = `https://picsum.photos/seed/${product.id}/600/800`;
+      imageUrl = `/picsum.photos/seed/${product.id}/600/800`;
     }
 
     return {
