@@ -106,13 +106,13 @@ export default function NewProducts() {
   const newProducts = allProducts.filter(p => p.status !== 'In Stock').map(product => {
     let imageUrl;
     if (product.id === 'prod_4') {
-      imageUrl = "/wooden.jpg";
+      imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
     } else if (product.id === 'prod_5') {
-      imageUrl = "/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg"
+      imageUrl = "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg"
     } else if (product.id === 'prod_6') {
-      imageUrl = "/modern-kitchen-with-a-marble-top-island-and-a-wooden-breakfast-bar.jpg"
+      imageUrl = "/blue-classic-l-shaped-kitchen-design-with-glossy-acrylic-finish.jpg"
     } else if (product.id === 'prod_7') {
-        imageUrl = "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg"
+        imageUrl = "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg"
     }
     else {
       imageUrl = `/picsum.photos/seed/${product.id}/600/800`;

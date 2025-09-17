@@ -102,9 +102,34 @@ const allProducts = [
 
 
 const productsWithImages = allProducts.map(product => {
-  let imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
-  if (product.id === 'prod_1') {
-      imageUrl = "https://images.unsplash.com/photo-1589271243979-3153ef0dcbd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b29kZW4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU3Njk1NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080";
+  let imageUrl;
+  switch(product.id) {
+    case 'prod_1':
+      imageUrl = "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg";
+      break;
+    case 'prod_2':
+      imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
+      break;
+    case 'prod_3':
+      imageUrl = "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg";
+      break;
+    case 'prod_4':
+      imageUrl = "/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg";
+      break;
+    case 'prod_5':
+      imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
+      break;
+    case 'prod_6':
+      imageUrl = "/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg";
+      break;
+    case 'prod_7':
+      imageUrl = "/modern-bedroom-design-with-a-double-bed-and-an-ottoman-bench.jpg";
+      break;
+    case 'prod_8':
+      imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
+      break;
+    default:
+      imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
   }
 
   return {
