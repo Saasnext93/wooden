@@ -5,19 +5,19 @@
 @layer base {
   :root {
     --background: 43 50% 93%; /* #f9f2e1 */
-    --foreground: 240 10% 3.9%; /* Near Black for text */
+    --foreground: 30 50% 20%; /* Dark Brown for text */
     --card: 43 50% 93%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 30 50% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 30 50% 20%;
     --primary: 30 50% 40%; /* Medium Warm Brown (Oak/Teak) */
     --primary-foreground: 0 0% 98%; /* Almost White for text on brown */
     --secondary: 30 40% 90%; /* Lighter, Softer Brown */
-    --secondary-foreground: 240 10% 3.9%;
+    --secondary-foreground: 30 50% 20%;
     --muted: 30 40% 94%;
-    --muted-foreground: 240 4% 46.1%;
+    --muted-foreground: 30 25% 45%;
     --accent: 120 10% 94%; /* Muted Earthy Green */
-    --accent-foreground: 240 10% 3.9%;
+    --accent-foreground: 30 50% 20%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 30 20% 88%; /* Soft Light Brown */
