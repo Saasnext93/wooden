@@ -7,11 +7,11 @@ import ProductFilters from '@/components/products/ProductFilters';
 import ProductGrid from '@/components/products/ProductGrid';
 import { useSearchParams } from 'next/navigation';
 
-const allProducts = [
+const allProducts: Product[] = [
   {
     id: 'prod_1',
     name: 'L-Shaped Kitchen Design',
-    description: 'A timeless piece, handcrafted from solid oak with a natural finish. Perfect for any living room.',
+    description: 'A timeless, ergonomic kitchen layout that maximizes corner space.',
     price: 450,
     imageId: 'product1',
     category: 'Modular Kitchen Design',
@@ -22,7 +22,7 @@ const allProducts = [
   {
     id: 'prod_2',
     name: 'Modern Wardrobe Design',
-    description: 'Minimalist design meets rich walnut wood. This coffee table is a statement of elegance.',
+    description: 'A sleek wardrobe with ample storage and a contemporary finish.',
     price: 620,
     imageId: 'product2',
     category: 'Wardrobe Design',
@@ -33,7 +33,7 @@ const allProducts = [
   {
     id: 'prod_3',
     name: 'Master Bedroom Design',
-    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    description: 'A luxurious and comfortable master bedroom set for ultimate relaxation.',
     price: 1250,
     imageId: 'product3',
     category: 'Master bedroom design',
@@ -44,7 +44,7 @@ const allProducts = [
   {
     id: 'prod_4',
     name: 'Art Deco Kids Bedroom',
-    description: 'Display your collection in style with this sleek and sturdy bookshelf, made from reclaimed pine.',
+    description: 'A playful and stylish bedroom design for the modern kid.',
     price: 780,
     imageId: 'product4',
     category: 'Kids Room Design',
@@ -56,10 +56,10 @@ const allProducts = [
   {
     id: 'prod_5',
     name: 'Parallel Kitchen Design',
-    description: 'Designed for comfort and style, this chair features a beautiful ash wood frame and leather seat.',
+    description: 'An efficient kitchen layout ideal for compact spaces, offering great workflow.',
     price: 530,
     imageId: 'product5',
-    category: 'Kitchen wall design',
+    category: 'Modular Kitchen Design',
     material: 'Ash',
     rating: 4.8,
     status: 'Pre-Order',
@@ -67,11 +67,11 @@ const allProducts = [
   },
   {
     id: 'prod_6',
-    name: 'Modern Kitchen Wall Design',
-    description: 'Gather your family around this stunning round dining table, crafted from dark walnut for a dramatic effect.',
+    name: 'U-Shaped Kitchen Design',
+    description: 'A spacious kitchen design with extensive counter space and storage.',
     price: 1400,
     imageId: 'product6',
-    category: 'Kitchen wall design',
+    category: 'Modular Kitchen Design',
     material: 'Walnut',
     rating: 4.9,
     status: 'New Arrival',
@@ -79,7 +79,7 @@ const allProducts = [
   {
     id: 'prod_7',
     name: 'Kids Bedroom with Bunk Bed',
-    description: 'A touch of luxury for any room. This plush velvet ottoman comes in a variety of rich colors.',
+    description: 'A space-saving and fun bunk bed design for kids\' rooms.',
     price: 320,
     imageId: 'product7',
     category: 'Kids Room Design',
@@ -90,7 +90,7 @@ const allProducts = [
   {
     id: 'prod_8',
     name: 'Swing Wardrobe with Study Table',
-    description: 'Solid oak floating shelves that provide a clean, modern way to display decor.',
+    description: 'A multifunctional wardrobe with an integrated study table.',
     price: 180,
     imageId: 'product8',
     category: 'Wardrobe Design',
@@ -145,7 +145,7 @@ export default function ProductPageContent() {
   const initialCategories = searchParams.getAll('categories');
 
   const [filters, setFilters] = useState({
-    categories: initialCategories.length > 0 ? initialCategories : ([] as string[]),
+    categories: initialCategories.length > 0 ? initialCategories.map(c => c.split('%20').join(' ')) : ([] as string[]),
     materials: [] as string[],
   });
   const [sort, setSort] = useState('rating-desc');
@@ -189,7 +189,7 @@ export default function ProductPageContent() {
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-2">Our Collection</h1>
         <p className="text-lg text-muted-foreground">
-          Discover handcrafted pieces that bring warmth and elegance to your home.
+          Discover handcrafted modular pieces that bring warmth and elegance to your home.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

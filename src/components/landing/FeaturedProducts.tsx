@@ -61,7 +61,7 @@ const allProducts = [
     description: 'Designed for comfort and style, this chair features a beautiful ash wood frame and leather seat.',
     price: 530,
     imageId: 'product5',
-    category: 'Kitchen wall design',
+    category: 'Modular Kitchen Design',
     material: 'Ash',
     rating: 4.8,
     status: 'Pre-Order',
@@ -69,11 +69,11 @@ const allProducts = [
   },
   {
     id: 'prod_6',
-    name: 'Modern Kitchen Wall Design',
+    name: 'U-Shaped Kitchen Design',
     description: 'Gather your family around this stunning round dining table, crafted from dark walnut for a dramatic effect.',
     price: 1400,
     imageId: 'product6',
-    category: 'Kitchen wall design',
+    category: 'Modular Kitchen Design',
     material: 'Walnut',
     rating: 4.9,
     status: 'New Arrival',
@@ -110,7 +110,6 @@ export default function FeaturedProducts() {
     'Wardrobe Design',
     'Master bedroom design',
     'Kids Room Design',
-    'Kitchen wall design'
   ];
   const [activeTab, setActiveTab] = useState(categories[0]);
 

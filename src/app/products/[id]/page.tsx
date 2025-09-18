@@ -7,12 +7,13 @@ import { Star, Truck, ShieldCheck, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import TypewriterEffect from '@/components/animations/TypewriterEffect';
+import type { Product } from '@/lib/types';
 
-const allProducts = [
+const allProducts: Product[] = [
   {
     id: 'prod_1',
     name: 'L-Shaped Kitchen Design',
-    description: 'A timeless piece, handcrafted from solid oak with a natural finish. Perfect for any living room.',
+    description: 'A timeless, ergonomic kitchen layout that maximizes corner space, offering ample storage and a seamless workflow for a modern culinary experience.',
     price: 450,
     imageId: 'product1',
     category: 'Modular Kitchen Design',
@@ -25,7 +26,7 @@ const allProducts = [
   {
     id: 'prod_2',
     name: 'Modern Wardrobe Design',
-    description: 'Minimalist design meets rich walnut wood. This coffee table is a statement of elegance.',
+    description: 'A sleek and spacious wardrobe with a minimalist aesthetic, featuring smart organizational solutions to keep your space tidy and stylish.',
     price: 620,
     imageId: 'product2',
     category: 'Wardrobe Design',
@@ -38,7 +39,7 @@ const allProducts = [
   {
     id: 'prod_3',
     name: 'Master Bedroom Design',
-    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    description: 'A luxurious and comfortable master bedroom set, designed to be a serene retreat for ultimate relaxation and peaceful nights.',
     price: 1250,
     imageId: 'product3',
     category: 'Master bedroom design',
@@ -51,7 +52,7 @@ const allProducts = [
   {
     id: 'prod_4',
     name: 'Art Deco Kids Bedroom',
-    description: 'Display your collection in style with this sleek and sturdy bookshelf, made from reclaimed pine.',
+    description: 'A playful and stylish bedroom design that sparks creativity, featuring bold geometric patterns and vibrant colors for the modern kid.',
     price: 780,
     imageId: 'product4',
     category: 'Kids Room Design',
@@ -65,10 +66,10 @@ const allProducts = [
   {
     id: 'prod_5',
     name: 'Parallel Kitchen Design',
-    description: 'Designed for comfort and style, this chair features a beautiful ash wood frame and leather seat.',
+    description: 'An efficient and compact galley-style kitchen, perfect for smaller spaces while providing an excellent and ergonomic workflow.',
     price: 530,
     imageId: 'product5',
-    category: 'Kitchen wall design',
+    category: 'Modular Kitchen Design',
     material: 'Ash',
     rating: 4.8,
     status: 'Pre-Order',
@@ -78,21 +79,21 @@ const allProducts = [
   },
   {
     id: 'prod_6',
-    name: 'Modern Kitchen Wall Design',
-    description: 'Gather your family around this stunning round dining table, crafted from dark walnut for a dramatic effect.',
+    name: 'U-Shaped Kitchen Design',
+    description: 'A spacious and versatile U-shaped kitchen layout that offers abundant counter space and storage, perfect for busy family kitchens.',
     price: 1400,
     imageId: 'product6',
-    category: 'Kitchen wall design',
+    category: 'Modular Kitchen Design',
     material: 'Walnut',
     rating: 4.9,
     status: 'New Arrival',
     imageUrl: "/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg",
-    imageHint: 'kitchen wall design'
+    imageHint: 'u-shaped kitchen'
   },
   {
     id: 'prod_7',
     name: 'Kids Bedroom with Bunk Bed',
-    description: 'A touch of luxury for any room. This plush velvet ottoman comes in a variety of rich colors.',
+    description: 'A space-saving and fun bunk bed design that maximizes floor space, making it ideal for shared kids\' rooms and sleepovers.',
     price: 320,
     imageId: 'product7',
     category: 'Kids Room Design',
@@ -105,7 +106,7 @@ const allProducts = [
   {
     id: 'prod_8',
     name: 'Swing Wardrobe with Study Table',
-    description: 'Solid oak floating shelves that provide a clean, modern way to display decor.',
+    description: 'A multifunctional and space-efficient swing wardrobe that includes an integrated study table, perfect for bedrooms or home offices.',
     price: 180,
     imageId: 'product8',
     category: 'Wardrobe Design',

@@ -72,39 +72,6 @@ const allProducts = [
     status: 'Pre-Order',
     status_label: ' new design'
   },
-  {
-    id: 'prod_6',
-    name: 'Modern Kitchen Wall Design',
-    description: 'Gather your family around this stunning round dining table, crafted from dark walnut for a dramatic effect.',
-    price: 1400,
-    imageId: 'product6',
-    category: 'Kitchen wall design',
-    material: 'Walnut',
-    rating: 4.9,
-    status: 'New Arrival',
-  },
-  {
-    id: 'prod_7',
-    name: 'Kids Bedroom with Bunk Bed',
-    description: 'A touch of luxury for any room. This plush velvet ottoman comes in a variety of rich colors.',
-    price: 320,
-    imageId: 'product7',
-    category: 'Kids Room Design',
-    material: 'Velvet',
-    rating: 4.5,
-    status: 'New Arrival',
-  },
-  {
-    id: 'prod_8',
-    name: 'Swing Wardrobe with Study Table',
-    description: 'Solid oak floating shelves that provide a clean, modern way to display decor.',
-    price: 180,
-    imageId: 'product8',
-    category: 'Wardrobe Design',
-    material: 'Oak',
-    rating: 4.7,
-    status: 'In Stock',
-  },
 ];
 
 
@@ -113,7 +80,7 @@ export default function FeaturedSlider() {
     let imageUrl;
     switch(product.id) {
       case 'prod_1':
-        imageUrl = "/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg";
+        imageUrl = "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg";
         break;
       case 'prod_2':
         imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
@@ -150,7 +117,7 @@ export default function FeaturedSlider() {
                 <div className="text-center md:text-left">
                     <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Masterfully Crafted, Exclusively Yours</h2>
                     <p className="text-lg text-muted-foreground mb-6">
-                        Explore a curated selection of our finest modular furniture. Each piece is a testament to our dedication to quality, designed to bring both beauty and function to your space.
+                        Explore a curated selection of our finest modular kitchens, wardrobes and beds. Each piece is a testament to our dedication to quality, designed to bring both beauty and function to your space.
                     </p>
                     <Button asChild>
                         <Link href="/products">Explore the Collection</Link>

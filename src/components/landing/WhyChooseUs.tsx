@@ -5,12 +5,12 @@ const features = [
     {
         icon: <Tags className="w-10 h-10 text-primary" />,
         title: "Made to Order",
-        description: "We create personalised spaces that cater to your every requirement.",
+        description: "We create personalised modular kitchens, wardrobes and bedrooms that cater to your every requirement.",
     },
     {
         icon: <BadgePercent className="w-10 h-10 text-primary" />,
         title: "Lowest Prices Guaranteed",
-        description: "We provide the best possible solutions that suit your finances.",
+        description: "We provide the best possible modular solutions that suit your finances.",
     },
     {
         icon: <ClipboardCheck className="w-10 h-10 text-primary" />,
@@ -20,7 +20,7 @@ const features = [
     {
         icon: <Clock className="w-10 h-10 text-primary" />,
         title: "Timely Delivery Assurance",
-        description: "We proactively work on commitments to maintain our benchmark of ontime delivery.",
+        description: "We proactively work on commitments to maintain our benchmark of on-time delivery.",
     },
     {
         icon: <Award className="w-10 h-10 text-primary" />,

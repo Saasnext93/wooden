@@ -12,12 +12,12 @@ const philosophyPillars = [
     {
         icon: <Brush className="w-10 h-10 text-primary" />,
         title: "Artistry",
-        description: "We honor traditional techniques and modern design to create timeless, artisanal furniture.",
+        description: "We honor modern design to create timeless, artisanal modular furniture.",
     },
     {
         icon: <ShieldCheck className="w-10 h-10 text-primary" />,
         title: "Quality",
-        description: "From the choice of wood to the final finish, every detail is a promise of enduring quality and durability.",
+        description: "From the choice of materials to the final finish, every detail is a promise of enduring quality and durability.",
     },
 ]
 
@@ -32,7 +32,7 @@ export default function OurPhilosophy() {
                     Built on a Foundation of Values
                     </h2>
                     <p className="text-lg text-muted-foreground mb-8">
-                    We believe that the best furniture respects both the planet and the craft. Our philosophy is woven into every piece we create, ensuring a legacy of sustainability, artistry, and quality.
+                    We believe that the best furniture respects both the planet and the craft. Our philosophy is woven into every modular kitchen, wardrobe and bed we create, ensuring a legacy of sustainability, artistry, and quality.
                     </p>
                     <Button variant="outline" asChild>
                         <Link href="/#manufacturing">Discover Our Process</Link>

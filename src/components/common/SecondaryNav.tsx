@@ -16,50 +16,32 @@ import { useState } from 'react';
 
 const secondaryNavigationLinks: NavigationLink[] = [
   {
-    title: 'Upholstered Furniture',
-    href: '/products?categories=Sofas&categories=Chairs',
-    description: 'Comfortable and stylish seating solutions.',
+    title: 'Modular Kitchens',
+    href: '/products?categories=Modular%20Kitchen%20Design',
+    description: 'Beautiful kitchens for modern living.',
     items: [
-      { title: 'Stationary Sofas', href: '/products?categories=Sofas', imageId: 'category-sofas', imageUrl: '/sofa.jpg' },
-      { title: 'Motion Sofas', href: '/products?categories=Sofas', imageId: 'category-sofas', imageUrl: '/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg' },
-      { title: 'Home Theatre', href: '/products?categories=Sofas', imageId: 'category-sofas', imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg' },
-      { title: 'Armchairs', href: '/products?categories=Chairs', imageId: 'category-chairs', imageUrl: '/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg' },
-      { title: 'Day Bed', href: '/products?categories=Sofas', imageId: 'product1', imageUrl: '/modern-bedroom-design-with-a-double-bed-and-an-ottoman-bench.jpg' },
-      { title: 'Sofa Cum Bed', href: '/products?categories=Sofas', imageId: 'product3', imageUrl: '/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg' },
-      { title: 'Recliners', href: '/products?categories=Chairs', imageId: 'product5', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
-      { title: 'Beds', href: '/products?categories=Sofas', imageId: 'product1', imageUrl: '/sofa.jpg' },
-      { title: 'Mattress', href: '/products?categories=Sofas', imageId: 'product1', imageUrl: '/sofa.jpg' },
-      { title: 'Pillows', href: '/products?categories=Sofas', imageId: 'product1', imageUrl: '/sofa.jpg' },
-      { title: 'Puffee', href: '/products?categories=Sofas', imageId: 'product7', imageUrl: '/sofa.jpg' },
-    ],
-  },
-    {
-    title: 'Case Goods',
-    href: '/products?categories=Tables',
-    description: 'Explore our collection of case goods.',
-    items: [
-      { title: 'Coffee Tables', href: '/products?categories=Tables', imageId: 'category-tables', imageUrl: '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg' },
-      { title: 'Side Tables', href: '/products?categories=Tables', imageId: 'category-tables', imageUrl: '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg' },
-      { title: 'Consoles', href: '/products?categories=Tables', imageId: 'category-tables', imageUrl: '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg' },
+      { title: 'L-Shaped Kitchen', href: '/products/prod_1', imageId: 'kitchen-lshape', imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg' },
+      { title: 'U-Shaped Kitchen', href: '/products/prod_6', imageId: 'kitchen-ushape', imageUrl: '/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg' },
+      { title: 'Parallel Kitchen', href: '/products/prod_5', imageId: 'kitchen-parallel', imageUrl: '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg' },
     ],
   },
   {
-    title: 'Fixed Cabinets',
-    href: '/products?categories=Storage',
-    description: 'Explore our collection of fixed cabinets.',
+    title: 'Wardrobes',
+    href: '/products?categories=Wardrobe%20Design',
+    description: 'Stylish and functional wardrobe solutions.',
     items: [
-      { title: 'Entertainment Units', href: '/products?categories=Storage', imageId: 'category-storage', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
-      { title: 'Sideboards', href: '/products?categories=Storage', imageId: 'category-storage', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
-      { title: 'Bookshelves', href: '/products?categories=Storage', imageId: 'category-storage', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
+      { title: 'Swing Wardrobe', href: '/products/prod_8', imageId: 'wardrobe-swing', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
+      { title: 'Modern Wardrobe', href: '/products/prod_2', imageId: 'wardrobe-modern', imageUrl: '/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
     ],
   },
   {
-    title: 'Loose Cabinets',
-    href: '/products?categories=Storage',
-    description: 'Explore our collection of loose cabinets.',
+    title: 'Bedroom',
+    href: '/products?categories=Master%20bedroom%20design',
+    description: 'Create your perfect sanctuary.',
     items: [
-      { title: 'Night Stands', href: '/products?categories=Storage', imageId: 'category-storage', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
-      { title: 'Chest of Drawers', href: '/products?categories=Storage', imageId: 'category-storage', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
+      { title: 'Master Bedroom', href: '/products/prod_3', imageId: 'bedroom-master', imageUrl: '/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg' },
+      { title: 'Kids Bedroom', href: '/products/prod_4', imageId: 'bedroom-kids', imageUrl: '/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg' },
+      { title: 'Bunk Beds', href: '/products/prod_7', imageId: 'bedroom-bunk', imageUrl: '/modern-bedroom-design-with-a-double-bed-and-an-ottoman-bench.jpg' },
     ],
   },
 ];
@@ -76,21 +58,20 @@ export default function SecondaryNav() {
       <NavigationMenu>
         <NavigationMenuList>
           {secondaryNavigationLinks.map(link => {
-            const categoryImageId = link.items?.[0]?.imageId;
             let categoryImageUrl = '/wooden.jpg'; // Default image
 
-            if (link.title === 'Upholstered Furniture') {
-              categoryImageUrl = '/sofa.jpg';
-            } else if (link.title === 'Case Goods') {
-              categoryImageUrl = '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg';
-            } else if (link.title.includes('Cabinets')) {
+            if (link.title === 'Modular Kitchens') {
+              categoryImageUrl = '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg';
+            } else if (link.title === 'Wardrobes') {
               categoryImageUrl = '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg';
+            } else if (link.title === 'Bedroom') {
+              categoryImageUrl = '/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg';
             }
 
 
             // A menu is active if the current path starts with its href
             // or if one of its category filters is active
-            const isActive = pathname.startsWith(link.href ?? '#') || (link.href?.includes('?categories=') && (link.href.split('?categories=')[1].split('&').some(cat => categories.includes(cat))));
+            const isActive = pathname.startsWith(link.href ?? '#') || (link.href?.includes('?categories=') && (link.href.split('?categories=')[1].split('%20').join(' ').split('&').some(cat => categories.includes(cat))));
 
 
             return (
@@ -117,7 +98,7 @@ export default function SecondaryNav() {
                         />
                       ))}
                     </ul>
-                     {categoryImageId && (
+                     {link.items && (
                         <div className="p-4 w-[300px] bg-muted/50 flex flex-col justify-between">
                             <div>
                                 <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden">

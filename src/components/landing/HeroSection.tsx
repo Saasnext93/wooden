@@ -3,28 +3,28 @@ import Link from 'next/link';
 
 const heroPanels = [
   {
-    title: 'Boys Room Design',
-    href: '/products',
-    imageUrl: '/contemporary-boys-room-design-with-glossy-wall-panel-and-car-fixtures.jpeg',
-    imageHint: 'contemporary-boys-room-design-with-glossy-wall-panel-and-car-fixtures.jpeg',
+    title: 'Modular Kitchens',
+    href: '/products?categories=Modular%20Kitchen%20Design',
+    imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg',
+    imageHint: 'modular kitchen',
   },
   {
-    title: 'Modern Bedroom',
-    imageUrl: '/modern-bedroom-design-with-a-queen-bed-and-a-dark-green-tufted-headboard.jpg',
-    href: '/products',
-    imageHint: 'CNC machine cutting',
+    title: 'Wardrobes',
+    href: '/products?categories=Wardrobe%20Design',
+    imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg',
+    imageHint: 'modern wardrobe',
   },
   {
-    title: 'Kitchen',
-    imageUrl: '/wooden2.jpg',
+    title: 'Living Rooms',
     href: '/products',
-    imageHint: 'worker polishing wood',
-  },
-  {
-    title: 'Living Room',
     imageUrl: '/sofa.jpg',
-    href: '/products',
-    imageHint: 'saw blade cutting',
+    imageHint: 'living room sofa',
+  },
+  {
+    title: 'Bedrooms',
+    href: '/products?categories=Master%20bedroom%20design',
+    imageUrl: '/modern-bedroom-design-with-a-queen-bed-and-a-dark-green-tufted-headboard.jpg',
+    imageHint: 'modern bedroom',
   },
 ];
 
@@ -40,6 +40,7 @@ export default function HeroSection() {
               data-ai-hint={panel.imageHint}
               fill
               className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              priority
             />
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 flex h-full items-end justify-center p-8">
