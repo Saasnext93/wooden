@@ -7,7 +7,7 @@ import Link from 'next/link';
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, useMemo } from 'react';
-import { ScrollArea } from '../ui/scroll-area';
+import { ScrollArea, ScrollBar } from '../ui/scroll-area';
 
 const allProducts = [
   {
@@ -179,6 +179,7 @@ export default function FeaturedProducts() {
                              <TabsTrigger key={category} value={category} className="text-base mx-2 first:ml-0 last:mr-0 data-[state=active]:shadow-none data-[state=active]:bg-accent data-[state=active]:text-primary">{category}</TabsTrigger>
                         ))}
                     </TabsList>
+                    <ScrollBar orientation="horizontal" />
                   </ScrollArea>
                 </div>
                 {categories.map(category => (
