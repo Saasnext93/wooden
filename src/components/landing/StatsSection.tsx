@@ -1,25 +1,30 @@
 import { Building2, Home, Users, BookCopy } from "lucide-react";
 import ScrollAnimationWrapper from "../animations/ScrollAnimationWrapper";
+import CountingNumber from "../animations/CountingNumber";
 
 const stats = [
     {
         icon: <Home className="w-8 h-8 text-primary" />,
-        value: "5000+",
+        value: 5000,
+        suffix: "+",
         label: "Interior Projects"
     },
     {
         icon: <Users className="w-8 h-8 text-primary" />,
-        value: "200+",
+        value: 200,
+        suffix: "+",
         label: "Design Experts"
     },
     {
         icon: <Building2 className="w-8 h-8 text-primary" />,
-        value: "10 Cities",
+        value: 10,
+        suffix: " Cities",
         label: "2 Countries"
     },
     {
         icon: <BookCopy className="w-8 h-8 text-primary" />,
-        value: "2 lac+",
+        value: 200000,
+        suffix: "+",
         label: "Design Options"
     }
 ];
@@ -36,7 +41,10 @@ export default function StatsSection() {
                                     {stat.icon}
                                 </div>
                                 <div>
-                                    <p className="text-2xl md:text-3xl font-bold text-primary">{stat.value}</p>
+                                    <p className="text-2xl md:text-3xl font-bold text-primary">
+                                        <CountingNumber value={stat.value} />
+                                        {stat.suffix && <span>{stat.suffix}</span>}
+                                    </p>
                                     <p className="text-sm text-muted-foreground">{stat.label}</p>
                                 </div>
                                 {index < stats.length - 1 && (
