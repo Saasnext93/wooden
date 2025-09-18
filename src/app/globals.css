@@ -5,19 +5,19 @@
 @layer base {
   :root {
     --background: 43 50% 93%; /* #f9f2e1 */
-    --foreground: 25 25% 20%; /* Dark Brown */
+    --foreground: 240 10% 3.9%; /* Near Black for text */
     --card: 43 50% 93%;
-    --card-foreground: 25 25% 20%;
+    --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 25 25% 20%;
+    --popover-foreground: 240 10% 3.9%;
     --primary: 30 50% 40%; /* Medium Warm Brown (Oak/Teak) */
-    --primary-foreground: 35 33% 96%; /* Light Warm Beige for text on brown */
+    --primary-foreground: 0 0% 98%; /* Almost White for text on brown */
     --secondary: 30 40% 90%; /* Lighter, Softer Brown */
-    --secondary-foreground: 25 25% 25%;
+    --secondary-foreground: 240 10% 3.9%;
     --muted: 30 40% 94%;
-    --muted-foreground: 25 20% 45%;
+    --muted-foreground: 240 4% 46.1%;
     --accent: 120 10% 94%; /* Muted Earthy Green */
-    --accent-foreground: 25 25% 20%;
+    --accent-foreground: 240 10% 3.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 30 20% 88%; /* Soft Light Brown */
@@ -30,30 +30,30 @@
     --chart-5: 30 20% 70%;
     --radius: 0.5rem;
     --sidebar-background: 25 25% 15%;
-    --sidebar-foreground: 35 33% 95%;
+    --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 30 50% 50%;
-    --sidebar-primary-foreground: 35 33% 96%;
+    --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 25 25% 25%;
-    --sidebar-accent-foreground: 35 33% 95%;
+    --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 25 25% 30%;
     --sidebar-ring: 30 50% 50%;
   }
 
   .dark {
     --background: 25 25% 15%; /* Deep Dark Brown */
-    --foreground: 35 33% 92%; /* Off-white */
+    --foreground: 0 0% 98%; /* Off-white */
     --card: 25 25% 20%;
-    --card-foreground: 35 33% 92%;
+    --card-foreground: 0 0% 98%;
     --popover: 25 25% 20%;
-    --popover-foreground: 35 33% 92%;
+    --popover-foreground: 0 0% 98%;
     --primary: 30 50% 60%; /* Lighter Warm Brown */
-    --primary-foreground: 25 25% 10%; /* Dark Brown for text on light brown */
+    --primary-foreground: 240 10% 3.9%; /* Dark for text on light brown */
     --secondary: 25 25% 25%; /* Darker, Softer Brown */
-    --secondary-foreground: 35 33% 92%;
+    --secondary-foreground: 0 0% 98%;
     --muted: 25 25% 22%;
-    --muted-foreground: 35 20% 65%;
+    --muted-foreground: 240 4% 56.1%;
     --accent: 120 10% 22%; /* Dark Muted Green */
-    --accent-foreground: 35 33% 92%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 25 25% 30%; /* Dark Soft Brown */
@@ -65,11 +65,11 @@
     --chart-4: 30 20% 50%;
     --chart-5: 30 20% 70%;
     --sidebar-background: 25 25% 10%;
-    --sidebar-foreground: 35 33% 95%;
+    --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 30 50% 60%;
-    --sidebar-primary-foreground: 25 25% 10%;
+    --sidebar-primary-foreground: 240 10% 3.9%;
     --sidebar-accent: 25 25% 20%;
-    --sidebar-accent-foreground: 35 33% 95%;
+    --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 25 25% 25%;
     --sidebar-ring: 30 50% 60%;
   }
