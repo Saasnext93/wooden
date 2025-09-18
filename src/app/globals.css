@@ -13,16 +13,16 @@
     --primary: 40 4% 26%; /* #45433f */
     --primary-foreground: 0 0% 98%; /* Almost White for text on brown */
     --secondary: 30 40% 90%; /* Lighter, Softer Brown */
-    --secondary-foreground: 30 50% 20%;
+    --secondary-foreground: 40 4% 26%;
     --muted: 30 40% 94%;
-    --muted-foreground: 30 25% 45%;
+    --muted-foreground: 40 4% 36%;
     --accent: 120 10% 94%; /* Muted Earthy Green */
-    --accent-foreground: 30 50% 20%;
+    --accent-foreground: 40 4% 26%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 30 20% 88%; /* Soft Light Brown */
     --input: 30 20% 88%;
-    --ring: 30 50% 40%;
+    --ring: 40 4% 26%;
     --chart-1: 30 50% 40%;
     --chart-2: 30 50% 60%;
     --chart-3: 30 50% 20%;
