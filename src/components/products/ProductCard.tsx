@@ -11,8 +11,8 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link href={`/products/${product.id}`} className="block h-full">
-      <Card className="h-full flex flex-col overflow-hidden group transition-shadow hover:shadow-xl">
+    <Card className="h-full flex flex-col overflow-hidden group transition-shadow hover:shadow-xl">
+      <Link href={`/products/${product.id}`} className="block">
         <CardHeader className="p-0 relative aspect-square">
           {product.imageUrl && (
             <Image
@@ -25,16 +25,21 @@ export default function ProductCard({ product }: ProductCardProps) {
             />
           )}
         </CardHeader>
-        <CardContent className="p-4 flex-grow flex flex-col">
+      </Link>
+      <CardContent className="p-4 flex-grow flex flex-col">
+        <Link href={`/products/${product.id}`} className="block">
           <CardTitle className="text-lg font-headline leading-tight mb-2 min-h-[2.5rem]">{product.name}</CardTitle>
-          <div className="flex items-center justify-end text-sm text-muted-foreground mt-auto">
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 text-yellow-500 fill-current" />
-              <span>{product.rating}</span>
-            </div>
+        </Link>
+        <div className="flex items-center justify-between text-sm text-muted-foreground mt-auto">
+          <div className="flex items-center gap-1">
+            <Star className="w-4 h-4 text-yellow-500 fill-current" />
+            <span>{product.rating}</span>
           </div>
-        </CardContent>
-      </Card>
-    </Link>
+          <Button asChild variant="ghost" size="sm" className="px-2">
+            <Link href="/#contact">Get Quote</Link>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
   );
 }
