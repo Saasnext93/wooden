@@ -7,11 +7,13 @@ import { Button } from '@/components/ui/button';
 import { Star, Truck, ShieldCheck, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import TypewriterEffect from '@/components/animations/TypewriterEffect';
 import type { Product } from '@/lib/types';
 import QuoteModal from '@/components/products/QuoteModal';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import RelatedProducts from '@/components/products/RelatedProducts';
+import { cn } from '@/lib/utils';
 
-const allProducts: Product[] = [
+const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifications?: {name: string; value: string}[] })[] = [
   {
     id: 'prod_1',
     name: 'L-Shaped Kitchen Design',
@@ -23,7 +25,19 @@ const allProducts: Product[] = [
     rating: 4.8,
     status: 'In Stock',
     imageUrl: "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg",
-    imageHint: 'l-shaped kitchen'
+    imageHint: 'l-shaped kitchen',
+    gallery: [
+        { url: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg', hint: 'kitchen overview' },
+        { url: '/kitchen_close_up.jpg', hint: 'kitchen detail' },
+        { url: '/kitchen_storage.jpg', hint: 'kitchen storage' },
+        { url: '/kitchen_angle.jpg', hint: 'kitchen angle' },
+    ],
+    specifications: [
+        { name: 'Primary Material', value: 'HDHMR' },
+        { name: 'Finish', value: 'Glossy Laminate' },
+        { name: 'Countertop', value: 'Granite' },
+        { name: 'Warranty', value: '10 Years' }
+    ]
   },
   {
     id: 'prod_2',
@@ -36,7 +50,19 @@ const allProducts: Product[] = [
     rating: 4.9,
     status: 'In Stock',
     imageUrl: "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg",
-    imageHint: 'modern wardrobe'
+    imageHint: 'modern wardrobe',
+    gallery: [
+        { url: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg', hint: 'wardrobe front' },
+        { url: '/wardrobe_open.jpg', hint: 'wardrobe open' },
+        { url: '/wardrobe_detail.jpg', hint: 'wardrobe detail' },
+        { url: '/wardrobe_side.jpg', hint: 'wardrobe side' },
+    ],
+    specifications: [
+        { name: 'Primary Material', value: 'Plywood' },
+        { name: 'Finish', value: 'Matte Laminate' },
+        { name: 'Doors', value: '2 Swing Doors' },
+        { name: 'Warranty', value: '11 Years' }
+    ]
   },
   {
     id: 'prod_3',
@@ -49,7 +75,19 @@ const allProducts: Product[] = [
     rating: 4.7,
     status: 'In Stock',
     imageUrl: "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg",
-    imageHint: 'master bedroom'
+    imageHint: 'master bedroom',
+     gallery: [
+        { url: '/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg', hint: 'bedroom overview' },
+        { url: '/bedroom_bed.jpg', hint: 'bedroom bed' },
+        { url: '/bedroom_storage.jpg', hint: 'bedroom storage' },
+        { url: '/bedroom_detail.jpg', hint: 'bedroom decor' },
+    ],
+    specifications: [
+        { name: 'Bed Size', value: 'Queen' },
+        { name: 'Headboard Material', value: 'Upholstered Fabric' },
+        { name: 'Wardrobe Finish', value: 'Glossy Laminate' },
+        { name: 'Warranty', value: '10 Years' }
+    ]
   },
   {
     id: 'prod_4',
@@ -127,12 +165,18 @@ export default function ProductDetailPage() {
   const [reviewCount, setReviewCount] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const product = allProducts.find(p => p.id === id);
+  const [activeImage, setActiveImage] = useState(product?.gallery?.[0]?.url || product?.imageUrl);
+
   useEffect(() => {
-    // Generate random number only on the client-side after mounting
     setReviewCount(Math.floor(Math.random() * 50) + 10);
   }, []);
 
-  const product = allProducts.find(p => p.id === id);
+  useEffect(() => {
+    const currentProduct = allProducts.find(p => p.id === id);
+    setActiveImage(currentProduct?.gallery?.[0]?.url || currentProduct?.imageUrl);
+  }, [id]);
+
 
   if (!product) {
     return (
@@ -146,57 +190,94 @@ export default function ProductDetailPage() {
     );
   }
 
-  const { name, description, rating, imageUrl, imageHint, category } = product;
+  const { name, description, rating, category, gallery, specifications } = product;
+
+  const relatedProducts = allProducts.filter(p => p.category === category && p.id !== id).slice(0, 3);
 
   return (
     <>
-      <div>
-          {/* Hero Section */}
-          <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center text-white">
-              {imageUrl &&
-                <Image
-                    src={imageUrl}
-                    alt={name}
-                    data-ai-hint={imageHint}
-                    fill
-                    className="object-cover"
-                    priority
-                />
-              }
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="relative z-10 text-center p-4">
-                  <p className="text-lg md:text-xl font-body uppercase tracking-widest">{category}</p>
-                  <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 drop-shadow-md min-h-[4rem] md:min-h-[6rem]">
-                      <TypewriterEffect text={name} />
-                  </h1>
+      <div className="container mx-auto px-4 py-12 md:py-16">
+          {/* Main Product Section */}
+          <section className="grid md:grid-cols-2 gap-8 md:gap-12">
+              {/* Image Gallery */}
+              <div className="space-y-4">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-lg shadow-lg">
+                      {activeImage && (
+                          <Image
+                              src={activeImage}
+                              alt={name}
+                              data-ai-hint={product.imageHint}
+                              fill
+                              className="object-cover transition-opacity duration-300"
+                              priority
+                              key={activeImage}
+                          />
+                      )}
+                  </div>
+                  {gallery && gallery.length > 1 && (
+                      <div className="grid grid-cols-4 gap-4">
+                          {gallery.map((img) => (
+                              <button
+                                  key={img.url}
+                                  onClick={() => setActiveImage(img.url)}
+                                  className={cn(
+                                      "relative aspect-square w-full overflow-hidden rounded-md border-2 transition-colors",
+                                      activeImage === img.url ? "border-primary" : "border-transparent hover:border-primary/50"
+                                  )}
+                              >
+                                  <Image
+                                      src={img.url}
+                                      alt={name}
+                                      data-ai-hint={img.hint}
+                                      fill
+                                      className="object-cover"
+                                  />
+                              </button>
+                          ))}
+                      </div>
+                  )}
               </div>
-          </section>
 
-          {/* Product Details Section */}
-          <section className="container mx-auto px-4 py-16 md:py-24">
-              <div className="grid md:grid-cols-2 gap-12">
-                  {/* Left Column: Description & Rating */}
-                  <div>
-                      <h2 className="text-2xl font-headline font-bold text-primary mb-4">Product Details</h2>
-                      <p className="text-lg text-muted-foreground mb-6">{description}</p>
-                      <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1 text-yellow-500">
+              {/* Product Info */}
+              <div>
+                  <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground">{category}</p>
+                  <h1 className="text-3xl md:text-4xl font-headline font-bold text-primary my-2">{name}</h1>
+                  <div className="flex items-center gap-4 mb-6">
+                      <div className="flex items-center gap-1 text-yellow-500">
                           <Star className="w-5 h-5 fill-current" />
                           <span className="font-bold text-lg text-foreground">{rating}</span>
-                          </div>
-                          {reviewCount !== null && (
-                            <span className="text-sm text-muted-foreground">({reviewCount} reviews)</span>
-                          )}
                       </div>
+                      {reviewCount !== null && (
+                          <span className="text-sm text-muted-foreground">({reviewCount} reviews)</span>
+                      )}
                   </div>
+                  
+                  <Tabs defaultValue="description" className="w-full">
+                        <TabsList>
+                            <TabsTrigger value="description">Description</TabsTrigger>
+                            {specifications && <TabsTrigger value="specs">Specifications</TabsTrigger>}
+                        </TabsList>
+                        <TabsContent value="description" className="py-4 text-base text-foreground/80 min-h-[120px]">
+                           {description}
+                        </TabsContent>
+                        {specifications && (
+                            <TabsContent value="specs" className="py-4 min-h-[120px]">
+                                <ul className="space-y-2 text-foreground/80">
+                                    {specifications.map(spec => (
+                                        <li key={spec.name} className="flex justify-between">
+                                            <span className="font-semibold text-foreground/90">{spec.name}:</span>
+                                            <span>{spec.value}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </TabsContent>
+                        )}
+                  </Tabs>
 
-                  {/* Right Column: Actions & Features */}
-                  <div className="space-y-8">
+                  <div className="space-y-8 mt-6">
                       <div>
-                          <h2 className="text-2xl font-headline font-bold text-primary mb-4">Request a Quote</h2>
-                          <p className="text-muted-foreground mb-6">Interested in this piece? Add it to your quote request, and our team will get in touch with you.</p>
                           <Button size="lg" className="w-full text-lg" onClick={() => setIsModalOpen(true)}>
-                              Add to Quote
+                              Request a Quote
                           </Button>
                       </div>
                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -217,6 +298,10 @@ export default function ProductDetailPage() {
               </div>
           </section>
       </div>
+
+       {/* Related Products Section */}
+      {relatedProducts.length > 0 && <RelatedProducts products={relatedProducts} />}
+
       <QuoteModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
