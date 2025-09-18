@@ -12,6 +12,7 @@ import QuoteModal from '@/components/products/QuoteModal';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import RelatedProducts from '@/components/products/RelatedProducts';
 import { cn } from '@/lib/utils';
+import WhyChooseUs from '@/components/landing/WhyChooseUs';
 
 const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifications?: {name: string; value: string}[] })[] = [
   {
@@ -298,6 +299,9 @@ export default function ProductDetailPage() {
               </div>
           </section>
       </div>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
 
        {/* Related Products Section */}
       {relatedProducts.length > 0 && <RelatedProducts products={relatedProducts} />}
