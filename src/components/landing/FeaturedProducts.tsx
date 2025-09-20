@@ -141,7 +141,7 @@ export default function FeaturedProducts() {
             imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
             break;
         default:
-            imageUrl = `/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg`;
+            imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
     }
 
     return {
