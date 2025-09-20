@@ -2,14 +2,13 @@ import Image from "next/image";
 import ScrollAnimationWrapper from "../animations/ScrollAnimationWrapper";
 
 const partners = [
-    { name: "iPaints", logo: "/ipaints.png", width: 100, height: 50 },
-    { name: "Berger", logo: "/berger.png", width: 120, height: 60 },
-    { name: "Ebco", logo: "/ebco.png", width: 110, height: 55 },
-    { name: "Elica", logo: "/elica.png", width: 100, height: 50 },
-    { name: "Hettich", logo: "/hettich.png", width: 130, height: 65 },
-    { name: "eGlu", logo: "/eglu.png", width: 100, height: 50 },
-    { name: "Excel", logo: "/excel.png", width: 120, height: 60 },
-    { name: "FA", logo: "/fa.png", width: 80, height: 40 },
+    { name: "iPaints", logo: "/Asian-Paints.png", width: 100, height: 50 },
+    { name: "Berger", logo: "/Berger-Paint.jpg", width: 120, height: 60 },
+    { name: "Ebco", logo: "/Ebco (2).jpg", width: 110, height: 55 },
+    { name: "Elica", logo: "/Excel.jpg", width: 100, height: 50 },
+    { name: "Hettich", logo: "/Faber.jpg", width: 130, height: 65 },
+    { name: "eGlu", logo: "/Hettich (2).png", width: 100, height: 50 },
+    
 ];
 
 export default function BrandPartners() {
