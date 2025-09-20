@@ -110,6 +110,16 @@
   .loader-fade-out {
     animation: loader-fade-out 0.5s ease-out forwards;
   }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+
+  .scrolling-wrapper {
+      display: flex;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+  }
 }
 
 

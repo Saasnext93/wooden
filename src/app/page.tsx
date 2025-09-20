@@ -1,4 +1,5 @@
 import AboutSection from "@/components/landing/AboutSection";
+import BrandPartners from "@/components/landing/BrandPartners";
 import ContactForm from "@/components/landing/ContactForm";
 import FeaturedProducts from "@/components/landing/FeaturedProducts";
 import FeaturedSlider from "@/components/landing/FeaturedSlider";
@@ -25,6 +26,7 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <TrustBadges />
+      <BrandPartners />
       <ContactForm />
     </div>
   );
