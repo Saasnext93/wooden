@@ -20,7 +20,7 @@ const layouts = [
   },
   {
     name: 'U-shape',
-    imageUrl: '/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1721825176413-eea9d1e8ae8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8bW9kdWxhciUyMGJlZHJvb218ZW58MHx8fHwxNzU4NTY2NTgzfDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'U-shaped kitchen layout',
   },
   {
