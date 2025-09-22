@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 const layouts = [
   {
     name: 'Straight',
-    imageUrl: '/straight-kitchen.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1588854337236-6889d631faa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2R1bGFyJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NTg1NjYzODh8MA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'straight kitchen layout',
   },
   {
