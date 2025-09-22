@@ -4,6 +4,7 @@ import ContactForm from "@/components/landing/ContactForm";
 import FeaturedProducts from "@/components/landing/FeaturedProducts";
 import FeaturedSlider from "@/components/landing/FeaturedSlider";
 import HeroSection from "@/components/landing/HeroSection";
+import KitchenLayouts from "@/components/landing/KitchenLayouts";
 import ManufacturingProcess from "@/components/landing/ManufacturingProcess";
 import NewProducts from "@/components/landing/NewProducts";
 import OurPhilosophy from "@/components/landing/OurPhilosophy";
@@ -18,6 +19,7 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <FeaturedSlider />
+      <KitchenLayouts />
       <OurPhilosophy />
       <FeaturedProducts />
       <NewProducts />

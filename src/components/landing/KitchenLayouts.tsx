@@ -1,0 +1,95 @@
+
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
+import { cn } from '@/lib/utils';
+
+const layouts = [
+  {
+    name: 'Straight',
+    imageUrl: '/straight-kitchen.jpg',
+    imageHint: 'straight kitchen layout',
+  },
+  {
+    name: 'L-shape',
+    imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg',
+    imageHint: 'L-shaped kitchen layout',
+  },
+  {
+    name: 'U-shape',
+    imageUrl: '/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg',
+    imageHint: 'U-shaped kitchen layout',
+  },
+  {
+    name: 'Parallel',
+    imageUrl: '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg',
+    imageHint: 'parallel kitchen layout',
+  },
+  {
+    name: 'Island',
+    imageUrl: '/island-kitchen.jpg',
+    imageHint: 'island kitchen layout',
+  },
+];
+
+export default function KitchenLayouts() {
+  const [activeTab, setActiveTab] = useState(layouts[3].name);
+
+  return (
+    <section className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4">
+        <ScrollAnimationWrapper className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">
+            Our range of modular kitchen layouts
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            We've created a range of layouts that offer functional, stylish solutions to perfectly suit your needs.
+          </p>
+        </ScrollAnimationWrapper>
+
+        <ScrollAnimationWrapper delay={200}>
+          <Tabs value={activeTab} onValueChange={setActiveTab} orientation="vertical" className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <TabsList className="flex flex-col h-auto justify-start items-stretch bg-transparent p-0 space-y-2">
+              {layouts.map((layout) => (
+                <TabsTrigger
+                  key={layout.name}
+                  value={layout.name}
+                  className={cn(
+                    "w-full text-left justify-start p-4 rounded-lg text-lg font-medium transition-all duration-300",
+                    "data-[state=active]:bg-red-500 data-[state=active]:text-white data-[state=active]:shadow-lg",
+                    "hover:bg-accent hover:text-primary"
+                  )}
+                >
+                  {layout.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            <div className="md:col-span-3 relative min-h-[400px] md:min-h-[500px]">
+              {layouts.map((layout) => (
+                <TabsContent key={layout.name} value={layout.name} className="absolute inset-0 m-0 p-0 h-full w-full">
+                   <div className="relative h-full w-full overflow-hidden rounded-lg shadow-2xl">
+                     <Image
+                        src={layout.imageUrl}
+                        alt={layout.name}
+                        data-ai-hint={layout.imageHint}
+                        fill
+                        className={cn(
+                            "object-cover transition-opacity duration-500",
+                            activeTab === layout.name ? "opacity-100" : "opacity-0"
+                        )}
+                        priority={layout.name === 'Parallel'}
+                      />
+                   </div>
+                </TabsContent>
+              ))}
+            </div>
+          </Tabs>
+        </ScrollAnimationWrapper>
+      </div>
+    </section>
+  );
+}
