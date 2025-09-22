@@ -15,7 +15,7 @@ const layouts = [
   },
   {
     name: 'L-shape',
-    imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1662454419716-c4c504728811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHwlMjBtb2R1bGFyJTIwYmVkcm9vbXxlbnwwfHx8fDE3NTg1NjY0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'L-shaped kitchen layout',
   },
   {
