@@ -34,9 +34,9 @@ const kitchenProducts = [
     name: 'Stylish Green & Grey Kitchen',
     category: 'Straight',
     images: [
-      { url: '/kitchens/kitchen2-1.jpg', hint: 'green kitchen cabinets' },
-      { url: '/kitchens/kitchen2-2.jpg', hint: 'modern kitchen appliances' },
-      { url: '/kitchens/kitchen2-3.jpg', hint: 'kitchen sink detail' },
+      { url: '/MODULERKITCHEN/StraightKitchen/img2.jpg', hint: 'green kitchen cabinets' },
+      { url: '/MODULERKITCHEN/StraightKitchen/img1.jpg', hint: 'modern kitchen appliances' },
+      { url: '/MODULERKITCHEN/StraightKitchen/img4.jpg', hint: 'kitchen sink detail' },
     ]
   },
   {
@@ -44,9 +44,9 @@ const kitchenProducts = [
     name: 'Sleek Serenity Modern Kitchen',
     category: 'Parallel',
     images: [
-      { url: '/kitchens/kitchen3-1.jpg', hint: 'minimalist kitchen' },
-      { url: '/kitchens/kitchen3-2.jpg', hint: 'glossy kitchen cabinets' },
-      { url: '/kitchens/kitchen3-3.jpg', hint: 'kitchen lighting' },
+      { url: '/MODULERKITCHEN/ParallalKitchen/m.jpg', hint: 'minimalist kitchen' },
+      { url: '/MODULERKITCHEN/ParallalKitchen/M2.jpg', hint: 'glossy kitchen cabinets' },
+      { url: '/MODULERKITCHEN/ParallalKitchen/M3.jpg', hint: 'kitchen lighting' },
     ]
   },
   {
@@ -54,9 +54,9 @@ const kitchenProducts = [
     name: 'Classic U-Shaped Kitchen',
     category: 'U-Shaped',
     images: [
-      { url: '/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg', hint: 'u-shaped kitchen' },
-      { url: 'https://images.unsplash.com/photo-1586208958839-06c17cacdf08?w=800', hint: 'kitchen appliances' },
-      { url: 'https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=800', hint: 'kitchen counter' },
+      { url: '/MODULERKITCHEN/UShape/img1.jpg', hint: 'u-shaped kitchen' },
+      { url: '/MODULERKITCHEN/UShape/img2.jpg', hint: 'kitchen appliances' },
+      { url: '/MODULERKITCHEN/UShape/img3.jpg', hint: 'kitchen counter' },
     ]
   },
   {
@@ -64,9 +64,9 @@ const kitchenProducts = [
     name: 'Compact L-Shaped Kitchen',
     category: 'L-Shaped',
     images: [
-      { url: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg', hint: 'l-shaped kitchen' },
-      { url: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800', hint: 'kitchen cooking' },
-      { url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800', hint: 'kitchen interior' },
+      { url: '/MODULERKITCHEN/Island/img.jpg', hint: 'l-shaped kitchen' },
+      { url: '/MODULERKITCHEN/Island/img2.jpg', hint: 'kitchen cooking' },
+      { url: '/MODULERKITCHEN/Island/img3.jpg', hint: 'kitchen interior' },
     ]
   },
   {
@@ -74,9 +74,9 @@ const kitchenProducts = [
     name: 'Minimalist Straight Island Kitchen',
     category: 'Straight Island',
     images: [
-      { url: '/island-kitchen-design.jpg', hint: 'straight island kitchen' },
-      { url: 'https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800', hint: 'kitchen chairs' },
-      { url: 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=800', hint: 'kitchen details' },
+      { url: '/MODULERKITCHEN/LShape/img.jpg', hint: 'straight island kitchen' },
+      { url: '/MODULERKITCHEN/LShape/image3.jpg', hint: 'kitchen chairs' },
+      { url: '/MODULERKITCHEN/LShape/imge4.jpg', hint: 'kitchen details' },
     ]
   }
 ];
