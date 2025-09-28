@@ -49,16 +49,7 @@ const bedroomProducts = [
       { url: '/BEDROOMS/BUNKBEDS/img3.jpg', hint: 'bunk bed setup' },
     ]
   },
-  {
-    id: 'bedroom_4',
-    name: 'Elegant Queen Bedroom',
-    category: 'Master Bedrooms',
-    images: [
-      { url: '/BEDROOMS/MASTERBEDROOM/img4.jpg', hint: 'elegant queen bed' },
-      { url: '/BEDROOMS/MASTERBEDROOM/img1.jpg', hint: 'bedroom vanity' },
-      { url: '/BEDROOMS/MASTERBEDROOM/img2.jpg', hint: 'bedroom lighting' },
-    ]
-  },
+  
   {
     id: 'bedroom_5',
     name: 'Playful Bunk Room',
