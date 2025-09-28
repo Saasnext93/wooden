@@ -6,9 +6,9 @@ import { Button } from "../ui/button";
 
 export default function AboutSection() {
     const aboutImage = {
-        imageUrl: "/about-us.jpg",
+        imageUrl: "https://images.unsplash.com/photo-1667892702886-a93444e752f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNnx8bW9kdWxhciUyMGZ1cm5pdHVyZXxlbnwwfHx8fDE3NTkwNzI4ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
         description: "Image for the about section",
-        imageHint: "woodworking tools"
+        imageHint: "modular furniture"
     };
 
     return (
