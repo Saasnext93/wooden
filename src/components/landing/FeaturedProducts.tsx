@@ -396,17 +396,17 @@ export default function FeaturedProducts() {
                     <ScrollBar orientation="horizontal" className="hidden md:flex" />
                   </ScrollArea>
                 </div>
-                {categories.map(category => (
-                  <TabsContent key={category} value={category}>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                          {filteredProducts.map((product) => (
-                              <div key={product.id}>
-                                  <ProductCard product={product} />
-                              </div>
-                          ))}
-                      </div>
-                  </TabsContent>
-                ))}
+                
+                <TabsContent value={activeTab}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {filteredProducts.map((product) => (
+                            <div key={product.id}>
+                                <ProductCard product={product} />
+                            </div>
+                        ))}
+                    </div>
+                </TabsContent>
+                
             </Tabs>
         </ScrollAnimationWrapper>
 
