@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -23,9 +24,9 @@ const kitchenProducts = [
     name: 'Coastal Chic Modular Kitchen',
     category: 'L-Shaped Island',
     images: [
-      { url: '/kitchens/kitchen1-1.jpg', hint: 'blue kitchen island' },
-      { url: '/kitchens/kitchen1-2.jpg', hint: 'kitchen dining area' },
-      { url: '/kitchens/kitchen1-3.jpg', hint: 'kitchen countertop' },
+      { url: '/MODULERKITCHEN/LShape/image2.jpg', hint: 'blue kitchen island' },
+      { url: '/MODULERKITCHEN/LShape/image3.jpg', hint: 'kitchen dining area' },
+      { url: '/MODULERKITCHEN/LShape/image1.jpg', hint: 'kitchen countertop' },
     ]
   },
   {
@@ -93,7 +94,7 @@ export default function KitchenShowcase() {
     if (activeCategory === 'All') {
       return kitchenProducts;
     }
-    return kitchenProducts.filter(k => k.category === activeCategory);
+    return kitchenProducts.filter(k => k.category.includes(activeCategory.replace(' Island', '')));
   }, [activeCategory]);
 
   const openQuoteModal = (productName: string) => {
