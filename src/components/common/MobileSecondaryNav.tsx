@@ -19,11 +19,11 @@ const secondaryNavigationLinks: NavigationLink[] = [
     href: '/products?categories=Modular%20Kitchen%20Design',
     description: 'Beautiful kitchens for modern living.',
     items: [
-      { title: 'L-Shaped Kitchen', href: '/products/prod_1', imageId: 'kitchen-lshape', imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg' },
-      { title: 'U-Shaped Kitchen', href: '/products/prod_6', imageId: 'kitchen-ushape', imageUrl: '/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg' },
-      { title: 'Parallel Kitchen', href: '/products/prod_5', imageId: 'kitchen-parallel', imageUrl: '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg' },
-      { title: 'Straight Kitchen', href: '/products/prod_9', imageId: 'kitchen-straight', imageUrl: '/straight-kitchen-design.jpg' },
-      { title: 'Island Kitchen', href: '/products/prod_10', imageId: 'kitchen-island', imageUrl: '/island-kitchen-design.jpg' },
+      { title: 'L-Shaped Kitchen', href: '/products/prod_1', imageId: 'kitchen-lshape', imageUrl: '/MODULERKITCHEN/LShape/image1.jpg' },
+      { title: 'U-Shaped Kitchen', href: '/products/prod_6', imageId: 'kitchen-ushape', imageUrl: '/MODULERKITCHEN/UShape/img1.jpg' },
+      { title: 'Parallel Kitchen', href: '/products/prod_5', imageId: 'kitchen-parallel', imageUrl: '/MODULERKITCHEN/ParallalKitchen/m.jpg' },
+      { title: 'Straight Kitchen', href: '/products/prod_9', imageId: 'kitchen-straight', imageUrl: '/MODULERKITCHEN/StraightKitchen/img1.jpg' },
+      { title: 'Island Kitchen', href: '/products/prod_10', imageId: 'kitchen-island', imageUrl: '/MODULERKITCHEN/Island/img.jpg' },
     ],
   },
   {
@@ -40,9 +40,9 @@ const secondaryNavigationLinks: NavigationLink[] = [
     href: '/products?categories=Master%20bedroom%20design',
     description: 'Create your perfect sanctuary.',
     items: [
-      { title: 'Master Bedroom', href: '/products/prod_3', imageId: 'bedroom-master', imageUrl: '/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg' },
-      { title: 'Kids Bedroom', href: '/products/prod_4', imageId: 'bedroom-kids', imageUrl: '/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg' },
-      { title: 'Bunk Beds', href: '/products/prod_7', imageId: 'bedroom-bunk', imageUrl: '/modern-bedroom-design-with-a-double-bed-and-an-ottoman-bench.jpg' },
+      { title: 'Master Bedroom', href: '/products/prod_3', imageId: 'bedroom-master', imageUrl: '/BEDROOMS/MASTERBEDROOM/img1.jpg' },
+      { title: 'Kids Bedroom', href: '/products/prod_4', imageId: 'bedroom-kids', imageUrl: '/BEDROOMS/KIDS/img1.jpg' },
+      { title: 'Bunk Beds', href: '/products/prod_7', imageId: 'bedroom-bunk', imageUrl: '/BEDROOMS/BUNKBEDS/img1.jpg' },
     ],
   },
   {
@@ -50,11 +50,11 @@ const secondaryNavigationLinks: NavigationLink[] = [
     href: '/products?categories=Modular%20Furniture',
     description: 'Functional and stylish furniture.',
     items: [
-        { title: 'Sofas', href: '/products/prod_11', imageId: 'sofa-modern', imageUrl: '/sofa.jpg' },
-        { title: 'TV Units', href: '/products/prod_12', imageId: 'tv-unit', imageUrl: '/tv-unit.jpg' },
+        { title: 'Sofas', href: '/products/prod_11', imageId: 'sofa-modern', imageUrl: '/MODULERFURNITURE/SOFAS/img1.jpg' },
+        { title: 'TV Units', href: '/products/prod_12', imageId: 'tv-unit', imageUrl: '/MODULERFURNITURE/TVUNITS/img1.jpg' },
         { title: 'Crockery Units', href: '/products', imageId: 'crockery-unit', imageUrl: '/crockery-unit.jpg' },
-        { title: 'Bookshelves', href: '/products/prod_13', imageId: 'bookshelf', imageUrl: '/bookshelf.jpg' },
-        { title: 'Study Tables', href: '/products/prod_14', imageId: 'study-table', imageUrl: '/study-table.jpg' },
+        { title: 'Bookshelves', href: '/products/prod_13', imageId: 'bookshelf', imageUrl: '/MODULERFURNITURE/BOOKSHELVES/img1.jpg' },
+        { title: 'Study Tables', href: '/products/prod_14', imageId: 'study-table', imageUrl: '/MODULERFURNITURE/STUDYTABLE/img1.jpg' },
     ]
   }
 ];
