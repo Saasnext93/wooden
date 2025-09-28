@@ -52,7 +52,7 @@ const secondaryNavigationLinks: NavigationLink[] = [
     items: [
         { title: 'Sofas', href: '/products/prod_11', imageId: 'sofa-modern', imageUrl: '/MODULERFURNITURE/SOFAS/img1.jpg' },
         { title: 'TV Units', href: '/products/prod_12', imageId: 'tv-unit', imageUrl: '/MODULERFURNITURE/TVUNITS/img1.jpg' },
-        { title: 'Crockery Units', href: '/products', imageId: 'crockery-unit', imageUrl: '/crockery-unit.jpg' },
+        { title: 'Crockery Units', href: '/products', imageId: 'crockery-unit', imageUrl: '/MODULERFURNITURE/crockery-unit.jpg' },
         { title: 'Bookshelves', href: '/products/prod_13', imageId: 'bookshelf', imageUrl: '/MODULERFURNITURE/BOOKSHELVES/img1.jpg' },
         { title: 'Study Tables', href: '/products/prod_14', imageId: 'study-table', imageUrl: '/MODULERFURNITURE/STUDYTABLE/img1.jpg' },
     ]

@@ -30,9 +30,9 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     imageHint: 'l-shaped kitchen',
     gallery: [
         { url: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg', hint: 'kitchen overview' },
-        { url: '/kitchen_close_up.jpg', hint: 'kitchen detail' },
-        { url: '/kitchen_storage.jpg', hint: 'kitchen storage' },
-        { url: '/kitchen_angle.jpg', hint: 'kitchen angle' },
+        { url: '/MODULERKITCHEN/LShape/image2.jpg', hint: 'kitchen detail' },
+        { url: '/MODULERKITCHEN/LShape/image3.jpg', hint: 'kitchen storage' },
+        { url: '/MODULERKITCHEN/LShape/imge4.jpg', hint: 'kitchen angle' },
     ],
     specifications: [
         { name: 'Primary Material', value: 'HDHMR' },
@@ -55,9 +55,9 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     imageHint: 'modern wardrobe',
     gallery: [
         { url: '/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg', hint: 'wardrobe front' },
-        { url: '/wardrobe_open.jpg', hint: 'wardrobe open' },
-        { url: '/wardrobe_detail.jpg', hint: 'wardrobe detail' },
-        { url: '/wardrobe_side.jpg', hint: 'wardrobe side' },
+        { url: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg', hint: 'wardrobe open' },
+        { url: '/BEDROOMS/MASTERBEDROOM/img3.jpg', hint: 'wardrobe detail' },
+        { url: '/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg', hint: 'wardrobe side' },
     ],
     specifications: [
         { name: 'Primary Material', value: 'Plywood' },
@@ -80,9 +80,9 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     imageHint: 'master bedroom',
      gallery: [
         { url: '/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg', hint: 'bedroom overview' },
-        { url: '/bedroom_bed.jpg', hint: 'bedroom bed' },
-        { url: '/bedroom_storage.jpg', hint: 'bedroom storage' },
-        { url: '/bedroom_detail.jpg', hint: 'bedroom decor' },
+        { url: '/BEDROOMS/MASTERBEDROOM/img1.jpg', hint: 'bedroom bed' },
+        { url: '/BEDROOMS/MASTERBEDROOM/img2.jpg', hint: 'bedroom storage' },
+        { url: '/BEDROOMS/MASTERBEDROOM/img3.jpg', hint: 'bedroom decor' },
     ],
     specifications: [
         { name: 'Bed Size', value: 'Queen' },
@@ -168,7 +168,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     material: 'MDF',
     rating: 4.6,
     status: 'In Stock',
-    imageUrl: "/straight-kitchen-design.jpg",
+    imageUrl: "/MODULERKITCHEN/StraightKitchen/img1.jpg",
     imageHint: 'straight kitchen'
   },
   {
@@ -181,7 +181,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     material: 'Quartz',
     rating: 4.9,
     status: 'New Arrival',
-    imageUrl: "/island-kitchen-design.jpg",
+    imageUrl: "/MODULERKITCHEN/Island/img.jpg",
     imageHint: 'island kitchen'
   },
   {
@@ -194,7 +194,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     material: 'Fabric',
     rating: 4.8,
     status: 'In Stock',
-    imageUrl: "/sofa.jpg",
+    imageUrl: "/MODULERFURNITURE/SOFAS/img1.jpg",
     imageHint: 'modern sofa'
   },
   {
@@ -207,7 +207,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     material: 'Wood',
     rating: 4.7,
     status: 'In Stock',
-    imageUrl: "/tv-unit.jpg",
+    imageUrl: "/MODULERFURNITURE/TVUNITS/img1.jpg",
     imageHint: 'tv unit'
   },
   {
@@ -220,7 +220,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     material: 'Wood',
     rating: 4.8,
     status: 'In Stock',
-    imageUrl: "/bookshelf.jpg",
+    imageUrl: "/MODULERFURNITURE/BOOKSHELVES/img1.jpg",
     imageHint: 'bookshelf'
   },
   {
@@ -233,7 +233,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     material: 'Wood',
     rating: 4.9,
     status: 'New Arrival',
-    imageUrl: "/study-table.jpg",
+    imageUrl: "/MODULERFURNITURE/STUDYTABLE/img1.jpg",
     imageHint: 'study table'
   },
 ];
