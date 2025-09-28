@@ -66,10 +66,10 @@ export default function ProductShowcase() {
         </ScrollAnimationWrapper>
 
         <ScrollAnimationWrapper delay={200}>
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Main Image */}
-            <div className="lg:col-span-3 relative min-h-[400px] md:min-h-[600px] w-full sticky top-24">
-              <div className="relative h-full w-full overflow-hidden rounded-lg shadow-2xl">
+            <div className="relative min-h-[400px] md:min-h-[600px] w-full lg:sticky top-24">
+              <div className="relative h-full w-full overflow-hidden rounded-lg shadow-2xl aspect-square">
                 <Image
                   src={activeItem.imageUrl}
                   alt={activeItem.name}
@@ -85,7 +85,7 @@ export default function ProductShowcase() {
             </div>
 
             {/* Categories & Sub-items */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="space-y-8">
               <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="w-full">
                 <TabsList className="grid w-full grid-cols-3">
                   {categories.map((category) => (
