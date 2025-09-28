@@ -2,7 +2,6 @@
 'use client';
 
 import { Star, StarHalf } from 'lucide-react';
-import Image from 'next/image';
 import { useMemo, useState } from 'react';
 
 import type { Testimonial } from '@/lib/types';
@@ -24,7 +23,7 @@ const allTestimonials: Testimonial[] = [
   },
   {
     id: 'test_2',
-    quote: "Wooden Manufacture transformed our living space. The sofa is not only beautiful but incredibly comfortable. The whole process was seamless.",
+    quote: "Pinnacle Modular Furniture transformed our living space. The sofa is not only beautiful but incredibly comfortable. The whole process was seamless.",
     customerName: 'Mahesh Kumar',
     customerTitle: 'Interior Designer, Delhi',
     imageId: 'avatar2',
@@ -139,14 +138,6 @@ export default function Testimonials() {
                                 {filteredTestimonials.map((testimonial, index) => (
                                     <div key={testimonial.id}>
                                         <div className="flex items-start gap-4">
-                                            <Image
-                                                src={testimonial.avatarUrl}
-                                                alt={`Avatar of ${testimonial.customerName}`}
-                                                data-ai-hint={testimonial.avatarHint}
-                                                width={40}
-                                                height={40}
-                                                className="rounded-full mt-1 border-2 border-primary/20"
-                                            />
                                             <div className="flex-1">
                                                 <div className="flex items-center justify-between">
                                                     <div>
