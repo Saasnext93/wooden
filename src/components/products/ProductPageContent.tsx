@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -21,7 +22,7 @@ const allProducts: Product[] = [
   },
   {
     id: 'prod_2',
-    name: 'Modern Wardrobe Design',
+    name: 'Sliding Wardrobe',
     description: 'A sleek wardrobe with ample storage and a contemporary finish.',
     price: 620,
     imageId: 'product2',
@@ -174,7 +175,7 @@ const productsWithImages = allProducts.map(product => {
       imageUrl = "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg";
       break;
     case 'prod_2':
-      imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
+      imageUrl = "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg";
       break;
     case 'prod_3':
       imageUrl = "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg";

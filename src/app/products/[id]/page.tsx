@@ -43,18 +43,18 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
   },
   {
     id: 'prod_2',
-    name: 'Modern Wardrobe Design',
-    description: 'A sleek and spacious wardrobe with a minimalist aesthetic, featuring smart organizational solutions to keep your space tidy and stylish.',
+    name: 'Sliding Wardrobe',
+    description: 'A sleek and spacious sliding wardrobe with a minimalist aesthetic, featuring smart organizational solutions to keep your space tidy and stylish.',
     price: 620,
     imageId: 'product2',
     category: 'Wardrobe Design',
     material: 'Walnut',
     rating: 4.9,
     status: 'In Stock',
-    imageUrl: "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg",
+    imageUrl: "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg",
     imageHint: 'modern wardrobe',
     gallery: [
-        { url: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg', hint: 'wardrobe front' },
+        { url: '/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg', hint: 'wardrobe front' },
         { url: 'https://images.unsplash.com/photo-1662454419716-c4c504728811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2R1bGFyJTIwYmVkcm9vbXxlbnwwfHx8fDE3NTgzNDcwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'wardrobe open' },
         { url: '/wardrobe_detail.jpg', hint: 'wardrobe detail' },
         { url: '/wardrobe_side.jpg', hint: 'wardrobe side' },
@@ -62,7 +62,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     specifications: [
         { name: 'Primary Material', value: 'Plywood' },
         { name: 'Finish', value: 'Matte Laminate' },
-        { name: 'Doors', value: '2 Swing Doors' },
+        { name: 'Doors', value: '2 Sliding Doors' },
         { name: 'Warranty', value: '11 Years' }
     ]
   },

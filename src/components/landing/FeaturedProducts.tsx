@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import ProductCard from '../products/ProductCard';
@@ -23,7 +24,7 @@ const allProducts = [
   },
   {
     id: 'prod_2',
-    name: 'Modern Wardrobe Design',
+    name: 'Sliding Wardrobe',
     description: 'Minimalist design meets rich walnut wood. This coffee table is a statement of elegance.',
     price: 620,
     imageId: 'product2',
@@ -165,7 +166,7 @@ export default function FeaturedProducts() {
             imageUrl = "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg";
             break;
         case 'prod_2':
-            imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
+            imageUrl = "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg";
             break;
         case 'prod_3':
             imageUrl = "/contemporary-boys-room-design-with-glossy-beige-wardrobe.jpg";

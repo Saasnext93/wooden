@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import {
@@ -34,7 +35,7 @@ const secondaryNavigationLinks: NavigationLink[] = [
     description: 'Stylish and functional wardrobe solutions.',
     items: [
       { title: 'Swing Wardrobe', href: '/products/prod_8', imageId: 'wardrobe-swing', imageUrl: '/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
-      { title: 'Modern Wardrobe', href: '/products/prod_2', imageId: 'wardrobe-modern', imageUrl: '/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
+      { title: 'Sliding Wardrobe', href: '/products/prod_2', imageId: 'wardrobe-modern', imageUrl: '/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg' },
     ],
   },
   {
