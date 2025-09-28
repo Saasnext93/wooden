@@ -79,9 +79,9 @@ export default function SecondaryNav() {
               <NavigationMenuItem key={link.title}>
                 <NavigationMenuTrigger
                   className={cn(
-                    'text-base font-headline tracking-wider uppercase',
+                    'text-base font-headline tracking-wider uppercase font-bold',
                      isActive
-                      ? 'text-primary font-bold'
+                      ? 'text-primary'
                       : 'text-muted-foreground'
                   )}
                 >
