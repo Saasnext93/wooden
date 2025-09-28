@@ -1,7 +1,6 @@
 import AboutSection from "@/components/landing/AboutSection";
 import BrandPartners from "@/components/landing/BrandPartners";
 import ContactForm from "@/components/landing/ContactForm";
-import FeaturedProducts from "@/components/landing/FeaturedProducts";
 import FeaturedSlider from "@/components/landing/FeaturedSlider";
 import HeroSection from "@/components/landing/HeroSection";
 import ProductShowcase from "@/components/landing/ProductShowcase";
@@ -21,7 +20,6 @@ export default function Home() {
       <FeaturedSlider />
       <ProductShowcase />
       <OurPhilosophy />
-      <FeaturedProducts />
       <NewProducts />
       <AboutSection />
       <ManufacturingProcess />
