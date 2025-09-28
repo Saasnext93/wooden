@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Star, StarHalf } from 'lucide-react';
@@ -79,7 +80,7 @@ export default function Testimonials() {
   const testimonialsWithImages = allTestimonials.map(testimonial => {
     return {
       ...testimonial,
-      avatarUrl: `https://picsum.photos/seed/${testimonial.id}/100/100`,
+      avatarUrl: `/AVATAR/${testimonial.imageId}.jpg`,
       avatarHint: 'customer portrait'
     }
   });

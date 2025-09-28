@@ -72,7 +72,7 @@ export default function NewProducts() {
         imageUrl = "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg"
     }
     else {
-      imageUrl = `/picsum.photos/seed/${product.id}/600/800`;
+      imageUrl = "/art-deco-kids-bedroom-design-with-arc-pink-panels-and-white-frame.jpg";
     }
 
     return {

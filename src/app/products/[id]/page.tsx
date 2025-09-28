@@ -55,7 +55,7 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     imageHint: 'modern wardrobe',
     gallery: [
         { url: '/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg', hint: 'wardrobe front' },
-        { url: 'https://images.unsplash.com/photo-1662454419716-c4c504728811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2R1bGFyJTIwYmVkcm9vbXxlbnwwfHx8fDE3NTgzNDcwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'wardrobe open' },
+        { url: '/wardrobe_open.jpg', hint: 'wardrobe open' },
         { url: '/wardrobe_detail.jpg', hint: 'wardrobe detail' },
         { url: '/wardrobe_side.jpg', hint: 'wardrobe side' },
     ],

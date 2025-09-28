@@ -96,7 +96,7 @@ export default function FeaturedSlider() {
         imageUrl = "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg";
         break;
       default:
-        imageUrl = `https://picsum.photos/seed/${product.id}/600/600`;
+        imageUrl = "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg";
     }
 
     return {
