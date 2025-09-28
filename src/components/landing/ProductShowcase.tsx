@@ -11,11 +11,11 @@ const categories = [
   {
     name: 'Modular Kitchens',
     items: [
-      { name: 'Straight', imageUrl: 'https://images.unsplash.com/photo-1588854337236-6889d631faa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2R1bGFyJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NTg1NjYzODh8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'straight kitchen layout' },
-      { name: 'L-shape', imageUrl: 'https://images.unsplash.com/photo-1662454419716-c4c504728811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHwlMjBtb2R1bGFyJTIwYmVkcm9vbXxlbnwwfHx8fDE3NTg1NjY0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'L-shaped kitchen layout' },
-      { name: 'U-shape', imageUrl: 'https://images.unsplash.com/photo-1721825176413-eea9d1e8ae8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8bW9kdWxhciUyMGJlZHJvb218ZW58MHx8fHwxNzU4NTY2NTgzfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'U-shaped kitchen layout' },
-      { name: 'Parallel', imageUrl: 'https://images.unsplash.com/photo-1559554704-0f74b35a8718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2R1bGFyJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NTg1NjYzODh8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'parallel kitchen layout' },
-      { name: 'Island', imageUrl: 'https://images.unsplash.com/photo-1586208958839-06c17cacdf08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxM3x8bW9kdWxhciUyMGtpdGNoZW58ZW58MHx8fHwxNzU4NTY2Mzg4fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'island kitchen layout' },
+      { name: 'Straight', imageUrl: '/MODULERKITCHEN/StraightKitchen/img1.jpg', imageHint: 'straight kitchen layout' },
+      { name: 'L-shape', imageUrl: '/MODULERKITCHEN/LShape/image1.jpg', imageHint: 'L-shaped kitchen layout' },
+      { name: 'U-shape', imageUrl: '/MODULERKITCHEN/UShape/img1.jpg', imageHint: 'U-shaped kitchen layout' },
+      { name: 'Parallel', imageUrl: '/MODULERKITCHEN/ParallalKitchen/m.jpg', imageHint: 'parallel kitchen layout' },
+      { name: 'Island', imageUrl: '/MODULERKITCHEN/Island/img.jpg', imageHint: 'island kitchen layout' },
     ],
   },
   {
