@@ -120,6 +120,28 @@ const allProducts: Product[] = [
     rating: 4.9,
     status: 'New Arrival',
   },
+  {
+    id: 'prod_11',
+    name: 'Modern Sofa',
+    description: 'A comfortable and stylish sofa for your living room.',
+    price: 950,
+    imageId: 'product11',
+    category: 'Modular Furniture',
+    material: 'Fabric',
+    rating: 4.8,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_12',
+    name: 'Wooden TV Unit',
+    description: 'A sleek and modern TV unit to organize your entertainment space.',
+    price: 350,
+    imageId: 'product12',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.7,
+    status: 'In Stock',
+  },
 ];
 
 
@@ -155,6 +177,12 @@ const productsWithImages = allProducts.map(product => {
       break;
     case 'prod_10':
       imageUrl = "/island-kitchen-design.jpg";
+      break;
+    case 'prod_11':
+      imageUrl = "/sofa.jpg";
+      break;
+    case 'prod_12':
+      imageUrl = "/tv-unit.jpg";
       break;
     default:
       imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";

@@ -184,6 +184,32 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     imageUrl: "/island-kitchen-design.jpg",
     imageHint: 'island kitchen'
   },
+  {
+    id: 'prod_11',
+    name: 'Modern Sofa',
+    description: 'A comfortable and stylish sofa for your living room.',
+    price: 950,
+    imageId: 'product11',
+    category: 'Modular Furniture',
+    material: 'Fabric',
+    rating: 4.8,
+    status: 'In Stock',
+    imageUrl: "/sofa.jpg",
+    imageHint: 'modern sofa'
+  },
+  {
+    id: 'prod_12',
+    name: 'Wooden TV Unit',
+    description: 'A sleek and modern TV unit to organize your entertainment space.',
+    price: 350,
+    imageId: 'product12',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.7,
+    status: 'In Stock',
+    imageUrl: "/tv-unit.jpg",
+    imageHint: 'tv unit'
+  },
 ];
 
 

@@ -44,6 +44,16 @@ const secondaryNavigationLinks: NavigationLink[] = [
       { title: 'Bunk Beds', href: '/products/prod_7', imageId: 'bedroom-bunk', imageUrl: '/modern-bedroom-design-with-a-double-bed-and-an-ottoman-bench.jpg' },
     ],
   },
+  {
+    title: 'Modular Furniture',
+    href: '/products?categories=Modular%20Furniture',
+    description: 'Functional and stylish furniture.',
+    items: [
+        { title: 'Sofas', href: '/products/prod_11', imageId: 'sofa-modern', imageUrl: '/sofa.jpg' },
+        { title: 'TV Units', href: '/products/prod_12', imageId: 'tv-unit', imageUrl: '/tv-unit.jpg' },
+        { title: 'Crockery Units', href: '/products', imageId: 'crockery-unit', imageUrl: '/crockery-unit.jpg' },
+    ]
+  }
 ];
 
 
