@@ -11,6 +11,7 @@ import StatsSection from "@/components/landing/StatsSection";
 import Testimonials from "@/components/landing/Testimonials";
 import TrustBadges from "@/components/landing/TrustBadges";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
+import KitchenShowcase from "@/components/landing/KitchenShowcase";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <StatsSection />
       <FeaturedSlider />
       <ProductShowcase />
+      <KitchenShowcase />
       <OurPhilosophy />
       <NewProducts />
       <AboutSection />
