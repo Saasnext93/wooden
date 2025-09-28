@@ -100,6 +100,50 @@ const allProducts = [
     rating: 4.7,
     status: 'In Stock',
   },
+  {
+    id: 'prod_11',
+    name: 'Modern Sofa',
+    description: 'A comfortable and stylish sofa for your living room.',
+    price: 950,
+    imageId: 'product11',
+    category: 'Modular Furniture',
+    material: 'Fabric',
+    rating: 4.8,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_12',
+    name: 'Wooden TV Unit',
+    description: 'A sleek and modern TV unit to organize your entertainment space.',
+    price: 350,
+    imageId: 'product12',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.7,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_13',
+    name: 'Modern Bookshelf',
+    description: 'A stylish and functional bookshelf to display your favorite reads.',
+    price: 450,
+    imageId: 'product13',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.8,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_14',
+    name: 'Ergonomic Study Table',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
 ];
 
 
@@ -110,6 +154,7 @@ export default function FeaturedProducts() {
     'Wardrobe Design',
     'Master bedroom design',
     'Kids Room Design',
+    'Modular Furniture',
   ];
   const [activeTab, setActiveTab] = useState(categories[0]);
 
@@ -139,6 +184,18 @@ export default function FeaturedProducts() {
             break;
         case 'prod_8':
             imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
+            break;
+        case 'prod_11':
+            imageUrl = "/sofa.jpg";
+            break;
+        case 'prod_12':
+            imageUrl = "/tv-unit.jpg";
+            break;
+        case 'prod_13':
+            imageUrl = "/bookshelf.jpg";
+            break;
+        case 'prod_14':
+            imageUrl = "/study-table.jpg";
             break;
         default:
             imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
