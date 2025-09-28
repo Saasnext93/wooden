@@ -1,3 +1,4 @@
+
 'use client';
 
 import ProductCard from '../products/ProductCard';
@@ -425,8 +426,8 @@ export default function FeaturedProducts() {
                 {categories.map((category) => {
                   const productsToShow = getProductsForCategory(category);
                   return (
-                    <TabsContent key={category} value={category} forceMount>
-                        <div className={activeTab === category ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" : "hidden"}>
+                    <TabsContent key={category} value={category}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                             {productsToShow.map((product) => (
                                 <div key={product.id}>
                                     <ProductCard product={product} />
