@@ -33,16 +33,8 @@ export default function Footer() {
             <h3 className="font-headline font-semibold text-primary mb-4">Follow Us</h3>
             <div className="flex justify-center md:justify-start space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Facebook className="h-6 w-6" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="h-6 w-6" />
-                <span className="sr-only">Twitter</span>
               </Link>
             </div>
           </div>
