@@ -5,6 +5,7 @@ import Footer from "@/components/common/Footer"
 import './globals.css';
 import { Suspense } from 'react';
 import Loader from '@/components/common/Loader';
+import WhatsAppButton from '@/components/common/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: 'Pinnacle Modular Furniture',
@@ -32,6 +33,7 @@ export default function RootLayout({
             <div className="flex-1">{children}</div>
             <Footer />
             </div>
+            <WhatsAppButton />
             <Toaster />
         </Suspense>
       </body>
