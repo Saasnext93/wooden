@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-accent text-accent-foreground border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
           {/* Logo & Brand */}
           <div className="md:col-span-2 flex flex-col items-center md:items-start">
             <Logo />
@@ -46,6 +46,15 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+            {/* Visit Us */}
+            <div>
+            <h3 className="font-headline font-semibold text-primary mb-4">Visit Us</h3>
+            <address className="text-muted-foreground not-italic">
+                <p>123 Furniture Lane</p>
+                <p>Design District, Mumbai</p>
+                <p>India, 400051</p>
+            </address>
+            </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary/20 text-center text-sm text-muted-foreground">
