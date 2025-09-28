@@ -6,7 +6,7 @@ const heroPanels = [
   {
     title: 'Modular Kitchens',
     href: '/products?categories=Modular%20Kitchen%20Design',
-    imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg',
+    imageUrl: '/MODULERKITCHEN/LShape/image1.jpg',
     imageHint: 'modular kitchen',
   },
   {
@@ -16,15 +16,15 @@ const heroPanels = [
     imageHint: 'modern wardrobe',
   },
   {
-    title: 'Living Rooms',
+    title: 'Sofa',
     href: '/products',
-    imageUrl: '/sofa.jpg',
+    imageUrl: '/MODULERFURNITURE/SOFAS/img1.jpg',
     imageHint: 'living room sofa',
   },
   {
     title: 'Bedrooms',
     href: '/products?categories=Master%20bedroom%20design',
-    imageUrl: '/modern-bedroom-design-with-a-queen-bed-and-a-dark-green-tufted-headboard.jpg',
+    imageUrl: '/BEDROOMS/MASTERBEDROOM/img1.jpg',
     imageHint: 'modern bedroom',
   },
 ];

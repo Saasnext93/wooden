@@ -311,13 +311,13 @@ export default function FeaturedProducts() {
             imageUrl = "/sofa.jpg";
             break;
         case 'prod_12':
-            imageUrl = "/MODULERFURNITURE/STUDYTABLE/img1.jpg";
+            imageUrl = "/tv-unit.jpg";
             break;
         case 'prod_13':
-            imageUrl = "/MODULERFURNITURE/BOOKSHELVES/img1.jpg";
+            imageUrl = "/bookshelf.jpg";
             break;
         case 'prod_14':
-            imageUrl = "/MODULERFURNITURE/STUDYTABLE/img2.jpg";
+            imageUrl = "/study-table.jpg";
             break;
         case 'prod_15':
             imageUrl = "/MODULERFURNITURE/TVUNITS/img1.jpg";
@@ -387,13 +387,13 @@ export default function FeaturedProducts() {
         <ScrollAnimationWrapper delay={200}>
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <div className="flex justify-center mb-8">
-                  <ScrollArea className="w-full whitespace-nowrap rounded-lg">
-                    <TabsList className="h-auto bg-transparent p-0">
+                  <ScrollArea className="w-full whitespace-nowrap rounded-lg md:w-auto">
+                    <TabsList className="h-auto bg-transparent p-0 flex-wrap md:flex-nowrap md:h-10">
                         {categories.map(category => (
-                             <TabsTrigger key={category} value={category} className="text-base mx-2 first:ml-0 last:mr-0 data-[state=active]:shadow-none data-[state=active]:bg-accent data-[state=active]:text-primary">{category}</TabsTrigger>
+                             <TabsTrigger key={category} value={category} className="text-base mx-2 my-1 md:my-0 first:ml-0 last:mr-0 data-[state=active]:shadow-none data-[state=active]:bg-accent data-[state=active]:text-primary">{category}</TabsTrigger>
                         ))}
                     </TabsList>
-                    <ScrollBar orientation="horizontal" />
+                    <ScrollBar orientation="horizontal" className="hidden md:flex" />
                   </ScrollArea>
                 </div>
                 {categories.map(category => (
