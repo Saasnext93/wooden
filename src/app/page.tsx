@@ -12,6 +12,7 @@ import Testimonials from "@/components/landing/Testimonials";
 import TrustBadges from "@/components/landing/TrustBadges";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import KitchenShowcase from "@/components/landing/KitchenShowcase";
+import FurnitureShowcase from "@/components/landing/FurnitureShowcase";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <FeaturedSlider />
       <ProductShowcase />
       <KitchenShowcase />
+      <FurnitureShowcase />
       <OurPhilosophy />
       <NewProducts />
       <AboutSection />
