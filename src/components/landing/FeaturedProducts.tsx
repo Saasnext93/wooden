@@ -102,6 +102,28 @@ const allProducts = [
     status: 'In Stock',
   },
   {
+    id: 'prod_9',
+    name: 'Straight Kitchen Design',
+    description: 'A sleek and simple straight-line kitchen, perfect for minimalist and modern homes.',
+    price: 400,
+    imageId: 'product9',
+    category: 'Modular Kitchen Design',
+    material: 'MDF',
+    rating: 4.6,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_10',
+    name: 'Island Kitchen Design',
+    description: 'A contemporary kitchen featuring a central island, providing extra workspace and a social hub for the home.',
+    price: 1600,
+    imageId: 'product10',
+    category: 'Modular Kitchen Design',
+    material: 'Quartz',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
     id: 'prod_11',
     name: 'Modern Sofa',
     description: 'A comfortable and stylish sofa for your living room.',
@@ -307,6 +329,12 @@ export default function FeaturedProducts() {
         case 'prod_8':
             imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
             break;
+        case 'prod_9':
+            imageUrl = "/straight-kitchen-design.jpg";
+            break;
+        case 'prod_10':
+            imageUrl = "/island-kitchen-design.jpg";
+            break;
         case 'prod_11':
             imageUrl = "/sofa.jpg";
             break;
@@ -365,13 +393,12 @@ export default function FeaturedProducts() {
     }
   }), []);
 
-  const filteredProducts = useMemo(() => {
-    if (activeTab === 'All') {
+  const getProductsForCategory = (category: string) => {
+    if (category === 'All') {
       return productsWithImages.slice(0, 16);
     }
-    const productsForCategory = productsWithImages.filter(p => p.category === activeTab);
-    return productsForCategory.slice(0, 16);
-  }, [activeTab, productsWithImages]);
+    return productsWithImages.filter(p => p.category === category).slice(0, 16);
+  };
 
 
   return (
@@ -397,16 +424,20 @@ export default function FeaturedProducts() {
                   </ScrollArea>
                 </div>
                 
-                <TabsContent value={activeTab}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {filteredProducts.map((product) => (
-                            <div key={product.id}>
-                                <ProductCard product={product} />
-                            </div>
-                        ))}
-                    </div>
-                </TabsContent>
-                
+                {categories.map((category) => {
+                  const productsToShow = getProductsForCategory(category);
+                  return (
+                    <TabsContent key={category} value={category}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {productsToShow.map((product) => (
+                                <div key={product.id}>
+                                    <ProductCard product={product} />
+                                </div>
+                            ))}
+                        </div>
+                    </TabsContent>
+                  );
+                })}
             </Tabs>
         </ScrollAnimationWrapper>
 
