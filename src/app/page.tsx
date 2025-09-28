@@ -4,7 +4,7 @@ import ContactForm from "@/components/landing/ContactForm";
 import FeaturedProducts from "@/components/landing/FeaturedProducts";
 import FeaturedSlider from "@/components/landing/FeaturedSlider";
 import HeroSection from "@/components/landing/HeroSection";
-import ProductShowcase from "@/components/landing/KitchenLayouts";
+import ProductShowcase from "@/components/landing/ProductShowcase";
 import ManufacturingProcess from "@/components/landing/ManufacturingProcess";
 import NewProducts from "@/components/landing/NewProducts";
 import OurPhilosophy from "@/components/landing/OurPhilosophy";
