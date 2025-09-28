@@ -158,6 +158,32 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     imageUrl: "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg",
     imageHint: 'swing wardrobe'
   },
+  {
+    id: 'prod_9',
+    name: 'Straight Kitchen Design',
+    description: 'A sleek and simple straight-line kitchen, perfect for minimalist and modern homes with limited space.',
+    price: 400,
+    imageId: 'product9',
+    category: 'Modular Kitchen Design',
+    material: 'MDF',
+    rating: 4.6,
+    status: 'In Stock',
+    imageUrl: "/straight-kitchen-design.jpg",
+    imageHint: 'straight kitchen'
+  },
+  {
+    id: 'prod_10',
+    name: 'Island Kitchen Design',
+    description: 'A contemporary kitchen featuring a central island, providing extra workspace and a social hub for the home.',
+    price: 1600,
+    imageId: 'product10',
+    category: 'Modular Kitchen Design',
+    material: 'Quartz',
+    rating: 4.9,
+    status: 'New Arrival',
+    imageUrl: "/island-kitchen-design.jpg",
+    imageHint: 'island kitchen'
+  },
 ];
 
 
@@ -315,5 +341,3 @@ export default function ProductDetailPage() {
     </>
   );
 }
-
-    

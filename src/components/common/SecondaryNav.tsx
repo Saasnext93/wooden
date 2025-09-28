@@ -24,6 +24,8 @@ const secondaryNavigationLinks: NavigationLink[] = [
       { title: 'L-Shaped Kitchen', href: '/products/prod_1', imageId: 'kitchen-lshape', imageUrl: '/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg' },
       { title: 'U-Shaped Kitchen', href: '/products/prod_6', imageId: 'kitchen-ushape', imageUrl: '/u-shaped-contemporary-kitchen-design-with-led-lights-and-quartz-countertops.jpg' },
       { title: 'Parallel Kitchen', href: '/products/prod_5', imageId: 'kitchen-parallel', imageUrl: '/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg' },
+      { title: 'Straight Kitchen', href: '/products/prod_9', imageId: 'kitchen-straight', imageUrl: '/straight-kitchen-design.jpg' },
+      { title: 'Island Kitchen', href: '/products/prod_10', imageId: 'kitchen-island', imageUrl: '/island-kitchen-design.jpg' },
     ],
   },
   {

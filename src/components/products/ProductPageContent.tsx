@@ -98,6 +98,28 @@ const allProducts: Product[] = [
     rating: 4.7,
     status: 'In Stock',
   },
+  {
+    id: 'prod_9',
+    name: 'Straight Kitchen Design',
+    description: 'A sleek and simple straight-line kitchen, perfect for minimalist and modern homes.',
+    price: 400,
+    imageId: 'product9',
+    category: 'Modular Kitchen Design',
+    material: 'MDF',
+    rating: 4.6,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_10',
+    name: 'Island Kitchen Design',
+    description: 'A contemporary kitchen featuring a central island for extra workspace.',
+    price: 1600,
+    imageId: 'product10',
+    category: 'Modular Kitchen Design',
+    material: 'Quartz',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
 ];
 
 
@@ -127,6 +149,12 @@ const productsWithImages = allProducts.map(product => {
       break;
     case 'prod_8':
       imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
+      break;
+    case 'prod_9':
+      imageUrl = "/straight-kitchen-design.jpg";
+      break;
+    case 'prod_10':
+      imageUrl = "/island-kitchen-design.jpg";
       break;
     default:
       imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
