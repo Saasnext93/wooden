@@ -3,12 +3,12 @@ import Image from "next/image";
 import ScrollAnimationWrapper from "../animations/ScrollAnimationWrapper";
 
 const partners = [
-    { name: "iPaints", logo: "/BRAND/Asian-Paints.png", width: 100, height: 50 },
-    { name: "Berger", logo: "/BRAND/Berger-Paint.jpg", width: 120, height: 60 },
-    { name: "Ebco", logo: "/BRAND/Ebco.jpg", width: 110, height: 55 },
-    { name: "Elica", logo: "/BRAND/Excel.jpg", width: 100, height: 50 },
-    { name: "Hettich", logo: "/BRAND/Faber.jpg", width: 130, height: 65 },
-    { name: "eGlu", logo: "/BRAND/Hettich.png", width: 100, height: 50 },
+    { name: "iPaints", logo: "/brand/b1.png", width: 100, height: 50 },
+    { name: "Berger", logo: "/brand/b2.png", width: 120, height: 60 },
+    { name: "Ebco", logo: "/brand/b3.png", width: 110, height: 55 },
+    { name: "Elica", logo: "/brand/b4.png", width: 100, height: 50 },
+    { name: "Hettich", logo: "/brand/b5.png", width: 130, height: 65 },
+    { name: "eGlu", logo: "/brand/b6.png", width: 100, height: 50 },
     
 ];
 
