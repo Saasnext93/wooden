@@ -18,74 +18,73 @@ import QuoteModal from '../products/QuoteModal';
 import { cn } from '@/lib/utils';
 import ScrollAnimationWrapper from '../animations/ScrollAnimationWrapper';
 
-const furnitureProducts = [
+const bedroomProducts = [
   {
-    id: 'furniture_1',
-    name: 'Plush Velvet Sofa',
-    category: 'Sofas',
+    id: 'bedroom_1',
+    name: 'Modern Master Bedroom',
+    category: 'Master Bedrooms',
     images: [
-      { url: '/MODULERFURNITURE/SOFAS/img1.jpg', hint: 'plush velvet sofa' },
-      { url: '/MODULERFURNITURE/SOFAS/img3.jpg', hint: 'sofa side view' },
-      { url: '/MODULERFURNITURE/SOFAS/img4.jpg', hint: 'sofa detail' },
+      { url: '/BEDROOMS/MASTERBEDROOM/img1.jpg', hint: 'modern master bedroom' },
+      { url: '/BEDROOMS/MASTERBEDROOM/img2.jpg', hint: 'bedroom side table' },
+      { url: '/BEDROOMS/MASTERBEDROOM/img3.jpg', hint: 'bedroom wardrobe' },
     ]
   },
   {
-    id: 'furniture_2',
-    name: 'Modern Minimalist TV Unit',
-    category: 'TV Units',
+    id: 'bedroom_2',
+    name: 'Creative Kids Room',
+    category: 'Kids Rooms',
     images: [
-      { url: '/MODULERFURNITURE/TVUNITS/img1.jpg', hint: 'minimalist tv unit' },
-      { url: '/MODULERFURNITURE/TVUNITS/img2.jpg', hint: 'tv unit storage' },
-      { url: '/MODULERFURNITURE/TVUNITS/img3.jpg', hint: 'tv unit on wall' },
+      { url: '/BEDROOMS/KIDS/img1.jpg', hint: 'creative kids room' },
+      { url: '/BEDROOMS/KIDS/img2.jpg', hint: 'kids study area' },
+      { url: '/BEDROOMS/KIDS/img3.jpg', hint: 'kids bed detail' },
     ]
   },
   {
-    id: 'furniture_3',
-    name: 'Industrial Bookshelf',
-    category: 'Bookshelves',
+    id: 'bedroom_3',
+    name: 'Space-Saving Bunk Bed',
+    category: 'Bunk Beds',
     images: [
-      { url: '/MODULERFURNITURE/BOOKSHELVES/img1.jpg', hint: 'industrial bookshelf' },
-      { url: '/MODULERFURNITURE/BOOKSHELVES/img2.jpg', hint: 'bookshelf decor' },
-      { url: '/MODULERFURNITURE/BOOKSHELVES/img3.jpg', hint: 'bookshelf detail' },
+      { url: '/BEDROOMS/BUNKBEDS/img1.jpg', hint: 'bunk bed for kids' },
+      { url: '/BEDROOMS/BUNKBEDS/img2.jpg', hint: 'bunk bed stairs' },
+      { url: '/BEDROOMS/BUNKBEDS/img3.jpg', hint: 'bunk bed setup' },
     ]
   },
   {
-    id: 'furniture_4',
-    name: 'Classic Wooden Study Table',
-    category: 'Study Tables',
+    id: 'bedroom_4',
+    name: 'Elegant Queen Bedroom',
+    category: 'Master Bedrooms',
     images: [
-      { url: '/MODULERFURNITURE/STUDYTABLE/img1.jpg', hint: 'classic study table' },
-      { url: '/MODULERFURNITURE/STUDYTABLE/img2.jpg', hint: 'study table setup' },
-      { url: '/MODULERFURNITURE/STUDYTABLE/img3.jpg', hint: 'study table detail' },
+      { url: '/BEDROOMS/MASTERBEDROOM/img4.jpg', hint: 'elegant queen bed' },
+      { url: '/BEDROOMS/MASTERBEDROOM/img1.jpg', hint: 'bedroom vanity' },
+      { url: '/BEDROOMS/MASTERBEDROOM/img2.jpg', hint: 'bedroom lighting' },
     ]
   },
-   
   {
-    id: 'furniture_6',
-    name: 'Floating Wall TV Unit',
-    category: 'TV Units',
+    id: 'bedroom_5',
+    name: 'Playful Bunk Room',
+    category: 'Bunk Beds',
     images: [
-      { url: '/MODULERFURNITURE/TVUNITS/img4.jpg', hint: 'floating tv unit' },
-      { url: '/MODULERFURNITURE/TVUNITS/img1.jpg', hint: 'tv unit perspective' },
-      { url: '/MODULERFURNITURE/TVUNITS/img2.jpg', hint: 'tv unit with decor' },
+      { url: '/BEDROOMS/BUNKBEDS/img4.jpg', hint: 'playful bunk room' },
+      { url: '/BEDROOMS/BUNKBEDS/img1.jpg', hint: 'bunk bed storage' },
+      { url: '/BEDROOMS/BUNKBEDS/img2.jpg', hint: 'bunk bed decor' },
     ]
   },
 ];
 
-const furnitureCategories = [
-  'All', 'Sofas', 'TV Units', 'Bookshelves', 'Study Tables'
+const bedroomCategories = [
+  'All', 'Master Bedrooms', 'Kids Rooms', 'Bunk Beds'
 ];
 
-export default function FurnitureShowcase() {
+export default function BedroomShowcase() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState('');
 
-  const filteredFurniture = useMemo(() => {
+  const filteredBedrooms = useMemo(() => {
     if (activeCategory === 'All') {
-      return furnitureProducts;
+      return bedroomProducts;
     }
-    return furnitureProducts.filter(f => f.category === activeCategory);
+    return bedroomProducts.filter(f => f.category === activeCategory);
   }, [activeCategory]);
 
   const openQuoteModal = (productName: string) => {
@@ -95,12 +94,12 @@ export default function FurnitureShowcase() {
 
   return (
     <>
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-accent/50 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <ScrollAnimationWrapper className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">Our Modular Furniture</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-2">Our Bedroom Designs</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our collection of stylish and functional furniture, designed for modern living.
+              Create your personal sanctuary with our elegant and functional bedroom solutions.
             </p>
           </ScrollAnimationWrapper>
 
@@ -108,7 +107,7 @@ export default function FurnitureShowcase() {
             <div className="flex justify-center mb-8">
               <ScrollArea className="w-full whitespace-nowrap">
                 <div className="flex justify-center space-x-2 pb-4">
-                  {furnitureCategories.map(category => (
+                  {bedroomCategories.map(category => (
                     <Button
                       key={category}
                       variant={activeCategory === category ? 'default' : 'outline'}
@@ -129,7 +128,7 @@ export default function FurnitureShowcase() {
 
           <ScrollAnimationWrapper delay={400}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredFurniture.map(item => (
+              {filteredBedrooms.map(item => (
                 <Card key={item.id} className="overflow-hidden group">
                   <CardContent className="p-0">
                     <Carousel className="w-full">

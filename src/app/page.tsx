@@ -13,6 +13,7 @@ import TrustBadges from "@/components/landing/TrustBadges";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import KitchenShowcase from "@/components/landing/KitchenShowcase";
 import FurnitureShowcase from "@/components/landing/FurnitureShowcase";
+import BedroomShowcase from "@/components/landing/BedroomShowcase";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <ProductShowcase />
       <KitchenShowcase />
       <FurnitureShowcase />
+      <BedroomShowcase />
       <OurPhilosophy />
       <NewProducts />
       <AboutSection />
