@@ -10,7 +10,7 @@ export default function Logo({ isScrolled = false }: LogoProps) {
   return (
     <Link href="/" className="relative transition-all duration-300">
        <Image 
-        src="/logo_pin.png" 
+        src="/pinnaclelogo.png" 
         alt="Pinnacle Modular Furniture Logo"
         width={isScrolled ? 120 : 180}
         height={isScrolled ? 32 : 48}
