@@ -196,22 +196,22 @@ const productsWithImages = allProducts.map(product => {
       imageUrl = "/white-modern-2-door-swing-wardrobe-design-with-integrated-study-table.jpg";
       break;
     case 'prod_9':
-      imageUrl = "/straight-kitchen-design.jpg";
+      imageUrl = "/MODULERKITCHEN/StraightKitchen/img1.jpg";
       break;
     case 'prod_10':
-      imageUrl = "/island-kitchen-design.jpg";
+      imageUrl = "/MODULERKITCHEN/Island/img.jpg";
       break;
     case 'prod_11':
-      imageUrl = "/sofa.jpg";
+      imageUrl = "/MODULERFURNITURE/SOFAS/img1.jpg";
       break;
     case 'prod_12':
-      imageUrl = "/tv-unit.jpg";
+      imageUrl = "/MODULERFURNITURE/TVUNITS/img1.jpg";
       break;
     case 'prod_13':
-        imageUrl = "/bookshelf.jpg";
+        imageUrl = "/MODULERFURNITURE/BOOKSHELVES/img1.jpg";
         break;
     case 'prod_14':
-        imageUrl = "/study-table.jpg";
+        imageUrl = "/MODULERFURNITURE/STUDYTABLE/img1.jpg";
         break;
     default:
       imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
