@@ -210,6 +210,32 @@ const allProducts: (Product & { gallery?: {url: string; hint: string}[], specifi
     imageUrl: "/tv-unit.jpg",
     imageHint: 'tv unit'
   },
+  {
+    id: 'prod_13',
+    name: 'Modern Bookshelf',
+    description: 'A stylish and functional bookshelf to display your favorite reads.',
+    price: 450,
+    imageId: 'product13',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.8,
+    status: 'In Stock',
+    imageUrl: "/bookshelf.jpg",
+    imageHint: 'bookshelf'
+  },
+  {
+    id: 'prod_14',
+    name: 'Ergonomic Study Table',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+    imageUrl: "/study-table.jpg",
+    imageHint: 'study table'
+  },
 ];
 
 

@@ -52,6 +52,8 @@ const secondaryNavigationLinks: NavigationLink[] = [
         { title: 'Sofas', href: '/products/prod_11', imageId: 'sofa-modern', imageUrl: '/sofa.jpg' },
         { title: 'TV Units', href: '/products/prod_12', imageId: 'tv-unit', imageUrl: '/tv-unit.jpg' },
         { title: 'Crockery Units', href: '/products', imageId: 'crockery-unit', imageUrl: '/crockery-unit.jpg' },
+        { title: 'Bookshelves', href: '/products/prod_13', imageId: 'bookshelf', imageUrl: '/bookshelf.jpg' },
+        { title: 'Study Tables', href: '/products/prod_14', imageId: 'study-table', imageUrl: '/study-table.jpg' },
     ]
   }
 ];
