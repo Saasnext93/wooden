@@ -114,7 +114,7 @@ const allProducts = [
   },
   {
     id: 'prod_12',
-    name: 'Wooden TV Unit',
+    name: 'Studytable',
     description: 'A sleek and modern TV unit to organize your entertainment space.',
     price: 350,
     imageId: 'product12',
@@ -145,6 +145,127 @@ const allProducts = [
     rating: 4.9,
     status: 'New Arrival',
   },
+  {
+    id: 'prod_15',
+    name: 'TV unit',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_16',
+    name: 'TV unit',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_17',
+    name: 'TV unit',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_18',
+    name: 'TV unit',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_19',
+    name: 'TV unit',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_20',
+    name: 'TV unit',
+    description: 'A comfortable and ergonomic table for your study or home office.',
+    price: 550,
+    imageId: 'product14',
+    category: 'Modular Furniture',
+    material: 'Wood',
+    rating: 4.9,
+    status: 'New Arrival',
+  },
+  {
+    id: 'prod_21',
+    name: 'Master Bedroom Design',
+    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    price: 1250,
+    imageId: 'product3',
+    category: 'Master bedroom design',
+    material: 'Linen',
+    rating: 4.7,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_22',
+    name: 'Master Bedroom Design',
+    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    price: 1250,
+    imageId: 'product3',
+    category: 'Master bedroom design',
+    material: 'Linen',
+    rating: 4.7,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_23',
+    name: 'Master Bedroom Design',
+    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    price: 1250,
+    imageId: 'product3',
+    category: 'Master bedroom design',
+    material: 'Linen',
+    rating: 4.7,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_24',
+    name: 'Master Bedroom Design',
+    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    price: 1250,
+    imageId: 'product3',
+    category: 'Master bedroom design',
+    material: 'Linen',
+    rating: 4.7,
+    status: 'In Stock',
+  },
+  {
+    id: 'prod_25',
+    name: 'Master Bedroom Design',
+    description: 'A comfortable and stylish 3-seater sofa upholstered in a premium linen blend fabric.',
+    price: 1250,
+    imageId: 'product3',
+    category: 'Master bedroom design',
+    material: 'Linen',
+    rating: 4.7,
+    status: 'In Stock',
+  },
 ];
 
 
@@ -163,7 +284,7 @@ export default function FeaturedProducts() {
     let imageUrl;
     switch(product.id) {
         case 'prod_1':
-            imageUrl = "/l-shaped-contemporary-kitchen-design-with-full-height-cabinets-and-granite-countertop.jpg";
+            imageUrl = "/MODULERKITCHEN/LShape/image1.jpg";
             break;
         case 'prod_2':
             imageUrl = "/modern-3-door-swing-wardrobe-design-with-integrated-study-table.jpg";
@@ -190,14 +311,49 @@ export default function FeaturedProducts() {
             imageUrl = "/sofa.jpg";
             break;
         case 'prod_12':
-            imageUrl = "/tv-unit.jpg";
+            imageUrl = "/MODULERFURNITURE/STUDYTABLE/img1.jpg";
             break;
         case 'prod_13':
-            imageUrl = "/bookshelf.jpg";
+            imageUrl = "/MODULERFURNITURE/BOOKSHELVES/img1.jpg";
             break;
         case 'prod_14':
-            imageUrl = "/study-table.jpg";
+            imageUrl = "/MODULERFURNITURE/STUDYTABLE/img2.jpg";
             break;
+        case 'prod_15':
+            imageUrl = "/MODULERFURNITURE/TVUNITS/img1.jpg";
+            break;  
+        case 'prod_16':
+              imageUrl = "/MODULERFURNITURE/TVUNITS/img4.jpg";
+              break;   
+              
+        case 'prod_17':
+            imageUrl = "/MODULERFURNITURE/TVUNITS/img2.jpg";
+            break;
+        case 'prod_18':
+            imageUrl = "/MODULERFURNITURE/TVUNITS/img3.jpg";
+            break;
+        case 'prod_19':
+              imageUrl = "/MODULERFURNITURE/SOFAS/img3.jpg";
+              break;
+        case 'prod_20':
+                imageUrl = "/MODULERFURNITURE/SOFAS/img4.jpg";
+                break;
+
+        case 'prod_21':
+                  imageUrl = "/BEDROOMS/BUNKBEDS/img4.jpg";
+                  break;
+        case 'prod_22':
+                imageUrl = "/BEDROOMS/BUNKBEDS/img2.jpg";
+                    break;
+        case 'prod_23':
+                      imageUrl = "/BEDROOMS/KIDS/img2.jpg";
+                      break;
+        case 'prod_24':
+                        imageUrl = "/BEDROOMS/MASTERBEDROOM/img2.jpg";
+                        break;
+        case 'prod_25':
+                          imageUrl = "/BEDROOMS/MASTERBEDROOM/img1.jpg";
+                          break;
         default:
             imageUrl = "/modern-parallel-kitchen-design-with-open-shelves-and-backsplash-tiles.jpg";
     }
