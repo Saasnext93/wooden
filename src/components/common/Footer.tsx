@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Instagram } from "lucide-react";
 import Logo from "./Logo";
@@ -32,7 +33,7 @@ export default function Footer() {
           <div>
             <h3 className="font-headline font-semibold text-primary mb-4">Follow Us</h3>
             <div className="flex justify-center md:justify-start space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.instagram.com/pinnacle_modular_furniture_?igsh=MTJyMjQ0MXNvd2xqeg==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
