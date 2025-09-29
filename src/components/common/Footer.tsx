@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Instagram } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -42,9 +42,9 @@ export default function Footer() {
             <div>
             <h3 className="font-headline font-semibold text-primary mb-4">Visit Us</h3>
             <address className="text-muted-foreground not-italic">
-                <p>123 Furniture Lane</p>
-                <p>Design District, Mumbai</p>
-                <p>India, 400051</p>
+                <p>Shade No 4, Aanant Industrial Estate</p>
+                <p>Dangat Patil Nagar, Shivne</p>
+                <p>Pune, Maharashtra</p>
             </address>
             </div>
         </div>
